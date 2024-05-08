@@ -14,3 +14,13 @@ loginLink.addEventListener("click", (e) => {
   signupForm.style.display = "none";
   loginForm.style.display = "block";
 });
+
+let loginUsername = document.querySelector(".login-username");
+let loginPassword = document.querySelector(".login-password");
+let signupName = document.querySelector(".signup-name");
+let signupUsername = document.querySelector(".signup-username");
+let signupPassword = document.querySelector(".signup-password");
+let signupEmail = document.querySelector(".signup-email");
+let signupNumber = document.querySelector(".signup-number");
+let signupBtn = document.querySelector(".signup-btn");
+let loginBtn = document.querySelector(".login-btn");
