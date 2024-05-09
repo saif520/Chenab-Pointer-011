@@ -5,23 +5,31 @@
 #product-page{
     width: 100%;
     height: auto;
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
 }
 #product-path{
     width: 76%;
     height: 40px;
-    border: 1px solid greenyellow;
+    /* border: 1px solid greenyellow; */
     box-sizing: border-box;
     padding-left: 15px;
     padding-right: 15px;
     margin-top: 8px;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    align-items: center;
+}
+#product-path>a{
+    font-size: 14px;
+    line-height: 12px;
+    color: rgb(45, 45, 45);
+    font-family: montserrat-regular, sans-serif;
 }
 #product-details{
     width: 76%;
     min-height: 600px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     box-sizing: border-box;
     padding-left: 15px;
     padding-right: 15px;
@@ -31,27 +39,45 @@
     margin-left: auto;
     margin-right: auto;
 }
-#p-different-image{
-    width: 90px;
+#p-image-container{
+    width: 10%;
     height: 550px;
-    border: 2px solid goldenrod;
+    /* border: 2px solid goldenrod; */
+    box-sizing: border-box;
+    padding: 18px;
 }
-#p-show-image{
-    width: 450px;
-    height: 563px;
-    border: 2px solid green;
+.p-image-innerContainer{
+    width: 100%;
+    /* height: 87px; */
+    /* border: 1px solid rgb(96, 95, 95); */
+}
+.p-image-innerContainer>img{
+    width: 100%;
+}
+.p-image-innerContainer>video{
+    width: 100%;
+}
+#p-image-showcase-container{
+    width: 40%;
+    min-height: 563px;
+    /* border: 2px solid green; */
+}
+#p-image-showcase-container>img{
+    width: 100%;
 }
 #p-details{
-    width: 527px;
+    width: 48%;
     min-height: 600px;
-    border: 2px solid brown;
+    /* border: 2px solid brown; */
     box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 25px;
 
 }
 #p-recently-viewed{
     width: 76%;
     min-height: 553px;
-    border: 2px solid rgb(54, 6, 100);
+    /* border: 2px solid rgb(54, 6, 100); */
     margin-left: auto;
     margin-right: auto;
 }
@@ -66,5 +92,242 @@
 }
 #p-recently-viewed-container{
     height: 410px;
-    border:2px solid red;
+    /* border:2px solid red; */
+    display: flex;
+}
+.p-recently-viewed-card{
+    width: 255px;
+    height: 410px;
+    margin-left: 15px;
+    margin-right: 15px;
+    /* border: 2px solid blue; */
+}
+.p-recently-viewed-card>img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.p-discounted-price{
+    font-family: montserrat-semibold, sans-serif !important;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 14px;
+}
+.p-actual-price::first-letter{
+    color: red;
+}
+.p-actual-price{
+    font-family: montserrat-semibold, sans-serif !important;
+    font-size: 12px;
+    line-height: 14px;
+    color: rgb(148, 148, 148);
+    padding-left: 4px;
+    text-decoration: line-through;
+}
+.rv-rating{
+    width: 50px;
+    text-align: center;
+    padding: 2px 2px 2px 2px;
+    border-radius: 50px;
+    position: relative;
+    top:-50px;
+    left:8px;
+    background-color: white;
+}
+.rv-rating>i{
+    font-size: 12px;
+    margin-right: 3px;
+    position: relative;
+}
+
+
+.pd-title{
+    color:rgb(79, 83, 98);
+    font-size: 24px;
+    line-height: 21px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.pd-description{
+    color: rgb(115, 115, 115);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-top: 15px;
+    margin-bottom: 18px;
+}
+.pd-rating{
+    width: 40px;
+    border: 1px solid grey;
+    text-align: center;
+    background-color: #f7f7f7;
+    padding: 3px 5px;
+    margin-bottom: 15px;
+}
+.pd-rating>i{
+    font-size: 12px;
+    margin-right: 5px;
+}
+.pd-rating-value{
+    font-weight:bold;
+}
+.pd-price-section{
+    list-style-type: none;
+    display: flex;
+}
+.pd-offer-price{
+    margin: 2px;
+    font-family: "montserrat, sans-serif";
+    font-size: 20px;
+    font-weight: 700;
+
+
+}
+.pd-actual-price{
+    margin: 3px;
+    text-decoration: line-through;
+    font-family: "montserrat, sans-serif";
+    color: #949494;
+    font-size: 16px;
+}
+.pd-discount-percentage{
+    margin: 4px;
+    font-family: "montserrat, sans-serif";
+    font-size: 20px;
+    color: #00b852;
+}
+
+.pd-tax-message{
+    color: #949494;
+    font-size: 15px;
+}
+.pd-fit-quality{
+    list-style-type: none;
+    display: flex;
+    margin-top: 20px;
+}
+.pd-fit{
+    background-color: #757575;
+    color: white;
+    font-weight: 700;
+    padding: 2px 10px 4px 10px;
+}
+.pd-quality{
+    border: 1px solid gray;
+    color: #898787;
+    margin-left: 20px;
+    font-weight: 700;
+    padding: 2px 10px 4px 10px;
+}
+.pd-border-1{
+    border: 2px solid #eeeeee;
+    margin-top: 28px;
+}
+.pd-discount-message{
+    margin-top: 15px;
+}
+.pd-extra-discount{
+    color: rgb(51, 51, 51);
+}
+.pd-learn-more{
+    color: #5eafaf;
+    cursor: pointer;
+}
+.pd-border-2{
+    border: 2px solid #eeeeee;
+    margin-top: 28px;
+}
+.pd-size-guide{
+    display: flex;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.pd-select-size{
+
+}
+.pd-guide{
+    color: #71b9b9;
+    cursor: pointer;
+}
+
+.pd-size-button{
+    margin-top: 15px;
+}
+.pd-size-btn{
+    width: 50px;
+    height: 50px;
+    font-size:14px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: white;
+    margin-left: 4px;
+    margin-right: 4px;
+    cursor: pointer;
+}
+.pd-size-btn:hover{
+    border: 1px solid rgb(66, 162, 162);
+}
+.pd-size-s{
+
+}
+.pd-size-2xl{
+    cursor: not-allowed;
+    opacity: 0.3;
+}
+.pd-size-notification{
+    margin-top: 30px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+.pd-not-find-text{
+    color:rgb(66, 162, 162);
+    margin: 5px;
+    cursor: pointer;
+}
+.pd-bell-icon{
+    font-size: 25px;
+    margin: 5px;
+    cursor: pointer;
+}
+.pd-bag-wishlist{
+    margin-top: 10px;
+}
+.pd-add-to-bag-btn{
+    margin-right: 10px;
+    /* font-weight: 600; */
+    font-size: 16px;
+    width: 16vw;
+    height: 7vh;
+    background-color: #ffd84d;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.pd-add-to-wishlist-btn{
+    border:1px solid #c1c2c5;
+    margin-left: 7px;
+    font-size: 16px;
+    width: 13vw;
+    height: 7vh;
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: white;
+}
+.pd-bag-icon{
+    margin-right: 8px;
+}
+.pd-wishlist-icon{
+    margin-right: 8px;
+}
+.pd-add-to-bag-text{
+
+}
+.pd-wishlist-text{
+    color: #96989d;
+}
+.pd-border-3{
+    border: 2px solid #eeeeee;
+    margin-top: 28px;
 }
