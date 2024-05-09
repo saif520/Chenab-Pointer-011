@@ -82,7 +82,8 @@ body {
 
 .form-container input[type="text"],
 .form-container input[type="number"],
-.form-container input[type="email"] {
+.form-container input[type="email"],
+.form-container input[type="password"] {
   display: block;
   margin: auto;
   height: 50px;
@@ -97,7 +98,8 @@ body {
 
 .form-container input[type="text"]::placeholder,
 .form-container input[type="number"]::placeholder,
-.form-container input[type="email"]::placeholder {
+.form-container input[type="email"]::placeholder,
+.form-container input[type="password"]::placeholder {
   color: grey;
   font-size: 15px;
   font-weight: 600;

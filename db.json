@@ -2,11 +2,11 @@
   "users": [
     {
       "id": 1,
-      "name": "Chaitanya",
-      "username": "",
-      "password": "",
-      "email": "",
-      "mobile": ""
+      "name": "Tehreem",
+      "username": "tehvrooom",
+      "password": "password",
+      "email": "tehreem@gmail.com",
+      "mobile": "987654321"
     }
   ],
   "product": [
