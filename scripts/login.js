@@ -41,6 +41,7 @@ signupBtn.addEventListener("click", (e) => {
   } else {
     localStorage.setItem("loginCheck", JSON.stringify("true"));
     let obj = {
+      id: 1,
       name: signupName.value,
       username: signupUsername.value,
       password: signupPassword.value,
@@ -54,9 +55,9 @@ signupBtn.addEventListener("click", (e) => {
 async function saveUserData(obj) {
   try {
     let res = await fetch("http://localhost:3000/users", {
-      method: "PUT",
+      method: "POST",
       headers: {
-        "Content-type": "application/json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(obj),
     });
