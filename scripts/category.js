@@ -85,7 +85,7 @@ function createCard(obj,ind){
     div.className = "card";
 
     let img_div = document.createElement("div");
-    div.setAttribute("id","image-div");
+    img_div.setAttribute("id","image-div");
 
     let image = document.createElement("img");
     image.setAttribute("src",obj.image);
@@ -98,34 +98,47 @@ function createCard(obj,ind){
 
     let rating = document.createElement("span");
     rating.className = "rating";
-    rating.innerHTML = `<i class="fa-solid fa-star fa-xs" style="color: #FFD43B;"></i>${obj.rating}`;
+    rating.innerHTML = `<i class="fa-solid fa-star fa-xs" style="color: #FFD43B;"></i><span class="rate">${obj.rating || 3.5}</span>`;
 
     //appending image,fit and rating into img_div;
     img_div.append(image,fit,rating);
 
-    let brand = document.createElement("div");
-    brand.className = "title";
-    brand.innerHTML = `<span class="title">${obj.title}</span><span class="wishlist"><i class="fa-regular fa-heart fa-lg" style="color: #a39f9f;"></i></span>`;
+    let content_div = document.createElement("div");
+    content_div.className = "content_div";
+
+    let brand_div = document.createElement("div");
+    brand_div.className="brand_div";
+    brand_div.innerHTML = `<span class="brand">${obj.brand}</span><span class="wishlist"><i class="fa-regular fa-heart fa-lg" style="color: #a39f9f;"></i></span>`;
     
 
-    let category = document.createElement("p");
-    category.className = "category";
-    category.innerText = `${obj.category}`;
+    let title = document.createElement("p");
+    title.className = "title";
+    title.innerText = `${obj.title}`;
 
     let price = document.createElement("p");
     price.className = "price";
-    price.innerHTML = `${obj.price}<s class="old-price">999</s>`
+    price.innerHTML = `<i class="fa-solid fa-indian-rupee-sign fa-2xs"></i>${obj.price}<s class="old-price"><i class="fa-solid fa-indian-rupee-sign fa-2xs"></i>${(Number(obj.price)+599)}</s>`
 
+    let tribe = document.createElement("p");
+    tribe.className = "tribe";
+    tribe.innerHTML = `<i class="fa-solid fa-indian-rupee-sign fa-2xs"></i>${Math.floor(Number(obj.price)-Number(obj.price)/20)} For TriBe Members`;
+    
     let material = document.createElement("p");
     material.className = "material";
     material.innerText = `${obj.material}`;
 
-    div.append(img_div,brand,category,price,material);
+    content_div.append(brand_div,title,price,tribe,material)
+    
+    div.append(img_div,content_div);
     return div;
 }
 
 function renderCards(data){
-    let dataListWrapper = document.getElementById("data-list-title-wrapper");
+    let dataListTitle = document.getElementById("data-list-title-wrapper");
+    dataListTitle.innerHTML = `<h2>PRODUCTS (${data.length})</h2>`
+
+    let dataListWrapper = document.getElementById("data-list-wrapper");
+    
     data.forEach((element,index) => {
         let card  = createCard(element,index);
         dataListWrapper.append(card);
