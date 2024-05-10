@@ -1,5 +1,3 @@
-localStorage.setItem("loginCheck", JSON.stringify("false"));
-
 let loginForm = document.querySelector(".login-container");
 let signupForm = document.querySelector(".signup-container");
 let signupLink = document.querySelector(".signup-link");
@@ -88,4 +86,43 @@ async function verifyUserData() {
   }
 
   return false;
+}
+
+//login
+
+loginBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  createLoginSession();
+});
+
+async function createLoginSession() {
+  if (await userLogin()) {
+    localStorage.setItem("loginToken", JSON.stringify("true"));
+    console.log("done");
+  } else {
+    alert("Wrong Credentials!");
+  }
+}
+
+async function userLogin() {
+  if (loginUsername.value && loginPassword.value) {
+    try {
+      let res = await fetch(userURL);
+      let data = await res.json();
+      for (let element of data) {
+        if (
+          element.username == loginUsername.value &&
+          element.password == loginPassword.value
+        ) {
+          return true;
+        }
+      }
+    } catch (err) {
+      console.log(err);
+    }
+
+    return false;
+  } else {
+    alert("Fill in all the Fields!");
+  }
 }
