@@ -1,3 +1,5 @@
+let cartCount = document.querySelector(".cart-count");
+
 //card container
 
 let container = document.querySelector(".container-main");
@@ -69,16 +71,19 @@ function appendData(data) {
   leftMain.innerHTML = "";
   let mrp = 0;
   let total = 0;
+  let count = 0;
   data.forEach((elem) => {
     //card appending
     let card = createCard(elem);
     leftMain.append(card);
+    count++;
 
     //summary box elements
     mrp += Number(elem.oldPrice);
     total += Number(elem.price);
   });
 
+  cartCount.innerText = `${count} items(s)`;
   summaryPrice.innerText = `₹${mrp}`;
   summaryDiscount.innerText = `-₹${mrp - total}`;
   summarySubtotal.innerText = `₹${total}`;
