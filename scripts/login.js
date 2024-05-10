@@ -98,7 +98,7 @@ loginBtn.addEventListener("click", (e) => {
 async function createLoginSession() {
   if (await userLogin()) {
     localStorage.setItem("loginToken", JSON.stringify("true"));
-    console.log("done");
+    alert("done");
   } else {
     alert("Wrong Credentials!");
   }
