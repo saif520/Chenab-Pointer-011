@@ -6,6 +6,23 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+header {
+  width: 1170px;
+  margin: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+header > p {
+  width: fit-content;
+  padding-inline: 11px;
+  font-weight: 700;
+}
+
+.cart-count {
+  font-weight: 500;
+}
+
 .container-main {
   margin: auto;
   width: 1170px;
