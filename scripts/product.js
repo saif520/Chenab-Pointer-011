@@ -136,8 +136,8 @@ function productDetails(ele){
   productInfo.append(title,description,rating,priceSection,tax,fitAndQuality,horizontalBorder1,discountmessage,horizontalBorder2,sizeAndGuide,sizeButton,sizeNotification,bagAndWishlist,horizontalBorder3);
 
 
-  title.innerHTML=ele.title;
-  description.innerText=ele.description;
+  title.innerHTML=ele.brand;
+  description.innerText=ele.title;
   ratingValue.innerText=ele.rating;
   offerPrice.innerText=`₹${ele.price}`;
   actualPrice.innerText=`₹${ele.oldPrice}`;
