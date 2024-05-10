@@ -141,7 +141,10 @@ function productDetails(ele){
   ratingValue.innerText=ele.rating;
   offerPrice.innerText=`₹${ele.price}`;
   actualPrice.innerText=`₹${ele.oldPrice}`;
-  discountPercentage.innerText=`${ele.discountPercentage}% OFF`;
+  let cp=ele.price;
+  let op=ele.oldPrice;
+  let discountPer=Math.floor(((op-cp)/op)*100);
+  discountPercentage.innerText=`${discountPer}% OFF`;
   tax.innerText=`inclusive of all taxes`;
   fit.innerText=ele.fit;
   quality.innerText=`100% COTTON`;
