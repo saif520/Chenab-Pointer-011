@@ -42,6 +42,20 @@ function createCard(obj) {
   cardImg.src = obj.image;
   removeCartBtn.innerText = "Remove";
   moveToWishlistBtn.innerText = "Move to Wishlist";
+  removeCartBtn.value = obj.title;
+
+  removeCartBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    let cart = JSON.parse(localStorage.getItem("cartData"));
+    for (let i = 0; i <= cart.length - 1; i++) {
+      if (cart[i].title == removeCartBtn.value) {
+        cart.splice(i, 1);
+        break;
+      }
+    }
+    localStorage.setItem("cartData", JSON.stringify(cart));
+    appendData(cart);
+  });
 
   cartProdLeft.append(cartProdTitle, price, oldPrice, savedAmount);
   cartProdRow.append(cartProdLeft, cardImg);
