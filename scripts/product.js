@@ -1,129 +1,40 @@
-let arr=[
-    {
-      "id":1,
-      "title": "Bewakoof®",
-      "category": "cargo",
-      "description": "Men's Black Create Good Stories Typography T-shirt",
-      "rating": "4.6",
-      "price": "429",
-      "oldPrice": "1099",
-      "discountPercentage":"60",
-      "image": {
-        "img1":"https://images.bewakoof.com/t1080/men-s-black-create-good-stories-typography-t-shirt-283013-1706003517-1.jpg",
-        "img2":"https://images.bewakoof.com/t1080/create-good-stories-half-sleeve-t-shirt-black-283013-1655749410-2.jpg",
-        "img3":"https://images.bewakoof.com/t1080/create-good-stories-half-sleeve-t-shirt-black-283013-1655749416-3.jpg",
-        "img4":"https://images.bewakoof.com/t1080/create-good-stories-half-sleeve-t-shirt-black-283013-1655749421-4.jpg",
-        "img5":"https://images.bewakoof.com/t1080/create-good-stories-half-sleeve-t-shirt-black-283013-1655749426-5.jpg",
-        "img6":"https://images.bewakoof.com/t1080/create-good-stories-half-sleeve-t-shirt-black-283013-1655749431-6.jpg",
-        "img7":"https://images.bewakoof.com/t1080/create-good-stories-half-sleeve-t-shirt-black-283013-1655749437-7.jpg"
-      },
-      "video":{
-        "video1":"https://media.bewakoof.com/videos/283013/create-good-stories-half-sleeve-t-shirt-black-283013-1642762382-video-1.mp4#t=0.1",
-      },
-      "material": "premium blended fabric",
-      "brand": "Bushirt",
-      "gender": "men",
-      "sales": "2389",
-      "fit": "Regular Fit"
+let id=2;
+async function fetchData(id){
+  let res=await fetch(`http://localhost:3000/product/${id}`,{
+    "method":"GET",
+    "headers":{
+      "content-type":"application/json"
     }
-]
-
+  });
+  let data=await res.json();
+  console.log(data);
+  appendProductData(data);
+}
+fetchData(id);
 
 
 let productPathTitle=document.getElementById("product-path-title");
 
-
-let imageContainer=document.getElementById("p-image-container");
-let showcaseContainer=document.getElementById("p-image-showcase-container");
+let imageShowcaseContainer=document.getElementById("p-image-showcase-container");
 let productInfo=document.getElementById("p-details");
 
 let recentlyViewedContainer=document.getElementById("p-recently-viewed-container");
 
 
-function appendProductData(arr){
-  imageContainer.innerHTML="";
-  arr.forEach((ele)=>{
-      productPathTitle.innerText=ele.description;
-      let pImageCard=createProductImage(ele);
-      imageContainer.append(pImageCard);
-      showcaseImage1(ele);
-      recentlyViewProduct(ele);
-      productDetails(ele);
-  })
-}
-function showcaseImage1(ele){
-  console.log(ele.image);
-  let img1=document.createElement("img");
-  img1.src=ele.image.img1;
-  console.log(img1);
-  showcaseContainer.append(img1);
-}
-
-appendProductData(arr);
-
-function createProductImage(ele){
-  imageContainer.innerHTML="";
-  let innerContainer=document.createElement("div");
-  let img1=document.createElement("img");
-  let img2=document.createElement("img");
-  let img3=document.createElement("img");
-  let img4=document.createElement("img");
-  let img5=document.createElement("img");
-  let img6=document.createElement("img");
-  let img7=document.createElement("img");
-
-  let video = document.createElement('video');
-  let source = document.createElement('source');
-    source.src =ele.video;
-    source.type = 'video/mp4';
-    video.appendChild(source);
-    video.controls = true;
-
-  
-  innerContainer.classList.add("p-image-innerContainer");
-  img1.src=ele.image.img1;
-  img2.src=ele.image.img2;
-  img3.src=ele.image.img3;
-  img4.src=ele.image.img4;
-  img5.src=ele.image.img5;
-  img6.src=ele.image.img6;
-  img7.src=ele.image.img7;
-  
-
-  img1.addEventListener("click",()=>{
-    showcaseImage(img1);
-  })
-  img2.addEventListener("click",()=>{
-    showcaseImage(img2);
-  })
-  img3.addEventListener("click",()=>{
-    showcaseImage(img3);
-  })
-  img4.addEventListener("click",()=>{
-    showcaseImage(img4);
-  })
-  img5.addEventListener("click",()=>{
-    showcaseImage(img5);
-  })
-  img6.addEventListener("click",()=>{
-    showcaseImage(img6);
-  })
-  img7.addEventListener("click",()=>{
-    showcaseImage(img7);
-  })
-  showcaseContainer.append(img3);
-  innerContainer.append(img1,img2,img3,img4,img5);
-  return innerContainer;
-}
-
-function showcaseImage(img){
-  showcaseContainer.innerHTML="";
-  console.log("saifuddin");
-  console.log(img);
-  showcaseContainer.append(img);
+function appendProductData(ele){
+  productPathTitle.innerText=ele.title;
+  productDetails(ele);
+  // recentlyViewProduct(ele);
+  showcaseProductImage(ele);
 }
 
 
+function showcaseProductImage(ele){
+  imageShowcaseContainer.innerHTML="";
+  let productImage=document.createElement("img");
+  productImage.src=ele.image;
+  imageShowcaseContainer.append(productImage);
+}
 
 function productDetails(ele){
   productInfo.innerHTML="";
@@ -247,13 +158,30 @@ function productDetails(ele){
   notFindText.innerText=`Couldn’t find your size?`;
   addToBagText.innerText=`ADD TO BAG`;
   wishlistText.innerText=`WISHLIST`;
+
+
+  addToBag.addEventListener("click",()=>{
+    addToBagText.innerText=`GO TO BAG`;
+    let arr=JSON.parse(localStorage.getItem("addToBagArr")) || [];
+    arr.push(ele);
+    localStorage.setItem("addToBagArr",JSON.stringify(arr));
+  })
+
+  wishlist.addEventListener("click",()=>{
+    wishlistIcon.classList.add("fa-solid","fa-heart");
+    wishlistIcon.style.color="#ff3d3d";
+    wishlistText.innerText="WISHLISTED";
+    wishlistText.style.color="black";
+    let arr=JSON.parse(localStorage.getItem("addToWishlistArr"))||[];
+    arr.push(ele);
+    localStorage.setItem("addToWishlistArr",JSON.stringify(arr));
+  })
 }
 
-
-
-
-
+let recentlyViewTitle=document.getElementById("p-recently-viewed-title");
+// recentlyViewTitle.innerText=`Recently Viewed`;
 function recentlyViewProduct(ele){
+  
   let card=document.createElement("div");
   let image=document.createElement("img");
   let discountedPrice=document.createElement("span");
@@ -274,12 +202,11 @@ function recentlyViewProduct(ele){
   
   rating.append(starIcon,ratingValue);
 
-  image.src=ele.image.img1;
+  image.src=ele.image;
   discountedPrice.innerText=`₹${ele.price}`;
   actualPrice.innerText=`₹${ele.oldPrice}`;
   starIcon.style.color="#FFD43B";
   ratingValue.innerText=ele.rating;
   card.append(image,rating,discountedPrice,actualPrice);
   recentlyViewedContainer.append(card);
-// ₹
 }

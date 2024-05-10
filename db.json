@@ -11,6 +11,7 @@
   ],
   "product": [
     {
+      "id":1,
       "title": "Men's Black Kungfu Smackdown Graphic Printed Oversized T-shirt",
       "category":"",
       "description": "",
@@ -27,13 +28,15 @@
 
     },
     {
+      "id":2,
       "title": "Men's Casual Cargo Pants",
       "category": "cargo",
       "description": "Upgrade your casual wardrobe with our Men's Casual Cargo Pants. These pants offer a stylish yet functional design, perfect for everyday wear. Rated \"4.0\" stars, they're made from premium blended fabric for durability and comfort. Original price: ₹\"899\", on sale now for ₹\"699\".",
       "rating": "4.0",
       "price": "699",
-      "oldPrice": "899",
-      "image": "men_casual_cargo_pants.jpg",
+      "oldPrice": "888",
+      "discountPercentage":"60",
+      "image": "https://images.bewakoof.com/t1080/men-s-black-create-good-stories-typography-t-shirt-283013-1706003517-1.jpg",
       "material": "premium blended fabric",
       "brand": "Bushirt",
       "gender": "men",
@@ -41,25 +44,28 @@
       "fit": "Regular Fit"
     },
     {
+      "id":3,
       "title": "Women's Floral Dress",
       "category": "dress",
       "description": "Embrace elegance with our Women's Floral Dress. This charming dress features a beautiful floral pattern, perfect for any occasion. Rated \"4.8\" stars, it's made from soft and breathable cotton for a comfortable fit. Original price: ₹\"1499\", on sale now for ₹\"1299\".",
       "rating": "4.8",
       "price": "1299",
       "oldPrice": "1499",
-      "image": "women_floral_dress.jpg",
+      "image": "https://images.bewakoof.com/t640/men-s-ginger-root-half-sleeve-t-shirt-555479-1709805537-1.jpg",
       "material": "100% cotton",
       "brand": "Rigo",
       "gender": "women",
       "sales": "3856",
       "fit": "Slim Fit"
     },{
+      "id":4,
       "title": "Women's Cropped Denim Jacket",
       "category": "jackets",
       "description": "Add a trendy layer to your look with our Women's Cropped Denim Jacket. This jacket features a cropped length and distressed detailing, perfect for adding a touch of edge to your outfit.",
+      "rating": "4.8",
       "price": "1199",
       "oldPrice": "1399",
-      "image": "women_cropped_denim_jacket.jpg",
+      "image": "https://images.bewakoof.com/t1080/men-s-blue-samurai-cat-graphic-printed-t-shirt-585456-1680526031-1.jpg",
       "material": "denim fabric",
       "brand": "Bewakoof®",
       "gender": "women",
@@ -67,12 +73,13 @@
       "fit": "Regular Fit"
     },
     {
+      "id":5,
       "title": "Men's Classic Crewneck T-Shirt",
       "category": "t-shirt",
       "description": "Keep it simple and stylish with our Men's Classic Crewneck T-Shirt. This t-shirt features a classic crewneck design and soft cotton fabric, perfect for everyday wear.",
       "price": "599",
       "oldPrice": "699",
-      "image": "men_classic_crewneck_tshirt.jpg",
+      "image": "https://images.bewakoof.com/t1080/men-s-blue-nomad-typography-oversized-t-shirt-611076-1709123251-1.jpg",
       "material": "soft cotton fabric",
       "brand": "Rigo",
       "gender": "men",
@@ -80,12 +87,13 @@
       "fit": "Regular Fit"
     },
     {
+      "id":6,
       "title": "Women's Casual Linen Pants",
       "category": "pants",
       "description": "Stay cool and comfortable with our Women's Casual Linen Pants. These pants feature a relaxed fit and breathable linen fabric, perfect for warmer days.",
       "price": "899",
       "oldPrice": "999",
-      "image": "women_casual_linen_pants.jpg",
+      "image": "https://images.bewakoof.com/t1080/game-over-minimal-full-sleeve-t-shirt-navy-blue-305200-1655748636-1.jpg",
       "material": "linen fabric",
       "brand": "Campus Sutra",
       "gender": "women",
@@ -93,12 +101,13 @@
       "fit": "Regular Fit"
     },
     {
+      "id":7,
       "title": "Men's Classic Denim Jacket",
       "category": "jackets",
       "description": "Add a timeless piece to your wardrobe with our Men's Classic Denim Jacket. This jacket features a classic denim design with button closure, perfect for layering over any outfit.",
       "price": "1499",
       "oldPrice": "1799",
-      "image": "men_denim_jacket.jpg",
+      "image": "https://images.bewakoof.com/t1080/men-s-brown-printed-oversized-t-shirt-604518-1707977514-1.jpg",
       "material": "denim fabric",
       "brand": "Campus Sutra",
       "gender": "men",

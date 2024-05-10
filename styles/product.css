@@ -29,7 +29,6 @@
     font-size: 14px;
     line-height: 12px;
     color: rgb(45, 45, 45);
-    font-family: montserrat-regular, sans-serif;
 }
 #product-details{
     width: 76%;
@@ -44,26 +43,9 @@
     margin-left: auto;
     margin-right: auto;
 }
-#p-image-container{
-    width: 10%;
-    height: 550px;
-    /* border: 2px solid goldenrod; */
-    box-sizing: border-box;
-    padding: 18px;
-}
-.p-image-innerContainer{
-    width: 100%;
-    /* height: 87px; */
-    /* border: 1px solid rgb(96, 95, 95); */
-}
-.p-image-innerContainer>img{
-    width: 100%;
-}
-.p-image-innerContainer>video{
-    width: 100%;
-}
+
 #p-image-showcase-container{
-    width: 40%;
+    width: 46%;
     min-height: 563px;
     /* border: 2px solid green; */
 }
@@ -71,7 +53,7 @@
     width: 100%;
 }
 #p-details{
-    width: 48%;
+    width: 52%;
     min-height: 600px;
     /* border: 2px solid brown; */
     box-sizing: border-box;
@@ -93,12 +75,12 @@
     font-size: 14px;
     font-weight: 700;
     line-height: 18px;
-    font-family: montserrat-bold, sans-serif;
 }
 #p-recently-viewed-container{
     height: 410px;
     /* border:2px solid red; */
     display: flex;
+    flex-wrap: wrap;
 }
 .p-recently-viewed-card{
     width: 255px;
@@ -109,19 +91,14 @@
 }
 .p-recently-viewed-card>img{
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 .p-discounted-price{
-    font-family: "montserrat-semibold, sans-serif";
     font-size: 16px;
     font-weight: bold;
     line-height: 14px;
 }
-.p-actual-price::first-letter{
-    color: red;
-}
 .p-actual-price{
-    font-family: montserrat-semibold, sans-serif !important;
     font-size: 12px;
     line-height: 14px;
     color: rgb(148, 148, 148);
@@ -161,7 +138,7 @@
     margin-bottom: 18px;
 }
 .pd-rating{
-    width: 40px;
+    width: 55px;
     border: 1px solid grey;
     text-align: center;
     background-color: #f7f7f7;
@@ -181,7 +158,6 @@
 }
 .pd-offer-price{
     margin: 2px;
-    font-family: "montserrat, sans-serif";
     font-size: 20px;
     font-weight: 700;
 
@@ -190,13 +166,11 @@
 .pd-actual-price{
     margin: 3px;
     text-decoration: line-through;
-    font-family: "montserrat, sans-serif";
     color: #949494;
     font-size: 16px;
 }
 .pd-discount-percentage{
     margin: 4px;
-    font-family: "montserrat, sans-serif";
     font-size: 20px;
     color: #00b852;
 }
@@ -303,7 +277,7 @@
     margin-right: 10px;
     /* font-weight: 600; */
     font-size: 16px;
-    width: 16vw;
+    width: 18vw;
     height: 7vh;
     background-color: #ffd84d;
     border: none;
@@ -314,7 +288,7 @@
     border:1px solid #c1c2c5;
     margin-left: 7px;
     font-size: 16px;
-    width: 13vw;
+    width: 14vw;
     height: 7vh;
     cursor: pointer;
     border-radius: 3px;
@@ -327,12 +301,46 @@
     margin-right: 8px;
 }
 .pd-add-to-bag-text{
-
+    font-weight: 600;
 }
 .pd-wishlist-text{
     color: #96989d;
+    font-weight: 600;
 }
 .pd-border-3{
     border: 2px solid #eeeeee;
     margin-top: 28px;
+}
+
+@media (max-width:1040px){
+    #product-details{
+        flex-direction: column;
+    }
+    #p-image-showcase-container{
+        width: 100%;
+    }
+    #p-details{
+        width: 100%;
+    }
+    .pd-add-to-bag-btn{
+        margin-right: 10px;
+        /* font-weight: 600; */
+        font-size: 16px;
+        width: 50%;
+        height: 7vh;
+        background-color: #ffd84d;
+        border: none;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+    .pd-add-to-wishlist-btn{
+        border:1px solid #c1c2c5;
+        margin-left: 7px;
+        font-size: 16px;
+        width: 40%;
+        height: 7vh;
+        cursor: pointer;
+        border-radius: 3px;
+        background-color: white;
+    }
 }
