@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container-main {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  width: 1170px;
+  margin: auto;
+}
+
+.card {
+  width: 23%;
+  position: relative;
+}
+
+.rm-card {
+  /* background-color: white; */
+  color: #5d5d64;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.card > img {
+  width: 100%;
+}
+
+.card-content {
+  border: 0.5px solid #e3e5e9;
+  border-top: none;
+  padding: 8px;
+}
+
+.card-content > h5 {
+  font-size: 12px;
+  margin: 0;
+}
+
+.card-content > p {
+  font-size: 12px;
+  color: #8f98a9;
+  margin: 0;
+  margin-top: 8px;
+}
+
+.price-div {
+  margin-top: 3px;
+}
+
+.price-div > span:first-child {
+  font-size: 12px;
+}
+
+.price-div > span:nth-child(2) {
+  font-size: 12px;
+  color: #8f98a9;
+  text-decoration: line-through;
+  margin-inline: 3px;
+}
+.price-div > span:last-child {
+  font-size: 12px;
+  color: #08ba0d;
+}
+
+.bag {
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid #e3e5e9;
+}
+
+.add-to-cart {
+  height: 100%;
+  font-size: 10px;
+  font-weight: 900;
+  color: #207bb4;
+  padding: 0 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 681px) and (max-width: 1200px) {
+  .container-main {
+    width: 950px;
+  }
+  .card {
+    width: 220px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 680px) {
+  .container-main {
+    width: 600px;
+  }
+  .card {
+    width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-main {
+    width: 470px;
+  }
+  .card {
+    width: 430px;
+  }
+}
