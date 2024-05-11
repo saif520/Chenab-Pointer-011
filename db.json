@@ -22,7 +22,7 @@
       "material": "premium blended fabric",
       "brand": "Bushirt",
       "gender": "men",
-      "sales": "2389",
+      "sales": 2389,
       "fit": "Regular Fit"
     },
     {
@@ -37,7 +37,7 @@
       "material": "100% cotton",
       "brand": "Rigo",
       "gender": "women",
-      "sales": "3856",
+      "sales": 3856,
       "fit": "Slim Fit"
     },
     {
@@ -51,7 +51,7 @@
       "material": "denim fabric",
       "brand": "Bewakoof®",
       "gender": "women",
-      "sales": "14200",
+      "sales": 14200,
       "fit": "Regular Fit"
     },
     {
@@ -65,7 +65,7 @@
       "material": "soft cotton fabric",
       "brand": "Rigo",
       "gender": "men",
-      "sales": "15678",
+      "sales": 15678,
       "fit": "Regular Fit"
     },
     {
@@ -79,7 +79,7 @@
       "material": "linen fabric",
       "brand": "Campus Sutra",
       "gender": "women",
-      "sales": "16900",
+      "sales": 16900,
       "fit": "Regular Fit"
     },
     {
@@ -93,7 +93,7 @@
       "material": "denim fabric",
       "brand": "Campus Sutra",
       "gender": "men",
-      "sales": "1967",
+      "sales": 1967,
       "fit": "Regular Fit"
     },
     {
@@ -107,7 +107,7 @@
       "material": "comfort stretch",
       "brand": "Campus Sutra",
       "gender": "women",
-      "sales": "2378",
+      "sales": 2378,
       "fit": "Regular Fit"
     },
     {
@@ -121,7 +121,7 @@
       "material": "premium blended fabric",
       "brand": "Rigo",
       "gender": "men",
-      "sales": "1567",
+      "sales": 1567,
       "fit": "Regular Fit"
     },
     {
@@ -135,7 +135,7 @@
       "material": "soft terry cotton",
       "brand": "Bewakoof®",
       "gender": "women",
-      "sales": "1892",
+      "sales": 1892,
       "fit": "Regular Fit"
     },
     {
@@ -149,7 +149,7 @@
       "material": "soft cotton fabric",
       "brand": "Campus Sutra",
       "gender": "men",
-      "sales": "7499",
+      "sales": 7499,
       "fit": "Regular Fit"
     },
     {
@@ -163,7 +163,7 @@
       "material": "soft chiffon fabric",
       "brand": "Mad Over Print",
       "gender": "women",
-      "sales": "8199",
+      "sales": 8199,
       "fit": "Regular Fit"
     },
     {
@@ -177,7 +177,7 @@
       "material": "stretch cotton fabric",
       "brand": "Rigo",
       "gender": "men",
-      "sales": "9299",
+      "sales": 9299,
       "fit": "Slim Fit"
     },
     {
@@ -191,7 +191,7 @@
       "material": "soft cotton fabric",
       "brand": "Bewakoof®",
       "gender": "women",
-      "sales": "10499",
+      "sales": 10499,
       "fit": "Regular Fit"
     },
     {
@@ -205,7 +205,7 @@
       "material": "genuine leather",
       "brand": "Campus Sutra",
       "gender": "men",
-      "sales": "12500",
+      "sales": 12500,
       "fit": "One Size"
     },
     {
@@ -219,7 +219,7 @@
       "material": "stretch denim fabric",
       "brand": "Rigo",
       "gender": "women",
-      "sales": "12899",
+      "sales": 12899,
       "fit": "Regular Fit"
     },
     {
@@ -233,7 +233,7 @@
       "material": "lightweight chiffon fabric",
       "brand": "Mad Over Print",
       "gender": "women",
-      "sales": "3254",
+      "sales": 3254,
       "fit": "Regular Fit"
     },
     {
@@ -247,7 +247,7 @@
       "material": "soft cotton fabric",
       "brand": "Bewakoof®",
       "gender": "men",
-      "sales": "3123",
+      "sales": 3123,
       "fit": "Regular Fit"
     },
     {
@@ -261,7 +261,7 @@
       "material": "soft terry cotton",
       "brand": "Campus Sutra",
       "gender": "women",
-      "sales": "1987",
+      "sales": 1987,
       "fit": "Regular Fit"
     },
     {
@@ -275,7 +275,7 @@
       "material": "durable cotton fabric",
       "brand": "Rigo",
       "gender": "men",
-      "sales": "1654",
+      "sales": 1654,
       "fit": "Regular Fit"
     },
     {
@@ -289,7 +289,7 @@
       "material": "lightweight chiffon fabric",
       "brand": "Campus Sutra",
       "gender": "women",
-      "sales": "2178",
+      "sales": 2178,
       "fit": "Regular Fit"
     },
     {
@@ -303,7 +303,7 @@
       "material": "nylon fabric",
       "brand": "Big Bunny",
       "gender": "men",
-      "sales": "1987",
+      "sales": 2178,
       "fit": "Regular Fit"
     },
     {
@@ -317,7 +317,7 @@
       "material": "soft cotton blend",
       "brand": "Bewakoof®",
       "gender": "women",
-      "sales": "2234",
+      "sales": 2234,
       "fit": "Slim Fit"
     },
     {
@@ -331,7 +331,7 @@
       "material": "soft terry cotton",
       "brand": "Mad Over Print",
       "gender": "men",
-      "sales": "2678",
+      "sales": 2678,
       "fit": "Regular Fit"
     },
     {
@@ -345,7 +345,7 @@
       "material": "stretchy fabric",
       "brand": "Rigo",
       "gender": "women",
-      "sales": "3123",
+      "sales": 3123,
       "fit": "Regular Fit"
     },
     {
@@ -359,7 +359,7 @@
       "material": "soft cotton fabric",
       "brand": "Campus Sutra",
       "gender": "men",
-      "sales": "1897",
+      "sales": 1897,
       "fit": "Regular Fit"
     },
     {
@@ -373,7 +373,7 @@
       "material": "stretch denim fabric",
       "brand": "Bewakoof®",
       "gender": "women",
-      "sales": "3125",
+      "sales": 3125,
       "fit": "Regular Fit"
     },
     {
@@ -387,7 +387,7 @@
       "material": "soft cotton fabric",
       "brand": "Campus Sutra",
       "gender": "men",
-      "sales": "2189",
+      "sales": 2189,
       "fit": "Regular Fit"
     }, 
     {
@@ -401,7 +401,7 @@
       "material": "stretch denim fabric",
       "brand": "Rigo",
       "gender": "men",
-      "sales": "2678",
+      "sales": 2678,
       "fit": "Slim Fit"
     },
     {
@@ -415,7 +415,7 @@
       "material": "genuine leather",
       "brand": "Rigo",
       "gender": "men",
-      "sales": "24500",
+      "sales": 24500,
       "fit": "True to Size"
     },
     {
@@ -429,7 +429,7 @@
       "material": "luxurious satin fabric",
       "brand": "Mad Over Print",
       "gender": "women",
-      "sales": "32500",
+      "sales": 24500,
       "fit": "Regular Fit"
     },
     {
@@ -443,7 +443,7 @@
       "material": "premium wool blend",
       "brand": "Campus Sutra",
       "gender": "men",
-      "sales": "42600",
+      "sales": 42600,
       "fit": "Slim Fit"
     },
     {
@@ -457,7 +457,7 @@
       "material": "denim fabric",
       "brand": "Bewakoof®",
       "gender": "women",
-      "sales": "58900",
+      "sales": 58900,
       "fit": "Regular Fit"
     },
     {
@@ -471,7 +471,7 @@
       "material": "soft cotton fabric",
       "brand": "Big Bunny",
       "gender": "men",
-      "sales": "72300",
+      "sales": 78900,
       "fit": "Regular Fit"
     },
     {
@@ -485,7 +485,7 @@
       "material": "lightweight rayon fabric",
       "brand": "Mad Over Print",
       "gender": "women",
-      "sales": "68900",
+      "sales": 68900,
       "fit": "Loose Fit"
     },
     {
@@ -499,7 +499,7 @@
       "material": "canvas fabric",
       "brand": "Campus Sutra",
       "gender": "men",
-      "sales": "85400",
+      "sales": 85400,
       "fit": "True to Size"
     },
     {
@@ -513,7 +513,7 @@
       "material": "stretch denim fabric",
       "brand": "Bewakoof®",
       "gender": "women",
-      "sales": "92600",
+      "sales": 92600,
       "fit": "Regular Fit"
     },
     {
@@ -527,7 +527,7 @@
       "material": "metal frame with polycarbonate lenses",
       "brand": "Rigo",
       "gender": "men",
-      "sales": "123500",
+      "sales": 123500,
       "fit": "One Size"
     },
     {
@@ -541,7 +541,7 @@
       "material": "soft chiffon fabric with lace overlay",
       "brand": "Mad Over Print",
       "gender": "women",
-      "sales": "148900",
+      "sales": 148900,
       "fit": "Regular Fit"
     },
     {
@@ -555,7 +555,7 @@
       "material": "durable canvas fabric",
       "brand": "Campus Sutra",
       "gender": "men",
-      "sales": "186700",
+      "sales": 186700,
       "fit": "One Size"
     },
     {
@@ -569,7 +569,7 @@
       "material": "soft jersey fabric",
       "brand": "Campus Sutra",
       "gender": "women",
-      "sales": "2189",
+      "sales": 2189,
       "fit": "Regular Fit"
     },
     {
@@ -583,7 +583,7 @@
       "material": "soft fleece fabric",
       "brand": "Big Bunny",
       "gender": "men",
-      "sales": "1567",
+      "sales": 1567,
       "fit": "Regular Fit"
     },
     {
@@ -597,7 +597,7 @@
       "material": "soft cotton blend",
       "brand": "Campus Sutra",
       "gender": "women",
-      "sales": "1892",
+      "sales": 1569,
       "fit": "Regular Fit"
     },
     {
@@ -611,7 +611,7 @@
       "material": "durable cotton fabric",
       "brand": "Rigo",
       "gender": "men",
-      "sales": "2756",
+      "sales": 2756,
       "fit": "Regular Fit"
     },
     {
@@ -639,7 +639,7 @@
       "material": "soft flannel fabric",
       "brand": "Bushirt",
       "gender": "men",
-      "sales": "2378",
+      "sales": 2378,
       "fit": "Regular Fit"
     },
     {
@@ -653,7 +653,7 @@
       "material": "soft jersey fabric",
       "brand": "Bewakoof®",
       "gender": "women",
-      "sales": "1987",
+      "sales": 1987,
       "fit": "Regular Fit"
     },
     {
@@ -667,7 +667,7 @@
       "material": "soft cotton fabric",
       "brand": "Campus Sutra",
       "gender": "men",
-      "sales": "2678",
+      "sales": 2678,
       "fit": "Regular Fit"
     },
     {
@@ -681,7 +681,7 @@
       "material": "denim fabric",
       "brand": "Campus Sutra",
       "gender": "men",
-      "sales": "1967",
+      "sales": 1966,
       "fit": "Regular Fit"
     },
     {
@@ -695,7 +695,7 @@
       "material": "comfort stretch",
       "brand": "Campus Sutra",
       "gender": "women",
-      "sales": "2378",
+      "sales": 23796,
       "fit": "Regular Fit"
     },
     {
@@ -709,7 +709,7 @@
       "material": "premium blended fabric",
       "brand": "Rigo",
       "gender": "men",
-      "sales": "1567",
+      "sales": 29848,
       "fit": "Regular Fit"
     },
     {
@@ -723,7 +723,7 @@
       "material": "soft terry cotton",
       "brand": "Bewakoof®",
       "gender": "women",
-      "sales": "1892",
+      "sales": 1892,
       "fit": "Regular Fit"
     },
     {
@@ -737,7 +737,7 @@
       "material": "flannel fabric",
       "brand": "Big Bunny",
       "gender": "men",
-      "sales": "2189",
+      "sales": 1892,
       "fit": "Regular Fit"
     },
     {
@@ -751,7 +751,7 @@
       "material": "denim fabric",
       "brand": "Rigo",
       "gender": "women",
-      "sales": "1856",
+      "sales": 1856,
       "fit": "Regular Fit"
     },
     {
@@ -765,7 +765,7 @@
       "material": "soft cotton fabric",
       "brand": "Campus Sutra",
       "gender": "men",
-      "sales": "2678",
+      "sales": 9819,
       "fit": "Regular Fit"
     },
     {
@@ -779,7 +779,7 @@
       "material": "lightweight chiffon fabric",
       "brand": "Mad Over Print",
       "gender": "women",
-      "sales": "3254",
+      "sales": 8199,
       "fit": "Regular Fit"
     },
     {
@@ -794,7 +794,7 @@
       "material": "soft fabric",
       "brand": "Campus Sutra",
       "gender": "men",
-      "sales": "1987",
+      "sales": 8764,
       "fit": "Regular Fit"
     },
     {
@@ -809,7 +809,7 @@
       "material": "stretchy fabric",
       "brand": "Bewakoof®",
       "gender": "women",
-      "sales": "3125",
+      "sales": 5219,
       "fit": "Slim Fit"
     },
     {
@@ -824,7 +824,7 @@
       "material": "breathable fabric",
       "brand": "Rigo",
       "gender": "men",
-      "sales": "2456",
+      "sales": 2456,
       "fit": "Regular Fit"
     },
     {
@@ -839,7 +839,7 @@
       "material": "denim fabric",
       "brand": "Bewakoof®",
       "gender": "women",
-      "sales": "3578",
+      "sales": 3578,
       "fit": "Regular Fit"
     },
     {
@@ -854,7 +854,7 @@
       "material": "100% cotton",
       "brand": "Campus Sutra",
       "gender": "men",
-      "sales": "2678",
+      "sales": 35984,
       "fit": "Regular Fit"
     },
     {
@@ -869,7 +869,7 @@
       "material": "stretchy denim fabric",
       "brand": "Rigo",
       "gender": "women",
-      "sales": "3123",
+      "sales": 9486,
       "fit": "Slim Fit"
     },
     {
@@ -884,7 +884,7 @@
       "material": "premium cotton",
       "brand": "Bushirt",
       "gender": "men",
-      "sales": "1987",
+      "sales": 9846,
       "fit": "Regular Fit"
     },
     {
@@ -899,7 +899,7 @@
       "material": "premium blended fabric",
       "brand": "Rigo",
       "gender": "men",
-      "sales": "2478",
+      "sales": 3548,
       "fit": "Slim Fit"
     },
     {
@@ -914,7 +914,7 @@
       "material": "soft fabric",
       "brand": "Bewakoof®",
       "gender": "women",
-      "sales": "3125",
+      "sales": 5794,
       "fit": "Regular Fit"
     },
     {
@@ -929,7 +929,7 @@
       "material": "breathable cotton fabric",
       "brand": "Campus Sutra",
       "gender": "men",
-      "sales": "1897",
+      "sales": 98468,
       "fit": "Regular Fit"
     },
     {
@@ -944,7 +944,7 @@
       "material": "lightweight & breathable fabric",
       "brand": "Mad Over Print",
       "gender": "women",
-      "sales": "2756",
+      "sales": 34651,
       "fit": "Regular Fit"
     },
     {
@@ -959,7 +959,7 @@
       "material": "durable & lightweight fabric",
       "brand": "Big Bunny",
       "gender": "men",
-      "sales": "2178",
+      "sales": 31564,
       "fit": "Regular Fit"
     },
     {
@@ -974,7 +974,7 @@
       "material": "premium cotton fabric",
       "brand": "Bewakoof®",
       "gender": "women",
-      "sales": "1987",
+      "sales": 8949,
       "fit": "Slim Fit"
     },
     {
@@ -988,7 +988,7 @@
       "material": "soft cotton fabric",
       "brand": "Rigo",
       "gender": "men",
-      "sales": "7499",
+      "sales": 7499,
       "fit": "Regular Fit"
     },
     {
@@ -1002,7 +1002,7 @@
       "material": "denim fabric",
       "brand": "Campus Sutra",
       "gender": "women",
-      "sales": "8199",
+      "sales": 8199,
       "fit": "Regular Fit"
     },
     {
@@ -1016,7 +1016,7 @@
       "material": "soft acrylic fabric",
       "brand": "Big Bunny",
       "gender": "men",
-      "sales": "9299",
+      "sales": 9299,
       "fit": "Regular Fit"
     },
     {
@@ -1030,7 +1030,7 @@
       "material": "soft chiffon fabric",
       "brand": "Bewakoof®",
       "gender": "women",
-      "sales": "10499",
+      "sales": 10499,
       "fit": "Regular Fit"
     },
     {
@@ -1044,7 +1044,7 @@
       "material": "stretch cotton fabric",
       "brand": "Rigo",
       "gender": "men",
-      "sales": "12500",
+      "sales": 12500,
       "fit": "Slim Fit"
     },
     {
@@ -1058,7 +1058,7 @@
       "material": "soft polyester fabric",
       "brand": "Mad Over Print",
       "gender": "women",
-      "sales": "12899",
+      "sales": 12899,
       "fit": "Regular Fit"
     },
     {
@@ -1072,7 +1072,7 @@
       "material": "premium cotton fabric",
       "brand": "Campus Sutra",
       "gender": "men",
-      "sales": "13500",
+      "sales": 12899,
       "fit": "Slim Fit"
     },
     { 
@@ -1087,7 +1087,7 @@
       "material": "premium blended fabric",
       "brand": "Campus Sutra",
       "gender": "men",
-      "sales": "1967",
+      "sales": 1967,
       "fit": "Regular Fit"
     },
     {
@@ -1102,7 +1102,7 @@
       "material": "soft terry cotton",
       "brand": "Bewakoof®",
       "gender": "women",
-      "sales": "3254",
+      "sales": 1967,
       "fit": "Regular Fit"
     },  
     {
@@ -1117,7 +1117,7 @@
       "material": "100% cotton",
       "brand": "Rigo",
       "gender": "men",
-      "sales": "3123",
+      "sales": 3123,
       "fit": "Slim Fit"
     },
     {
@@ -1132,7 +1132,7 @@
       "material": "comfort stretch",
       "brand": "Campus Sutra",
       "gender": "women",
-      "sales": "2378",
+      "sales": 2378,
       "fit": "Regular Fit"
     },
     {
@@ -1147,7 +1147,7 @@
       "material": "100% cotton",
       "brand": "Bewakoof®",
       "gender": "men",
-      "sales": "1892",
+      "sales": 23788,
       "fit": "Slim Fit"
     },
     {
@@ -1162,7 +1162,7 @@
       "material": "soft fabric",
       "brand": "Mad Over Print",
       "gender": "women",
-      "sales": "2756",
+      "sales": 2756,
       "fit": "Regular Fit"
     },
     {
@@ -1176,7 +1176,7 @@
       "material": "lightweight chiffon fabric",
       "brand": "Mad Over Print",
       "gender": "women",
-      "sales": "16900",
+      "sales": 16900,
       "fit": "Regular Fit"
     },
     {
@@ -1190,7 +1190,7 @@
       "material": "flannel fabric",
       "brand": "Big Bunny",
       "gender": "men",
-      "sales": "2189",
+      "sales": 2189,
       "fit": "Regular Fit"
     },
     {
@@ -1204,7 +1204,7 @@
       "material": "denim fabric",
       "brand": "Rigo",
       "gender": "women",
-      "sales": "1856",
+      "sales": 1856,
       "fit": "Regular Fit"
     },
     {
@@ -1218,7 +1218,7 @@
       "material": "soft cotton fabric",
       "brand": "Campus Sutra",
       "gender": "men",
-      "sales": "2678",
+      "sales": 2678,
       "fit": "Regular Fit"
     },
     {
@@ -1232,7 +1232,7 @@
       "material": "soft cotton fabric",
       "brand": "Bewakoof®",
       "gender": "men",
-      "sales": "15678",
+      "sales": 15678,
       "fit": "Regular Fit"
     },
     {
@@ -1246,7 +1246,7 @@
       "material": "soft fleece fabric",
       "brand": "Big Bunny",
       "gender": "men",
-      "sales": "13500",
+      "sales": 13500,
       "fit": "Regular Fit"
     },
     {
@@ -1260,7 +1260,7 @@
       "material": "soft jersey fabric",
       "brand": "Campus Sutra",
       "gender": "women",
-      "sales": "14200",
+      "sales": 14200,
       "fit": "Regular Fit"
     }
   ]
