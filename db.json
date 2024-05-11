@@ -19,10 +19,9 @@
   ],
   "product": [
     {
-      "id":1,
+      "id": 1,
       "title": "Men's Black Kungfu Smackdown Graphic Printed Oversized T-shirt",
-
-      "category":"",
+      "category": "",
       "description": "t-shirt",
       "rating": 4.5,
       "price": 800,
@@ -32,15 +31,14 @@
       "brand": "Bewakoof®",
       "gender": "men",
       "sales": 3856,
-      "fit":"Regular Fit"
-
+      "fit": "Regular Fit"
     },
     {
-      "id":2,
+      "id": 2,
       "title": "Men's Casual Cargo Pants",
       "category": "cargo",
       "description": "Upgrade your casual wardrobe with our Men's Casual Cargo Pants. These pants offer a stylish yet functional design, perfect for everyday wear. Rated \"4.0\" stars, they're made from premium blended fabric for durability and comfort. Original price: ₹\"899\", on sale now for ₹\"699\".",
-      "rating": 4.0,
+      "rating": 4,
       "price": 699,
       "oldPrice": 888,
       "image": "https://images.bewakoof.com/t1080/men-s-black-create-good-stories-typography-t-shirt-283013-1706003517-1.jpg",
@@ -51,7 +49,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":3,
+      "id": 3,
       "title": "Women's Floral Dress",
       "category": "dress",
       "description": "Embrace elegance with our Women's Floral Dress. This charming dress features a beautiful floral pattern, perfect for any occasion. Rated \"4.8\" stars, it's made from soft and breathable cotton for a comfortable fit. Original price: ₹\"1499\", on sale now for ₹\"1299\".",
@@ -64,17 +62,13 @@
       "gender": "women",
       "sales": 3856,
       "fit": "Slim Fit"
-
     },
     {
-
-      "id":4,
-
+      "id": 4,
       "title": "Women's Cropped Denim Jacket",
       "category": "jackets",
       "description": "Add a trendy layer to your look with our Women's Cropped Denim Jacket. This jacket features a cropped length and distressed detailing, perfect for adding a touch of edge to your outfit.",
       "rating": 4.8,
-      
       "price": 1199,
       "oldPrice": 1399,
       "image": "https://images.bewakoof.com/t1080/men-s-blue-samurai-cat-graphic-printed-t-shirt-585456-1680526031-1.jpg",
@@ -85,7 +79,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":5,
+      "id": 5,
       "title": "Men's Classic Crewneck T-Shirt",
       "category": "t-shirt",
       "description": "Keep it simple and stylish with our Men's Classic Crewneck T-Shirt. This t-shirt features a classic crewneck design and soft cotton fabric, perfect for everyday wear.",
@@ -99,9 +93,8 @@
       "sales": 15678,
       "fit": "Regular Fit"
     },
-  
     {
-      "id":6,
+      "id": 6,
       "title": "Men's Classic Denim Jacket",
       "category": "jackets",
       "description": "Add a timeless piece to your wardrobe with our Men's Classic Denim Jacket. This jacket features a classic denim design with button closure, perfect for layering over any outfit.",
@@ -116,7 +109,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":7,
+      "id": 7,
       "title": "Women's Casual Joggers",
       "category": "joggers",
       "description": "Stay comfy and stylish with our Women's Casual Joggers. These joggers are perfect for workouts or lounging at home.",
@@ -130,7 +123,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":8,
+      "id": 8,
       "title": "Men's Formal Trousers",
       "category": "pants",
       "description": "Achieve a sophisticated look with our Men's Formal Trousers. These trousers feature a classic fit and flat front, perfect for formal occasions.",
@@ -145,7 +138,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":9,
+      "id": 9,
       "title": "Women's Casual Sweatshirt",
       "category": "hoodies",
       "description": "Stay cozy and stylish with our Women's Casual Sweatshirt. This sweatshirt features a classic crewneck design and ribbed cuffs, perfect for everyday wear.",
@@ -160,10 +153,7 @@
       "fit": "Regular Fit"
     },
     {
-
-
-      "id":10,
-
+      "id": 10,
       "title": "Men's Casual Graphic T-Shirt",
       "category": "t-shirt",
       "description": "Express yourself with our Men's Casual Graphic T-Shirt. This t-shirt features a bold graphic print, perfect for adding personality to your outfit.",
@@ -178,7 +168,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":11,
+      "id": 11,
       "title": "Women's Floral Midi Skirt",
       "category": "skirts",
       "description": "Add a touch of elegance to your look with our Women's Floral Midi Skirt. This skirt features a charming floral print and midi-length hem, perfect for various occasions.",
@@ -193,7 +183,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":12,
+      "id": 12,
       "title": "Men's Slim-Fit Chinos",
       "category": "pants",
       "description": "Achieve a sleek and modern look with our Men's Slim-Fit Chinos. These pants feature a slim-fit silhouette and classic chino design, perfect for versatile styling.",
@@ -208,7 +198,7 @@
       "fit": "Slim Fit"
     },
     {
-      "id":13,
+      "id": 13,
       "title": "Women's Casual Striped Shirt",
       "category": "shirt",
       "description": "Keep it casual yet chic with our Women's Casual Striped Shirt. This shirt features a classic striped pattern and relaxed fit, perfect for effortless style.",
@@ -223,7 +213,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":14,
+      "id": 14,
       "title": "Men's Classic Leather Belt",
       "category": "accessories",
       "description": "Complete your look with our Men's Classic Leather Belt. This belt features a timeless design with genuine leather construction, perfect for adding a finishing touch to any outfit.",
@@ -238,7 +228,7 @@
       "fit": "One Size"
     },
     {
-      "id":15,
+      "id": 15,
       "title": "Women's Relaxed Fit Jeans",
       "category": "jeans",
       "description": "Stay comfortable and stylish with our Women's Relaxed Fit Jeans. These jeans feature a relaxed fit and classic denim design, perfect for everyday wear.",
@@ -253,7 +243,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":16,
+      "id": 16,
       "title": "Women's Flowy Maxi Dress",
       "category": "dress",
       "description": "Feel elegant and feminine in our Women's Flowy Maxi Dress. This dress features a flowy silhouette and flattering empire waist, perfect for special occasions.",
@@ -268,7 +258,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":17,
+      "id": 17,
       "title": "Men's Casual Polo Shirt",
       "category": "shirt",
       "description": "Stay casual and comfortable with our Men's Casual Polo Shirt. This shirt features a classic polo collar and short sleeves, perfect for everyday wear.",
@@ -283,7 +273,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":18,
+      "id": 18,
       "title": "Women's Cropped Hoodie",
       "category": "hoodies",
       "description": "Add a trendy layer to your wardrobe with our Women's Cropped Hoodie. This hoodie features a cropped length and drawstring hood, perfect for athleisure looks.",
@@ -298,7 +288,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":19,
+      "id": 19,
       "title": "Men's Casual Cargo Shorts",
       "category": "shorts",
       "description": "Stay cool and comfortable with our Men's Casual Cargo Shorts. These shorts feature multiple pockets and a relaxed fit, perfect for outdoor activities.",
@@ -313,7 +303,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":20,
+      "id": 20,
       "title": "Women's Floral Blouse",
       "category": "tops",
       "description": "Add a touch of femininity to your wardrobe with our Women's Floral Blouse. This blouse features a delicate floral print and flowy silhouette, perfect for pairing with jeans or skirts.",
@@ -328,7 +318,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":21,
+      "id": 21,
       "title": "Men's Classic Bomber Jacket",
       "category": "jackets",
       "description": "Stay stylish and warm with our Men's Classic Bomber Jacket. This jacket features a sleek bomber silhouette and ribbed trim, perfect for adding an edge to your look.",
@@ -343,7 +333,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":22,
+      "id": 22,
       "title": "Women's Basic Tank Top",
       "category": "tops",
       "description": "Refresh your basics with our Women's Basic Tank Top. This tank top features a scoop neckline and slim fit, perfect for layering or wearing on its own.",
@@ -358,7 +348,7 @@
       "fit": "Slim Fit"
     },
     {
-      "id":23,
+      "id": 23,
       "title": "Men's Graphic Print Hoodie",
       "category": "hoodies",
       "description": "Make a statement with our Men's Graphic Print Hoodie. This hoodie features a bold graphic print and kangaroo pocket, perfect for adding personality to your look.",
@@ -373,7 +363,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":24,
+      "id": 24,
       "title": "Women's Classic Shift Dress",
       "category": "dress",
       "description": "Achieve effortless style with our Women's Classic Shift Dress. This dress features a simple yet chic shift silhouette, perfect for both casual and dressy occasions.",
@@ -388,7 +378,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":25,
+      "id": 25,
       "title": "Men's Beige All Over Printed Oversized Shirt",
       "category": "shirt",
       "description": "Add a preppy touch to your wardrobe with our Men's Striped Polo Shirt. This shirt features a classic striped pattern and polo collar, perfect for a casual yet polished look.",
@@ -403,7 +393,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":26,
+      "id": 26,
       "title": "Women's Relaxed Fit Jeans",
       "category": "jeans",
       "description": "Keep it casual with our Women's Relaxed Fit Jeans. These jeans feature a relaxed fit and classic five-pocket styling, perfect for everyday wear.",
@@ -418,7 +408,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":27,
+      "id": 27,
       "title": "Men's Casual Plaid Shirt",
       "category": "shirt",
       "description": "Stay stylish and casual with our Men's Casual Plaid Shirt. This shirt features a classic plaid pattern and button-down collar, perfect for everyday wear.",
@@ -431,12 +421,9 @@
       "gender": "men",
       "sales": 2189,
       "fit": "Regular Fit"
-
     },
     {
-
-      "id":28,
-
+      "id": 28,
       "title": "Men's Slim-Fit Denim Jeans",
       "category": "jeans",
       "description": "Achieve a sleek and modern look with our Men's Slim-Fit Denim Jeans. These jeans feature a slim-fit silhouette and classic denim design, perfect for versatile styling.",
@@ -451,7 +438,7 @@
       "fit": "Slim Fit"
     },
     {
-      "id":29,
+      "id": 29,
       "title": "Men's Classic Leather Shoes",
       "category": "shoes",
       "description": "Step out in style with our Men's Classic Leather Shoes. These shoes feature a timeless design with genuine leather construction, perfect for adding sophistication to any outfit.",
@@ -466,7 +453,7 @@
       "fit": "True to Size"
     },
     {
-      "id":30,
+      "id": 30,
       "title": "Women's Elegant Maxi Dress",
       "category": "dress",
       "description": "Make a statement with our Women's Elegant Maxi Dress. This dress features a timeless maxi silhouette with elegant details, perfect for formal events or special occasions.",
@@ -481,7 +468,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":31,
+      "id": 31,
       "title": "Men's Slim-Fit Blazer",
       "category": "jackets",
       "description": "Elevate your formal look with our Men's Slim-Fit Blazer. This blazer features a sleek silhouette and classic lapel design, perfect for weddings or business meetings.",
@@ -496,7 +483,7 @@
       "fit": "Slim Fit"
     },
     {
-      "id":32,
+      "id": 32,
       "title": "Women's Casual Denim Jacket",
       "category": "jackets",
       "description": "Add a versatile layer to your wardrobe with our Women's Casual Denim Jacket. This jacket features a classic denim design with button closure, perfect for layering over any outfit.",
@@ -511,7 +498,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":33,
+      "id": 33,
       "title": "Men's Vintage Graphic T-Shirt",
       "category": "t-shirt",
       "description": "Show off your retro style with our Men's Vintage Graphic T-Shirt. This t-shirt features a nostalgic graphic print, perfect for adding a vintage vibe to your look.",
@@ -526,7 +513,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":34,
+      "id": 34,
       "title": "Women's Flowy Boho Dress",
       "category": "dress",
       "description": "Channel bohemian vibes with our Women's Flowy Boho Dress. This dress features a relaxed silhouette and boho-inspired details, perfect for festivals or beach days.",
@@ -541,7 +528,7 @@
       "fit": "Loose Fit"
     },
     {
-      "id":35,
+      "id": 35,
       "title": "Men's Casual Slip-On Sneakers",
       "category": "shoes",
       "description": "Stay comfortable and stylish on the go with our Men's Casual Slip-On Sneakers. These sneakers feature a slip-on design and cushioned insole, perfect for everyday wear.",
@@ -556,7 +543,7 @@
       "fit": "True to Size"
     },
     {
-      "id":36,
+      "id": 36,
       "title": "Women's Vintage High-Waisted Jeans",
       "category": "jeans",
       "description": "Achieve a retro-inspired look with our Women's Vintage High-Waisted Jeans. These jeans feature a high-waisted silhouette and vintage wash, perfect for pairing with crop tops or blouses.",
@@ -571,7 +558,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":37,
+      "id": 37,
       "title": "Men's Classic Aviator Sunglasses",
       "category": "accessories",
       "description": "Complete your look with our Men's Classic Aviator Sunglasses. These sunglasses feature a timeless aviator design with UV protection lenses, perfect for sunny days.",
@@ -586,7 +573,7 @@
       "fit": "One Size"
     },
     {
-      "id":38,
+      "id": 38,
       "title": "Women's Elegant Lace Blouse",
       "category": "blouses",
       "description": "Add a touch of romance to your wardrobe with our Women's Elegant Lace Blouse. This blouse features delicate lace detailing and a flattering silhouette, perfect for date nights or special occasions.",
@@ -601,7 +588,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":39,
+      "id": 39,
       "title": "Men's Casual Canvas Backpack",
       "category": "accessories",
       "description": "Stay organized on the go with our Men's Casual Canvas Backpack. This backpack features multiple compartments and adjustable straps, perfect for everyday use or weekend getaways.",
@@ -616,7 +603,7 @@
       "fit": "One Size"
     },
     {
-      "id":40,
+      "id": 40,
       "title": "Women's Casual Jogger Pants",
       "category": "joggers",
       "description": "Stay comfortable and stylish with our Women's Casual Jogger Pants. These pants feature a relaxed fit and elasticized waistband, perfect for lounging or running errands.",
@@ -631,7 +618,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":41,
+      "id": 41,
       "title": "Men's Classic Crewneck Sweatshirt",
       "category": "hoodies",
       "description": "Stay cozy and comfortable with our Men's Classic Crewneck Sweatshirt. This sweatshirt features a classic crewneck design and ribbed cuffs, perfect for casual wear.",
@@ -646,7 +633,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":42,
+      "id": 42,
       "title": "Women's Striped T-Shirt Dress",
       "category": "dress",
       "description": "Keep it casual yet chic with our Women's Striped T-Shirt Dress. This dress features a classic striped pattern and relaxed fit, perfect for effortless style.",
@@ -661,7 +648,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":43,
+      "id": 43,
       "title": "WomesnCasual Cargo Shorts",
       "category": "shorts",
       "description": "Stay cool and functional with our Men's Casual Cargo Shorts. These shorts feature multiple pockets and a relaxed fit, perfect for outdoor activities.",
@@ -676,7 +663,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":44,
+      "id": 44,
       "title": "Women's Knit Sweater",
       "category": "sweaters",
       "description": "Stay warm and stylish with our Women's Knit Sweater. This sweater features a cozy knit construction and relaxed fit, perfect for layering during colder months.",
@@ -691,7 +678,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":45,
+      "id": 45,
       "title": "Men's Classic Plaid Shirt",
       "category": "shirt",
       "description": "Add a touch of classic style to your wardrobe with our Men's Classic Plaid Shirt. This shirt features a timeless plaid pattern and button-down collar, perfect for casual outings.",
@@ -706,7 +693,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":46,
+      "id": 46,
       "title": "Women's Printed Skater Dress",
       "category": "dress",
       "description": "Make a statement with our Women's Printed Skater Dress. This dress features a playful print and flared skirt, perfect for adding a fun twist to your look.",
@@ -721,7 +708,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":47,
+      "id": 47,
       "title": "Men's Casual Graphic T-Shirt",
       "category": "t-shirt",
       "description": "Express yourself with our Men's Casual Graphic T-Shirt. This t-shirt features a bold graphic print, perfect for adding personality to your outfit.",
@@ -736,7 +723,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":48,
+      "id": 48,
       "title": "Men's Classic Denim Jacket",
       "category": "jackets",
       "description": "Add a timeless piece to your wardrobe with our Men's Classic Denim Jacket. This jacket features a classic denim design with button closure, perfect for layering over any outfit.",
@@ -751,7 +738,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":49,
+      "id": 49,
       "title": "Women's Casual Joggers",
       "category": "joggers",
       "description": "Stay comfy and stylish with our Women's Casual Joggers. These joggers are perfect for workouts or lounging at home.",
@@ -766,7 +753,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":50,
+      "id": 50,
       "title": "Men's Formal Trousers",
       "category": "pants",
       "description": "Achieve a sophisticated look with our Men's Formal Trousers. These trousers feature a classic fit and flat front, perfect for formal occasions.",
@@ -781,7 +768,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":51,
+      "id": 51,
       "title": "Women's Casual Sweatshirt",
       "category": "hoodies",
       "description": "Stay cozy and stylish with our Women's Casual Sweatshirt. This sweatshirt features a classic crewneck design and ribbed cuffs, perfect for everyday wear.",
@@ -796,7 +783,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":52,
+      "id": 52,
       "title": "Men's Plaid Flannel Shirt",
       "category": "shirt",
       "description": "Add a touch of rugged style to your wardrobe with our Men's Plaid Flannel Shirt. This shirt features a classic plaid pattern and button-down collar, perfect for casual outings.",
@@ -811,7 +798,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":53,
+      "id": 53,
       "title": "Women's Denim Shorts",
       "category": "shorts",
       "description": "Stay cool and stylish with our Women's Denim Shorts. These shorts feature a classic denim design with frayed hem, perfect for summer outings.",
@@ -826,7 +813,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":54,
+      "id": 54,
       "title": "Men's Graphic Printed T-Shirt",
       "category": "t-shirt",
       "description": "Express yourself with our Men's Graphic Printed T-Shirt. This t-shirt features a bold graphic print, perfect for adding personality to your outfit.",
@@ -841,7 +828,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":55,
+      "id": 55,
       "title": "Women's Flowy Maxi Dress",
       "category": "dress",
       "description": "Feel elegant and feminine in our Women's Flowy Maxi Dress. This dress features a flowy silhouette and flattering empire waist, perfect for special occasions.",
@@ -856,10 +843,7 @@
       "fit": "Regular Fit"
     },
     {
-
-
-      "id":56,
-
+      "id": 56,
       "title": "Men's Classic Crewneck Sweater",
       "category": "sweaters",
       "description": "Stay warm and stylish with our Men's Classic Crewneck Sweater. This sweater is perfect for layering in colder weather. Rated \"4.5\" stars, it's made from soft and cozy fabric for all-day comfort. Original price: ₹\"1599\", on sale now for ₹\"1299\".",
@@ -874,7 +858,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":57,
+      "id": 57,
       "title": "Women's Printed Leggings",
       "category": "leggings",
       "description": "Add a pop of color to your wardrobe with our Women's Printed Leggings. These leggings feature a vibrant print, perfect for adding flair to any outfit. Rated \"4.3\" stars, they're made from stretchy and breathable fabric for a comfortable fit. Original price: ₹\"499\", on sale now for ₹\"349\".",
@@ -889,7 +873,7 @@
       "fit": "Slim Fit"
     },
     {
-      "id":58,
+      "id": 58,
       "title": "Men's Casual Chino Pants",
       "category": "casual pants",
       "description": "Stay stylish and comfortable with our Men's Casual Chino Pants. These pants feature a classic chino design, perfect for both casual and semi-formal occasions. Rated \"4.2\" stars, they're made from breathable fabric for all-day wear. Original price: ₹\"999\", on sale now for ₹\"799\".",
@@ -904,7 +888,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":59,
+      "id": 59,
       "title": "Women's Classic Denim Jacket",
       "category": "jackets",
       "description": "Add a timeless piece to your wardrobe with our Women's Classic Denim Jacket. This jacket features a classic denim design with button closure, perfect for layering over any outfit. Rated \"4.6\" stars, it's made from durable denim fabric for long-lasting wear. Original price: ₹\"1499\", on sale now for ₹\"1199\".",
@@ -919,7 +903,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":60,
+      "id": 60,
       "title": "Men's Casual V-Neck T-Shirt",
       "category": "t-shirt",
       "description": "Keep it casual and comfortable with our Men's Casual V-Neck T-Shirt. This versatile t-shirt features a classic V-neck design, perfect for everyday wear. Rated \"4.4\" stars, it's made from soft and breathable cotton for all-day comfort. Original price: ₹\"399\", on sale now for ₹\"299\".",
@@ -934,7 +918,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":61,
+      "id": 61,
       "title": "Women's High-Waisted Jeans",
       "category": "jeans",
       "description": "Achieve a chic look with our Women's High-Waisted Jeans. These jeans feature a flattering high-waisted design, perfect for pairing with crop tops or blouses. Rated \"4.7\" stars, they're made from stretchy denim fabric for a comfortable fit. Original price: ₹\"999\", on sale now for ₹\"799\".",
@@ -949,7 +933,7 @@
       "fit": "Slim Fit"
     },
     {
-      "id":62,
+      "id": 62,
       "title": "Men's Classic Oxford Shirt",
       "category": "shirt",
       "description": "Elevate your formal look with our Men's Classic Oxford Shirt. This shirt features a timeless Oxford weave, perfect for both business and casual settings. Rated \"4.5\" stars, it's made from premium cotton for a crisp and polished appearance. Original price: ₹\"1499\", on sale now for ₹\"1199\".",
@@ -964,10 +948,7 @@
       "fit": "Regular Fit"
     },
     {
-
-
-      "id":63,
-
+      "id": 63,
       "title": "Men's Slim-Fit Chino Pants",
       "category": "casual pants",
       "description": "Upgrade your casual style with our Men's Slim-Fit Chino Pants. These pants feature a modern slim-fit design, perfect for a sleek and tailored look. Rated \"4.6\" stars, they're crafted from durable yet comfortable fabric for all-day wear. Original price: ₹\"899\", on sale now for ₹\"699\".",
@@ -982,7 +963,7 @@
       "fit": "Slim Fit"
     },
     {
-      "id":64,
+      "id": 64,
       "title": "Women's Cozy Cardigan",
       "category": "sweaters",
       "description": "Stay cozy and stylish with our Women's Cozy Cardigan. This cardigan features a relaxed fit and open-front design, perfect for layering over any outfit. Rated \"4.8\" stars, it's made from soft and warm fabric for maximum comfort. Original price: ₹\"1299\", on sale now for ₹\"999\".",
@@ -997,7 +978,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":65,
+      "id": 65,
       "title": "Men's Classic Striped Polo Shirt",
       "category": "shirt",
       "description": "Add a timeless piece to your wardrobe with our Men's Classic Striped Polo Shirt. This shirt features a classic striped pattern and polo collar, perfect for a preppy yet casual look. Rated \"4.4\" stars, it's made from breathable cotton fabric for all-day comfort. Original price: ₹\"699\", on sale now for ₹\"499\".",
@@ -1012,7 +993,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":66,
+      "id": 66,
       "title": "Women's Floral Maxi Dress",
       "category": "dress",
       "description": "Make a statement with our Women's Floral Maxi Dress. This dress features a vibrant floral print and flowy silhouette, perfect for any special occasion. Rated \"4.7\" stars, it's made from lightweight and breathable fabric for effortless elegance. Original price: ₹\"1599\", on sale now for ₹\"1299\".",
@@ -1027,7 +1008,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":67,
+      "id": 67,
       "title": "Men's Casual Shorts",
       "category": "shorts",
       "description": "Stay cool and comfortable with our Men's Casual Shorts. These shorts feature a relaxed fit and elastic waistband, perfect for lounging or outdoor activities. Rated \"4.3\" stars, they're made from durable yet lightweight fabric for easy movement. Original price: ₹\"499\", on sale now for ₹\"399\".",
@@ -1042,7 +1023,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":68,
+      "id": 68,
       "title": "Women's Classic Button-Up Shirt",
       "category": "shirt",
       "description": "Elevate your wardrobe with our Women's Classic Button-Up Shirt. This shirt features a timeless button-up design and tailored fit, perfect for both casual and formal settings. Rated \"4.5\" stars, it's made from premium cotton fabric for a polished look. Original price: ₹\"899\", on sale now for ₹\"699\".",
@@ -1057,7 +1038,7 @@
       "fit": "Slim Fit"
     },
     {
-      "id":69,
+      "id": 69,
       "title": "Men's Casual Checkered Shirt",
       "category": "shirt",
       "description": "Upgrade your casual wardrobe with our Men's Casual Checkered Shirt. This shirt features a stylish checkered pattern and button-down collar, perfect for versatile styling.",
@@ -1071,7 +1052,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":70,
+      "id": 70,
       "title": "Women's Ripped Denim Shorts",
       "category": "shorts",
       "description": "Add an edgy twist to your summer look with our Women's Ripped Denim Shorts. These shorts feature distressed detailing and frayed hem, perfect for a laid-back vibe.",
@@ -1085,7 +1066,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":71,
+      "id": 71,
       "title": "Men's Classic V-Neck Sweater",
       "category": "sweaters",
       "description": "Stay warm and stylish with our Men's Classic V-Neck Sweater. This sweater features a timeless v-neck design and ribbed cuffs, perfect for layering during colder months.",
@@ -1099,7 +1080,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":72,
+      "id": 72,
       "title": "Women's Printed Maxi Skirt",
       "category": "skirts",
       "description": "Make a statement with our Women's Printed Maxi Skirt. This skirt features a vibrant print and flowy silhouette, perfect for adding a pop of color to your outfit.",
@@ -1113,7 +1094,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":73,
+      "id": 73,
       "title": "Men's Casual Chino Pants",
       "category": "pants",
       "description": "Elevate your casual look with our Men's Casual Chino Pants. These pants feature a classic chino design with a slim fit, perfect for versatile styling.",
@@ -1127,7 +1108,7 @@
       "fit": "Slim Fit"
     },
     {
-      "id":74,
+      "id": 74,
       "title": "Women's Floral Blouse",
       "category": "blouses",
       "description": "Add a feminine touch to your wardrobe with our Women's Floral Blouse. This blouse features a delicate floral print and flowy silhouette, perfect for pairing with skirts or jeans.",
@@ -1141,7 +1122,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":75,
+      "id": 75,
       "title": "Men's Slim-Fit Checked Shirt",
       "category": "shirt",
       "description": "Achieve a polished look with our Men's Slim-Fit Checked Shirt. This shirt features a refined checkered pattern and slim-fit silhouette, perfect for both casual and formal occasions.",
@@ -1154,9 +1135,8 @@
       "sales": 12899,
       "fit": "Slim Fit"
     },
-    { 
-      "id":76,  
-
+    {
+      "id": 76,
       "title": "Men's Stylish Jacket",
       "category": "jackets",
       "description": "Stay warm and fashionable with our Men's Stylish Jacket. This jacket is perfect for chilly weather, featuring a sleek design. Rated \"4.5\" stars, it's made from durable material for long-lasting wear. Original price: ₹\"1799\", on sale now for ₹\"1499\".",
@@ -1171,7 +1151,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":77,
+      "id": 77,
       "title": "Women's Comfy Shorts",
       "category": "shorts",
       "description": "Enjoy comfort and style with our Women's Comfy Shorts. These shorts are perfect for lounging or casual outings. Rated \"4.2\" stars, they're made from soft and breathable fabric for all-day wear. Original price: ₹\"399\", on sale now for ₹\"299\".",
@@ -1186,7 +1166,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":78,
+      "id": 78,
       "title": "Men's Classic Checkered Shirt",
       "category": "shirt",
       "description": "Add sophistication to your wardrobe with our Men's Classic Checkered Shirt. This timeless shirt features a stylish checkered pattern, perfect for both casual and formal occasions. Rated \"4.7\" stars, it's crafted from premium cotton for superior comfort and durability. Original price: ₹\"1299\", on sale now for ₹\"999\".",
@@ -1201,7 +1181,7 @@
       "fit": "Slim Fit"
     },
     {
-      "id":79,
+      "id": 79,
       "title": "Women's Casual Joggers",
       "category": "joggers",
       "description": "Stay comfy and stylish with our Women's Casual Joggers. These joggers are perfect for workouts or lounging at home. Rated \"4.4\" stars, they're made from soft and stretchy fabric for ultimate comfort. Original price: ₹\"799\", on sale now for ₹\"599\".",
@@ -1216,7 +1196,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":80,
+      "id": 80,
       "title": "Men's Casual Slim-Fit T-Shirt",
       "category": "t-shirt",
       "description": "Keep it casual yet stylish with our Men's Casual Slim-Fit T-Shirt. This versatile t-shirt is perfect for everyday wear. Rated \"4.3\" stars, it's made from soft and breathable cotton for all-day comfort. Original price: ₹\"499\", on sale now for ₹\"399\".",
@@ -1231,7 +1211,7 @@
       "fit": "Slim Fit"
     },
     {
-      "id":81,
+      "id": 81,
       "title": "Women's Casual Hooded Sweatshirt",
       "category": "hoodies",
       "description": "Stay cozy and chic with our Women's Casual Hooded Sweatshirt. This sweatshirt features a hood and kangaroo pocket, perfect for chilly days. Rated \"4.6\" stars, it's crafted from soft and warm fabric for maximum comfort. Original price: ₹\"899\", on sale now for ₹\"749\".",
@@ -1246,7 +1226,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":82,
+      "id": 82,
       "title": "Women's Flowy Wrap Dress",
       "category": "dress",
       "description": "Embrace elegance with our Women's Flowy Wrap Dress. This dress features a flattering wrap silhouette and flowy skirt, perfect for special occasions.",
@@ -1260,7 +1240,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":83,
+      "id": 83,
       "title": "Men's Plaid Flannel Shirt",
       "category": "shirt",
       "description": "Add a touch of rugged style to your wardrobe with our Men's Plaid Flannel Shirt. This shirt features a classic plaid pattern and button-down collar, perfect for casual outings.",
@@ -1274,7 +1254,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":84,
+      "id": 84,
       "title": "Women's Denim Shorts",
       "category": "shorts",
       "description": "Stay cool and stylish with our Women's Denim Shorts. These shorts feature a classic denim design with frayed hem, perfect for summer outings.",
@@ -1288,7 +1268,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":85,
+      "id": 85,
       "title": "Men's Graphic Printed T-Shirt",
       "category": "t-shirt",
       "description": "Express yourself with our Men's Graphic Printed T-Shirt. This t-shirt features a bold graphic print, perfect for adding personality to your outfit.",
@@ -1302,9 +1282,7 @@
       "fit": "Regular Fit"
     },
     {
-
-      "id":86,
-
+      "id": 86,
       "title": "Men's Casual Striped Polo",
       "category": "shirt",
       "description": "Stay cool and stylish with our Men's Casual Striped Polo. This polo shirt features a classic striped pattern and short sleeves, perfect for casual outings.",
@@ -1318,7 +1296,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":87,
+      "id": 87,
       "title": "Men's Lightweight Hoodie",
       "category": "hoodies",
       "description": "Stay cozy without the bulk with our Men's Lightweight Hoodie. This hoodie features a lightweight design and kangaroo pocket, perfect for layering during transitional weather.",
@@ -1332,7 +1310,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":88,
+      "id": 88,
       "title": "Women's Casual Jogger Pants",
       "category": "joggers",
       "description": "Stay comfortable and stylish with our Women's Casual Jogger Pants. These pants feature a relaxed fit and elasticized waistband, perfect for lounging or running errands.",

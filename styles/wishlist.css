@@ -10,6 +10,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 16px;
+  padding-top: 60px;
   flex-wrap: wrap;
   width: 1170px;
   margin: auto;
@@ -17,15 +18,18 @@ body {
 
 .card {
   width: 23%;
+  max-height: 466px;
   position: relative;
 }
 
 .rm-card {
-  /* background-color: white; */
+  background-color: white;
+  border-radius: 50%;
   color: #5d5d64;
   position: absolute;
   right: 15px;
   top: 15px;
+  cursor: pointer;
 }
 
 .card > img {
