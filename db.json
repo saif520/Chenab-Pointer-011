@@ -1,18 +1,19 @@
 {
   "users": [
     {
-      "name": "Chaitanya",
-      "username":"",
-      "password":"",
-      "email":"",
-      "mobile":""
+      "id": 1,
+      "name": "Tehreem",
+      "username": "tehvrooom",
+      "password": "password",
+      "email": "tehreem@gmail.com",
+      "mobile": "987654321"
     }
-    
   ],
   "product": [
     {
       "id":1,
       "title": "Men's Black Kungfu Smackdown Graphic Printed Oversized T-shirt",
+
       "category":"",
       "description": "t-shirt",
       "rating": "4.5",
@@ -24,6 +25,7 @@
       "gender": "men",
       "sales": "3856",
       "fit":"Regular Fit"
+
     },
     {
       "id":2,
@@ -54,8 +56,12 @@
       "gender": "women",
       "sales": 3856,
       "fit": "Slim Fit"
-    },{
+
+    },
+    {
+
       "id":4,
+
       "title": "Women's Cropped Denim Jacket",
       "category": "jackets",
       "description": "Add a trendy layer to your look with our Women's Cropped Denim Jacket. This jacket features a cropped length and distressed detailing, perfect for adding a touch of edge to your outfit.",
@@ -155,7 +161,10 @@
       "fit": "Regular Fit"
     },
     {
+
+
       "id":10,
+
       "title": "Men's Casual Graphic T-Shirt",
       "category": "t-shirt",
       "description": "Express yourself with our Men's Casual Graphic T-Shirt. This t-shirt features a bold graphic print, perfect for adding personality to your outfit.",
@@ -405,9 +414,12 @@
       "gender": "men",
       "sales": 2189,
       "fit": "Regular Fit"
-    }, 
+
+    },
     {
+
       "id":28,
+
       "title": "Men's Slim-Fit Denim Jeans",
       "category": "jeans",
       "description": "Achieve a sleek and modern look with our Men's Slim-Fit Denim Jeans. These jeans feature a slim-fit silhouette and classic denim design, perfect for versatile styling.",
@@ -799,7 +811,10 @@
       "fit": "Regular Fit"
     },
     {
+
+
       "id":56,
+
       "title": "Men's Classic Crewneck Sweater",
       "category": "sweaters",
       "description": "Stay warm and stylish with our Men's Classic Crewneck Sweater. This sweater is perfect for layering in colder weather. Rated \"4.5\" stars, it's made from soft and cozy fabric for all-day comfort. Original price: ₹\"1599\", on sale now for ₹\"1299\".",
@@ -904,7 +919,10 @@
       "fit": "Regular Fit"
     },
     {
+
+
       "id":63,
+
       "title": "Men's Slim-Fit Chino Pants",
       "category": "casual pants",
       "description": "Upgrade your casual style with our Men's Slim-Fit Chino Pants. These pants feature a modern slim-fit design, perfect for a sleek and tailored look. Rated \"4.6\" stars, they're crafted from durable yet comfortable fabric for all-day wear. Original price: ₹\"899\", on sale now for ₹\"699\".",
@@ -1093,6 +1111,7 @@
     },
     { 
       "id":76,  
+
       "title": "Men's Stylish Jacket",
       "category": "jackets",
       "description": "Stay warm and fashionable with our Men's Stylish Jacket. This jacket is perfect for chilly weather, featuring a sleek design. Rated \"4.5\" stars, it's made from durable material for long-lasting wear. Original price: ₹\"1799\", on sale now for ₹\"1499\".",
@@ -1120,7 +1139,7 @@
       "gender": "women",
       "sales": 1967,
       "fit": "Regular Fit"
-    },  
+    },
     {
       "id":78,
       "title": "Men's Classic Checkered Shirt",
@@ -1238,7 +1257,9 @@
       "fit": "Regular Fit"
     },
     {
+
       "id":86,
+
       "title": "Men's Casual Striped Polo",
       "category": "shirt",
       "description": "Stay cool and stylish with our Men's Casual Striped Polo. This polo shirt features a classic striped pattern and short sleeves, perfect for casual outings.",
@@ -1281,6 +1302,3 @@
     }
   ]
 }
-            
-    
-    

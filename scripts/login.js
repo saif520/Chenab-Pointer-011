@@ -1,5 +1,3 @@
-localStorage.setItem("loginCheck", JSON.stringify("false"));
-
 let loginForm = document.querySelector(".login-container");
 let signupForm = document.querySelector(".signup-container");
 let signupLink = document.querySelector(".signup-link");
@@ -17,6 +15,7 @@ loginLink.addEventListener("click", (e) => {
   loginForm.style.display = "block";
 });
 
+let userURL = "http://localhost:3000/users";
 let loginUsername = document.querySelector(".login-username");
 let loginPassword = document.querySelector(".login-password");
 let signupName = document.querySelector(".signup-name");
@@ -29,40 +28,101 @@ let loginBtn = document.querySelector(".login-btn");
 
 signupBtn.addEventListener("click", (e) => {
   e.preventDefault();
-
-  if (
-    signupName.value == "" ||
-    signupUsername.value == "" ||
-    signupPassword.value == "" ||
-    signupEmail.value == "" ||
-    signupNumber.value == ""
-  ) {
-    alert("Fill all the details!");
-  } else {
-    localStorage.setItem("loginCheck", JSON.stringify("true"));
-    let obj = {
-      name: signupName.value,
-      username: signupUsername.value,
-      password: signupPassword.value,
-      email: signupEmail.value,
-      mobile: signupNumber.value,
-    };
-    saveUserData(obj);
-  }
+  saveUserData();
+  // localStorage.setItem("loginCheck", JSON.stringify("true"));
 });
 
-async function saveUserData(obj) {
+async function saveUserData() {
+  if (
+    signupName.value &&
+    signupUsername.value &&
+    signupPassword.value &&
+    signupEmail.value &&
+    signupNumber.value
+  ) {
+    if (signupPassword.value.length < 5) {
+      alert("Password must be 5 characters or more!");
+    } else if (await verifyUserData()) {
+      alert("User is already registered. Please Log in");
+      signupForm.style.display = "none";
+      loginForm.style.display = "block";
+    } else {
+      let newObj = {
+        name: signupName.value,
+        username: signupUsername.value,
+        password: signupPassword.value,
+        email: signupEmail.value,
+        mobile: signupNumber.value,
+      };
+      try {
+        await fetch(userURL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(newObj),
+        });
+        alert("User Registered Successfuly!");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  } else {
+    alert("Fill in all the fields!");
+  }
+}
+
+async function verifyUserData() {
   try {
-    let res = await fetch("http://localhost:3000/users", {
-      method: "PUT",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(obj),
-    });
+    let res = await fetch(userURL);
     let data = await res.json();
-    console.log(data);
-  } catch (error) {
-    console.log(error);
+    for (let element of data) {
+      if (element.username == signupUsername.value) {
+        return true;
+      }
+    }
+  } catch (err) {
+    console.log(err);
+  }
+
+  return false;
+}
+
+//login
+
+loginBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  createLoginSession();
+});
+
+async function createLoginSession() {
+  if (await userLogin()) {
+    localStorage.setItem("loginToken", JSON.stringify("true"));
+    console.log("done");
+  } else {
+    alert("Wrong Credentials!");
+  }
+}
+
+async function userLogin() {
+  if (loginUsername.value && loginPassword.value) {
+    try {
+      let res = await fetch(userURL);
+      let data = await res.json();
+      for (let element of data) {
+        if (
+          element.username == loginUsername.value &&
+          element.password == loginPassword.value
+        ) {
+          return true;
+        }
+      }
+    } catch (err) {
+      console.log(err);
+    }
+
+    return false;
+  } else {
+    alert("Fill in all the Fields!");
   }
 }
