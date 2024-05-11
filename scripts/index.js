@@ -282,9 +282,7 @@ topAccList.forEach(element => {
 let best1 = document.querySelector('#best1')
 let best2 = document.querySelector('#best2')
 let best3 = document.querySelector('#best3')
-let best1List=[]
-let best2List=[]
-let best3List=[]
+
 
 async function fetchData(){  
     try {
@@ -295,7 +293,11 @@ async function fetchData(){
       }
     });
     let data=await res.json();
-    best1List =data
+    data.forEach(element => {
+      let card = createCard(element)  
+      best1.append(card)
+    });
+    
     } catch (error) {
         console.log(error)
     }  
@@ -312,7 +314,10 @@ async function fetchData2(){
       }
     });
     let data=await res.json();
-    best2List =data
+    data.forEach(element => {
+        let card = createCard(element)  
+        best2.append(card)
+      });
     } catch (error) {
         console.log(error)
     }  
@@ -329,7 +334,10 @@ async function fetchData3(){
       }
     });
     let data=await res.json();
-    best3List =data
+    data.forEach(element => {
+        let card = createCard(element)  
+        best3.append(card)
+      });
     } catch (error) {
         console.log(error)
     }  
@@ -337,11 +345,7 @@ async function fetchData3(){
     
   }
 fetchData3();
-console.log(best1List)
-best1List.forEach(element => {
-    let card = createCard(element)
-    best1.append(card)
-});
+
 
 
 function createCard(elem){
@@ -353,5 +357,20 @@ function createCard(elem){
     let price = document.createElement("h3")
     let priceStrik = document.createElement("p")
     let off = document.createElement("p")
+    let dis = Math.ceil(((elem.oldPrice-elem.price)/elem.price)*100)
+
+    cardCont.className = "cardCont"
+    priceCont.className= "priceCont"
     
-}
+
+    image.src = elem.image 
+    brand.innertext = elem.brand
+    title.innerText = elem.title
+    price.innerText = `₹${elem.price}`
+    priceStrik.innerText = `₹${elem.oldPrice}`
+    off.innerText=`${dis}% OFF`
+    priceCont.append(price,priceStrik,off)
+    cardCont.append(image,brand,title,priceCont)
+
+    return cardCont;
+}   

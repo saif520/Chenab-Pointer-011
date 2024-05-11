@@ -147,6 +147,8 @@ body {
 }
 #bnr1 {
   width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .cont {
   text-align: center;
@@ -215,3 +217,19 @@ body {
     align-items: center;
 }
 
+/* Besteseller ----------------------------------*/
+#best1 , #best2,#best3{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.cardCont{
+    width: 20%;
+}
+.cardCont img{
+    width: 100px;
+}
+
+.priceCont{
+    display: flex;
+}
