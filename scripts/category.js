@@ -75,23 +75,23 @@ let str= `{
         }
     ]
 }`;
-let products = JSON.parse(str);
-console.log(products);
-renderCards(products.products);
+// let products = JSON.parse(str);
+// console.log(products);
+// renderCards(products.products);
 let MenCategorySet = new Set();
 let WomenCategorySet = new Set();
 let brandSet;
 let materialSet;
 let fitSet;
 let genderSet;
-let ratingSet = ["greater than 1","greater than ","greater than 3","greater than 4"]
-let sortBySet = ["popular",'new','price: high to low',"price: low to high"];
+let ratingSet = ["More than 1","More than 2","More than 3","More than 4"]
+let sortBySet = ["Popular",'New','Price: high to low',"Price: low to high"];
 
-let FilterObj = {
-    "Brand":brandSet,
-    "Material":materialSet,
-    "Fit":fitSet,
-}
+// let FilterObj = {
+//     "Brand":brandSet,
+//     "Material":materialSet,
+//     "Fit":fitSet,
+// }
 // let exp = document.getElementById("gender-filter");
 // exp.addEventListener("click",(e)=>{
 //     console.log(e);
@@ -100,6 +100,25 @@ let FilterObj = {
 // })
 let Gender = "";
 
+// Fetch data function
+const baseUrl = "http://localhost:3000/product";
+let fetchParams='';
+async function fetchData(fetchParams){
+    try{
+        let url = baseUrl+fetchParams;
+        console.log(url);
+
+        let res = await fetch(url);
+        let data = await res.json();
+        console.log(data.length);
+        renderCards(data);
+    }
+    catch(error){
+        console.log(error);
+    }
+    
+}
+
 //GEnder
 let categoryGender = document.getElementById("gender-name");
 let isGenderClicked = false;
@@ -107,7 +126,7 @@ categoryGender.addEventListener("click",(e)=>{
     let categoryDiv = document.getElementById("gender-filter");
     if(!isCategoryClicked){
         genderSet.forEach((element)=>{
-            let cat = createLabel(element);
+            let cat = createLabel(element,"gender");
             categoryDiv.append(cat);
         })
         isCategoryClicked = true;
@@ -128,23 +147,23 @@ categoryEl.addEventListener("click",(e)=>{
     if(!isCategoryClicked){
         if(Gender === "men"){
             MenCategorySet.forEach((element)=>{
-                let cat = createLabel(element);
+                let cat = createLabel(element,"category");
                 categoryDiv.append(cat);
             })
         }
         else if(Gender === "women"){
             WomenCategorySet.forEach((element)=>{
-                let cat = createLabel(element);
+                let cat = createLabel(element,"category");
                 categoryDiv.append(cat);
             })
         }
         else{
             MenCategorySet.forEach((element)=>{
-                let cat = createLabel(element);
+                let cat = createLabel(element,"category");
                 categoryDiv.append(cat);
             })
             WomenCategorySet.forEach((element)=>{
-                let cat = createLabel(element);
+                let cat = createLabel(element,"category");
                 categoryDiv.append(cat);
             })
         }
@@ -164,7 +183,7 @@ categoryBrand.addEventListener("click",(e)=>{
     let categoryDiv = document.getElementById("brand-filter");
     if(!isBrandClicked){
         brandSet.forEach((element)=>{
-            let cat = createLabel(element);
+            let cat = createLabel(element,"brand");
             categoryDiv.append(cat)
         })
         isBrandClicked = true;
@@ -183,7 +202,7 @@ categoryMaterial.addEventListener("click",(e)=>{
     let categoryDiv = document.getElementById("material-filter");
     if(!isMaterialClicked){
         materialSet.forEach((element)=>{
-            let cat = createLabel(element);
+            let cat = createLabel(element,"material");
             categoryDiv.append(cat)
         })
         isMaterialClicked = true;
@@ -202,7 +221,7 @@ categoryFit.addEventListener("click",(e)=>{
     let categoryDiv = document.getElementById("fit-filter");
     if(!isFitClicked){
         fitSet.forEach((element)=>{
-            let cat = createLabel(element);
+            let cat = createLabel(element,"fit");
             categoryDiv.append(cat)
         })
         isFitClicked = true;
@@ -221,7 +240,7 @@ categoryRating.addEventListener("click",(e)=>{
     let categoryDiv = document.getElementById("rating-filter");
     if(!isRatingClicked){
         ratingSet.forEach((element)=>{
-            let cat = createLabel(element);
+            let cat = createLabel(element,"rating");
             categoryDiv.append(cat)
         })
         isRatingClicked = true;
@@ -240,7 +259,7 @@ categorySortBy.addEventListener("click",(e)=>{
     let categoryDiv = document.getElementById("sortby-filter");
     if(!isSortByClicked){
         sortBySet.forEach((element)=>{
-            let cat = createLabel(element);
+            let cat = createLabel(element,"_sort");
             categoryDiv.append(cat)
         })
         isSortByClicked = true;
@@ -251,7 +270,7 @@ categorySortBy.addEventListener("click",(e)=>{
     }
 })
 
-function createLabel(element){
+function createLabel(element,filterKey){
     let div = document.createElement("div");
     div.className = element;
 
@@ -261,25 +280,76 @@ function createLabel(element){
     let input = document.createElement("input");
     input.type="radio";
     input.setAttribute("id",element);
-    input.setAttribute("name","category");
+    input.setAttribute("name",filterKey);
     input.setAttribute("value",element);
     input.hidden=true;
             
     let br = document.createElement("br");
+
+    input.addEventListener("click",(e)=>{
+        console.log("target.name: "+e.target.name);
+        console.log("target.value:"+e.target.value);
+
+        ["More than 1","More than 2","More than 3","More than 4"]
+        ["Popular",'New','Price: high to low',"Price: low to high"];
+        
+        if(e.target.name === 'sortby'){
+            if(e.target.value === "Popular"){
+                e.target.name = "_sort=sales";
+                e.target.value = "_order=asc"
+            }
+            if(e.target.value === "New"){
+                e.target.name = "_sort=sales";
+                e.target.value = "_order=desc"
+            }
+            if(e.target.value === "Price: high to low"){
+                e.target.name = "_sort=price";
+                e.target.value = "_order=asc"
+            }
+            if(e.target.value === "Price: low to high"){
+                e.target.name = "_sort=price";
+                e.target.value = "_order=desc"
+            }
+        }
+        if(e.target.name !== 'rating' && e.target.name !== 'sortby'){
+            if(fetchParams.includes(e.target.name)){
+                fetchParams = fetchParams.split("&");
+                for(let i=0;i<fetchParams.length;i++){
+                    // console.log(fetchParams(fetchParams[i]));
+                    if(fetchParams[i].includes(e.target.name)){
+                        fetchParams[i] = `${e.target.name}=${e.target.value}`;
+                        break;
+                    }
+                }
+                fetchParams = fetchParams.join("&");
+            }
+            else if(fetchParams.split('&').length >= 1){
+                fetchParams += `&${e.target.name}=${e.target.value}`;
+            }
+            else if(fetchParams.split('&').length === 0){
+                fetchParams += `${e.target.name}=${e.target.value}`;
+            }
+            console.log(baseUrl+"?"+fetchParams);
+            fetchData(`?${fetchParams}`);
+        }
+        e.stopImmediatePropagation();
+    })
+
     div.append(label,input,br);
+
     return div;
 }
 
 function fetchCategoryData(){ 
     fetch("http://localhost:3000/product").then((res)=>res.json()).then((data)=>{
-        console.log(data);
+        // console.log(data);
         function createFilter(data){
             let catogry_filters = [];
             let brand_filters = [];
             let material_filters = [];
             let fit_filters = [];
             let gender_filters = [];
-            console.log(data);
+            // console.log(data);
             data.forEach((element)=>{
                 let f = `${element.gender}.${element.category}`;
                 element.gender
@@ -295,7 +365,7 @@ function fetchCategoryData(){
             categorySet.forEach((element)=>{
                 let gender = element.split(".")[0];
                 let cat = element.split(".")[1];
-                console.log(gender+" "+cat);
+                // console.log(gender+" "+cat);
                 if(gender === "men"){
                     MenCategorySet.add(cat);
                 }
@@ -308,13 +378,13 @@ function fetchCategoryData(){
             materialSet = new Set(material_filters);
             fitSet = new Set(fit_filters);
             genderSet = new Set(gender_filters);
-            console.log(categorySet);
-            console.log(MenCategorySet);
-            console.log(WomenCategorySet);
-            console.log(brandSet);
-            console.log(materialSet);
-            console.log(fitSet);
-            console.log(genderSet);
+            // console.log(categorySet);
+            // console.log(MenCategorySet);
+            // console.log(WomenCategorySet);
+            // console.log(brandSet);
+            // console.log(materialSet);
+            // console.log(fitSet);
+            // console.log(genderSet);
         }
         createFilter(data)
     }).catch((error)=>{
@@ -325,7 +395,7 @@ function fetchCategoryData(){
 fetchCategoryData();
 
 function createCard(obj,ind){
-    console.log(obj);
+    // console.log(obj);
     let div = document.createElement("div");
     div.className = "card";
 
@@ -334,6 +404,7 @@ function createCard(obj,ind){
 
     let image = document.createElement("img");
     image.setAttribute("src",obj.image);
+    image.setAttribute("alt","Image Unavailable");
     image.style.display = "block";
     image.className="product-image";
 
@@ -380,10 +451,15 @@ function createCard(obj,ind){
 
 function renderCards(data){
     let dataListTitle = document.getElementById("data-list-title-wrapper");
-    dataListTitle.innerHTML = `<h2>PRODUCTS (${data.length})</h2>`
+    let params = fetchParams.split("&");
+    let filterTitle = params.map((element)=>{
+        return element.split("=")[1];
+    })
+    dataListTitle.innerHTML = `<h2>PRODUCTS FILTERED BY ${filterTitle.join(" | ")} (${data.length})</h2>`
 
     let dataListWrapper = document.getElementById("data-list-wrapper");
-    
+    dataListWrapper.innerHTML = '';
+
     data.forEach((element,index) => {
         let card  = createCard(element,index);
         dataListWrapper.append(card);
