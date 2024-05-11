@@ -33,11 +33,45 @@ footer{
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    display: flex;
+    display: grid;
+    grid-template-areas: "customer company contract keepup"
+                         "return download payment .";
     justify-content: space-between;
+}
+.f-list-1{
+    grid-area: a;
+    grid-area: customer;
+}
+.f-list-2{
+    grid-area: b;
+    grid-area: company;
+}
+.f-list-3{
+    grid-area: c;
+    grid-area: contract;
+}
+.f-list-4{
+    grid-area: d;
+    grid-area: keepup;
+}
+.f-list-5{
+    grid-area: e;
+    grid-area: return;
+    margin-top: 10px;
+}
+.f-list-6{
+    grid-area: f;
+    grid-area: download;
+    margin-top: 10px;
+}
+.f-list-7{
+    grid-area: g;
+    grid-area: payment;
+    margin-top: 10px;
 }
 .f-list{
     list-style-type: none;
+    max-width: 300px;
 }
 .f-list>li{
     cursor: pointer;
@@ -105,7 +139,8 @@ footer{
 }
 
 .f-list-4>:nth-child(2)>input{
-    padding: 8px 15px 8px 10px;
+    padding: 8px 1px 8px 1px;
+    max-width: 120px;
     border-top: 1px solid black;
     border-left: none;
     border-right: 0px solid;
@@ -117,8 +152,15 @@ footer{
 .f-list-4>:nth-child(2)>button{
     background-color: rgb(253, 216, 53);
     border: none;
-    padding: 8px 25px 10px 25px;
+    padding: 8px 20px 10px 20px;
     margin-left: -3px;
+}
+.f-list-5>li:nth-child(1){
+    color: white;
+}
+.f-list-6>li:nth-child(2)>img{
+    width: 110px;
+    margin-left: 3px;
 }
 
 #footer-bar{
@@ -128,4 +170,44 @@ footer{
     border-bottom: 3px solid #878787;
     margin-left: auto;
     margin-right: auto;
+}
+
+@media (max-width:1213px){
+    .f-list-4>:nth-child(2)>input{
+        padding: 8px 1px 8px 1px;
+        max-width: 110px;
+    }
+    .f-list-4>:nth-child(2)>button{
+        padding: 8px 15px 10px 15px;
+    }
+}
+@media (max-width:1109px){
+    .f-list-4>:nth-child(2)>input{
+        padding: 8px 4px 8px 1px;
+        max-width: 95px;
+    }
+    .f-list-4>:nth-child(2)>button{
+        padding: 8px 11px 10px 11px;
+    }
+}
+@media (max-width:1020px){
+    #footer-item{
+        width: 95%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        /* display: grid; */
+        grid-template-areas: "customer company"
+                             "contract keepup"
+                             "return download"
+                             "payment .";
+        justify-content: space-between;
+    }
+    .footer-logo{
+        width: 95%;
+        font-weight: 700;
+    }
+    .f-list{
+    }
+    
 }
