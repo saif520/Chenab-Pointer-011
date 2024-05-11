@@ -7,7 +7,6 @@ async function fetchData(id){
     }
   });
   let data=await res.json();
-  console.log(data);
   appendProductData(data);
 }
 fetchData(id);
@@ -24,7 +23,6 @@ let recentlyViewedContainer=document.getElementById("p-recently-viewed-container
 function appendProductData(ele){
   productPathTitle.innerText=ele.title;
   productDetails(ele);
-  // recentlyViewProduct(ele);
   showcaseProductImage(ele);
 }
 
@@ -179,12 +177,16 @@ function productDetails(ele){
     arr.push(ele);
     localStorage.setItem("addToWishlistArr",JSON.stringify(arr));
   })
+
+  let recentlyViewArr=JSON.parse(localStorage.getItem("recentlyViewArr")) || [];
+  recentlyViewArr.push(ele);
+  localStorage.setItem("recentlyViewArr",JSON.stringify(recentlyViewArr));
+
+  recentlyViewFunction();
 }
 
 let recentlyViewTitle=document.getElementById("p-recently-viewed-title");
-// recentlyViewTitle.innerText=`Recently Viewed`;
-function recentlyViewProduct(ele){
-  
+function recentlyViewProduct(ele,index,recentlyViewArr){
   let card=document.createElement("div");
   let image=document.createElement("img");
   let discountedPrice=document.createElement("span");
@@ -212,4 +214,24 @@ function recentlyViewProduct(ele){
   ratingValue.innerText=ele.rating;
   card.append(image,rating,discountedPrice,actualPrice);
   recentlyViewedContainer.append(card);
+  card.addEventListener("click",()=>{
+    showcaseProductImage(ele);
+    productDetails(ele);
+  })
+}
+function recentlyViewFunction(){
+  recentlyViewedContainer.innerHTML="";
+  let recentlyViewArr=JSON.parse(localStorage.getItem("recentlyViewArr"))
+  let left=0;
+  let right=recentlyViewArr.length-1;
+  while(left<right){
+    let temp=recentlyViewArr[left];
+    recentlyViewArr[left]=recentlyViewArr[right];
+    recentlyViewArr[right]=temp;
+    left++;
+    right--;
+  }
+  recentlyViewArr.forEach((element,index) => {
+    recentlyViewProduct(element,index,recentlyViewArr);
+  });
 }
