@@ -233,3 +233,217 @@ body {
 .priceCont{
     display: flex;
 }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cambo&family=Micro+5&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Press+Start+2P&family=Shojumaru&family=Sixtyfour:BLED@0..100&family=ZCOOL+KuaiLe&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family:"Montserrat", sans-serif;
+}
+
+footer{
+    width: 100%;
+    height: auto;
+    background-color: #181818;
+    color: white;
+    font-size: 14px;
+    padding-top: 80px;
+    padding-bottom: 30px;
+}
+.footer-logo{
+    color: rgb(253, 216, 53);
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 600;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: 80px; */
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+#footer-item{
+    width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-areas: "customer company contract keepup"
+                         "return download payment .";
+    justify-content: space-between;
+}
+.f-list-1{
+    grid-area: a;
+    grid-area: customer;
+}
+.f-list-2{
+    grid-area: b;
+    grid-area: company;
+}
+.f-list-3{
+    grid-area: c;
+    grid-area: contract;
+}
+.f-list-4{
+    grid-area: d;
+    grid-area: keepup;
+}
+.f-list-5{
+    grid-area: e;
+    grid-area: return;
+    margin-top: 10px;
+}
+.f-list-6{
+    grid-area: f;
+    grid-area: download;
+    margin-top: 10px;
+}
+.f-list-7{
+    grid-area: g;
+    grid-area: payment;
+    margin-top: 10px;
+}
+.f-list{
+    list-style-type: none;
+    max-width: 300px;
+}
+.f-list>li{
+    cursor: pointer;
+}
+.f-list>li:nth-child(1){
+    color: rgb(253, 216, 53);
+    margin-bottom: 25px;
+    font-size: 13px;
+}
+
+.f-list-1>li:nth-child(2){
+    margin-bottom: 5px;
+}
+.f-list-1>li:nth-child(3){
+    margin-bottom: 5px;
+}
+.f-list-1>li:nth-child(4){
+    margin-bottom: 5px;
+}
+.f-list-1>li:nth-child(6){
+    margin-top: 65px;
+    margin-bottom: 25px;
+
+}
+.f-list-1>li:nth-child(6)>i{
+    margin-right: 20px;
+}
+.f-list-1>li:nth-child(7)>i{
+    margin-right: 27px;
+}
+.f-list-2>li:nth-child(2){
+    margin-bottom: 5px;
+}
+.f-list-2>li:nth-child(3){
+    margin-bottom: 5px;
+}
+.f-list-2>li:nth-child(4){
+    margin-bottom: 5px;
+}
+.f-list-2>li:nth-child(5){
+    margin-bottom: 5px;
+}
+.f-list-2>li:nth-child(7){
+    margin-top: 40px;
+    color: rgb(253, 216, 53);
+    margin-bottom: 35px;
+}
+.f-list-3>li:nth-child(5){
+    margin-top: 50px;
+    color: rgb(253, 216, 53);
+    margin-bottom: 30px;
+}
+.f-list-3>li:nth-child(2),:nth-child(3),:nth-child(4){
+    margin-bottom: 15px;
+}
+.f-list-3>li:nth-child(2)>i{
+    margin-right: 7px;
+}
+.f-list-3>li:nth-child(3)>i{
+    margin-right: 7px;
+}
+.f-list-3>li:nth-child(4)>i{
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.f-list-4>:nth-child(2)>input{
+    padding: 8px 1px 8px 1px;
+    max-width: 120px;
+    border-top: 1px solid black;
+    border-left: none;
+    border-right: 0px solid;
+    border-bottom: 0px solid;
+    border-bottom: 2px solid rgb(253, 216, 53);
+    background-color:#181818;
+    cursor: pointer;
+}
+.f-list-4>:nth-child(2)>button{
+    background-color: rgb(253, 216, 53);
+    border: none;
+    padding: 8px 20px 10px 20px;
+    margin-left: -3px;
+}
+.f-list-5>li:nth-child(1){
+    color: white;
+}
+.f-list-6>li:nth-child(2)>img{
+    width: 110px;
+    margin-left: 3px;
+}
+
+#footer-bar{
+    margin: 30px;
+    width: 80%;
+    height: 1px;
+    border-bottom: 3px solid #878787;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width:1213px){
+    .f-list-4>:nth-child(2)>input{
+        padding: 8px 1px 8px 1px;
+        max-width: 110px;
+    }
+    .f-list-4>:nth-child(2)>button{
+        padding: 8px 15px 10px 15px;
+    }
+}
+@media (max-width:1109px){
+    .f-list-4>:nth-child(2)>input{
+        padding: 8px 4px 8px 1px;
+        max-width: 95px;
+    }
+    .f-list-4>:nth-child(2)>button{
+        padding: 8px 11px 10px 11px;
+    }
+}
+@media (max-width:1020px){
+    #footer-item{
+        width: 95%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        /* display: grid; */
+        grid-template-areas: "customer company"
+                             "contract keepup"
+                             "return download"
+                             "payment .";
+        justify-content: space-between;
+    }
+    .footer-logo{
+        width: 95%;
+        font-weight: 700;
+    }
+    .f-list{
+    }
+    
+}
