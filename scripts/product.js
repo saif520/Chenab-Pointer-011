@@ -1,4 +1,4 @@
-let id=2;
+let id=3;
 async function fetchData(id){
   let res=await fetch(`http://localhost:3000/product/${id}`,{
     "method":"GET",
@@ -147,7 +147,7 @@ function productDetails(ele){
   discountPercentage.innerText=`${discountPer}% OFF`;
   tax.innerText=`inclusive of all taxes`;
   fit.innerText=ele.fit;
-  quality.innerText=`100% COTTON`;
+  quality.innerText=ele.material;
   extraDiscount.innerText=`TriBe members get an extra discount of ₹40 and FREE shipping.`;
   learnMore.innerText=`Learn more`;
   selectSize.innerText=`SELECT SIZE`;

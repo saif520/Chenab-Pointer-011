@@ -13,7 +13,7 @@
     /* border: 2px solid blue; */
 }
 #product-path{
-    width: 76%;
+    width: 66%;
     height: 40px;
     /* border: 1px solid greenyellow; */
     box-sizing: border-box;
@@ -59,7 +59,7 @@
     min-height: 600px;
     /* border: 2px solid brown; */
     box-sizing: border-box;
-    padding-left: 20px;
+    padding-left: 25px;
     padding-right: 25px;
 
 }
