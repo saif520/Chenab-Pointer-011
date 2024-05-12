@@ -18,7 +18,7 @@ my-app/
 │  ├─ ...
 
 ## Video Walkthrough of the project
-<a href="https://www.youtube.com/watch?v=2N29GB4qw9"></a>
+<a href="https://www.youtube.com/watch?v=2N29GB4qw9">project presentation</a>
 
 ## Video Walkthrough of the codebase
 Attach a very short video walkthough of codebase [ 1 - 5 minutes ]
