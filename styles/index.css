@@ -2,13 +2,26 @@ body {
   margin: 0px;
   padding: 0px;
 }
+.loginbtn{
+  color: #000000;
+}
+.loginbtn:hover{
+  text-decoration: none;
+  color: #000000;
+}
 .cont {
   max-width: 1600px;
   margin: auto;
 }
 
 #navTop {
+  display: none;
   background-color: #eeeeee;
+}
+@media (min-width:1200px)  {
+  #navTop{
+    display: block;
+  }
 }
 .cont.navTop {
   display: flex;
@@ -26,25 +39,41 @@ body {
 }
 #navTop div p {
   margin: 0px;
+  
+}
+#mar{
+  margin:0px
 }
 #navMid {
+  padding: 10px 10px ; 
+  display: flex;
+  justify-content: space-between;  
+ 
+}
+#bdr{
   border-bottom: 1px solid rgb(163, 162, 162);
 }
-.navMid {
+#navMid div:nth-of-type(1){
   display: flex;
-  justify-content: space-between;
+  height: 50px;
   align-items: center;
+  justify-content: space-around;
+  
 }
-.navMid > div:nth-of-type(2) {
-  gap: 20px;
+#navMid div:nth-of-type(2){
   display: flex;
   align-items: center;
-  font-size: 20px;
+  gap:20px;
+
+
 }
+
+
 .navMid img{
   width: 160px;
 }
 #navEnd {
+  display: none;
   display: flex;
   gap: 40px;
   padding-top: 10px;
@@ -60,6 +89,8 @@ body {
   padding: 10px;
   border-radius: 5px;
   background-color: #eaeaea;
+  display: flex;
+  justify-content: space-between;
 }
 #serachicon {
   color: grey;
@@ -72,54 +103,14 @@ body {
 }
 
 /* Dropdown Button */
-.dropbtn {
+button.dropbtn {
   background-color: #ffffff;
   padding: 16px;
+  margin-bottom: 0px;
   font-size: 16px;
   border: none;
 }
 
-/* The container <div> - needed to position the dropdown content */
-.dropdown1,
-.dropdown2,
-.dropdown3 {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown1-content,
-.dropdown2-content,
-.dropdown3-content {
-  display: none;
-  position: absolute;
-  margin-top: 11px;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  z-index: 5;
-}
-
-/* Links inside the dropdown */
-.dropdown1-content a,
-.dropdown2-content a,
-.dropdown3-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown1-content a:hover {
-  background-color: #ddd;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown1:hover .dropdown1-content,
-.dropdown2:hover .dropdown2-content,
-.dropdown3:hover .dropdown3-content {
-  display: block;
-}
 /* First carousal */
 .carousel-control-next {
   height: 300px;
@@ -221,7 +212,16 @@ body {
 
 /* Besteseller ----------------------------------*/
 #bestseller{
+  max-width: 1960px;
+  margin: auto;
+  text-align: center
   
+}
+.priceCont p{
+  text-decoration: line-through;
+}
+.priceCont h5{
+  color: rgb(43, 201, 43);
 }
 #best1 , #best2,#best3{
     display: flex;
@@ -229,10 +229,14 @@ body {
     width: 100%;
 }
 .cardCont{
+    border: 1px solid rgb(183, 183, 183);
     width: 20%;
+    margin: 20px;
+    text-align: start ;
 }
 .cardCont img{
-    width: 100px;
+    width: 100%;
+
 }
 
 .priceCont{

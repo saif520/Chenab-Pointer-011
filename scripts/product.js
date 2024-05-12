@@ -1,7 +1,6 @@
-// productId
-
-
-let id=4;
+let loginToken=JSON.parse(localStorage.getItem("loginToken"));
+let obj=JSON.parse(localStorage.getItem("productId"));
+let id=obj.id;
 async function fetchData(id){
   let res=await fetch(`http://localhost:3000/product/${id}`,{
     "method":"GET",
@@ -165,20 +164,32 @@ function productDetails(ele){
 
 
   addToBag.addEventListener("click",()=>{
-    addToBagText.innerText=`GO TO BAG`;
-    let arr=JSON.parse(localStorage.getItem("addToBagArr")) || [];
-    arr.push(ele);
-    localStorage.setItem("addToBagArr",JSON.stringify(arr));
+    if(loginToken){
+      addToBagText.innerText=`GO TO BAG`;
+      let arr=JSON.parse(localStorage.getItem("cartData")) || [];
+      arr.push(ele);
+      localStorage.setItem("cartData",JSON.stringify(arr));
+    }
+    else{
+      alert("Please Login first!");
+      window.location.href="http://127.0.0.1:5500/Chenab-Pointer-011/html/login.html";
+    }
   })
 
   wishlist.addEventListener("click",()=>{
-    wishlistIcon.classList.add("fa-solid","fa-heart");
-    wishlistIcon.style.color="#ff3d3d";
-    wishlistText.innerText="WISHLISTED";
-    wishlistText.style.color="black";
-    let arr=JSON.parse(localStorage.getItem("addToWishlistArr"))||[];
-    arr.push(ele);
-    localStorage.setItem("addToWishlistArr",JSON.stringify(arr));
+    if(loginToken){
+      wishlistIcon.classList.add("fa-solid","fa-heart");
+      wishlistIcon.style.color="#ff3d3d";
+      wishlistText.innerText="WISHLISTED";
+      wishlistText.style.color="black";
+      let arr=JSON.parse(localStorage.getItem("addToWishlistArr"))||[];
+      arr.push(ele);
+      localStorage.setItem("addToWishlistArr",JSON.stringify(arr));
+    }
+    else{
+      alert("Please Login first!");
+      window.location.href="http://127.0.0.1:5500/Chenab-Pointer-011/html/login.html";
+    }
   })
 
   let recentlyViewArr=JSON.parse(localStorage.getItem("recentlyViewArr")) || [];

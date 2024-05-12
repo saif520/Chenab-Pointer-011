@@ -100,7 +100,7 @@ async function createLoginSession() {
     localStorage.setItem("loginToken", JSON.stringify("true"));
     alert("Logged In");
     window.location.href =
-      "file:///home/tehreem/Downloads/weekProject/Chenab-Pointer-011/html/index.html";
+      "../html/index.html";
   } else {
     alert("Wrong Credentials!");
   }
