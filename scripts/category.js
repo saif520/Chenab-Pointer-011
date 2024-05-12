@@ -44,9 +44,16 @@ async function fetchData(fetchParams,page){
 }
 
 let initialFetchDataParams = localStorage.getItem("filter") || false;
+let Gender="";
 if(initialFetchDataParams){
     initialFetchDataParams = JSON.parse(initialFetchDataParams).filterParams.slice(1,);
-    console.log(initialFetchDataParams);
+    // console.log(initialFetchDataParams);
+    // if(initialFetchDataParams.includes("men")){
+    //     Gender = "men"
+    // }
+    // else{
+    //     Gender = "women";
+    // }
 }
 else{
     initialFetchDataParams = "gender=men";
@@ -254,8 +261,13 @@ function createLabel(element,filterKey){
     // let br = document.createElement("br");
 
     input.addEventListener("click",(e)=>{
-        console.log("target.name: "+e.target.name);
-        console.log("target.value:"+e.target.value);
+        // let active = document.querySelector(`[name|=${filterKey}]`);
+        // console.log(active);
+        // active.previousSibling.classList.remove("active");
+        label.classList.add("active");
+        
+        // console.log("target.name: "+e.target.name);
+        // console.log("target.value:"+e.target.value);
 
         // ["More than 1","More than 2","More than 3","More than 4"]
         // ["Popular",'New','Price: high to low',"Price: low to high"];
@@ -442,8 +454,10 @@ function createCard(obj,ind){
     wishlist.className = "wishlist";
     wishlist.innerHTML = `<i class="fa-regular fa-heart fa-lg" style="color: #a39f9f;"></i>`;
 
+    brand_div.append(wishlist);
     //wishlist evenlistener
     wishlist.addEventListener("click",(e)=>{
+        e.stopImmediatePropagation();
         if(loginToken){
             let getWishlistItem = JSON.parse(localStorage.getItem("addToWishlistArr")) || [];
             getWishlistItem.push(obj);
@@ -455,7 +469,7 @@ function createCard(obj,ind){
         }
         else{
             alert("Please Login First !");
-            window.open("./login.html","_self");
+            window.location.href="./login.html";
         }
     })
 
@@ -480,6 +494,7 @@ function createCard(obj,ind){
     div.append(img_div,content_div);
     //Event listener to redirect and save the card object
     div.addEventListener("click",(e)=>{
+        e.stopImmediatePropagation();
         localStorage.setItem("productId",JSON.stringify({id:obj.id}));
         window.open("./product.html","_self");
     });
@@ -511,7 +526,9 @@ function renderCards(data){
         });
     }
     else{
+       if(page==1){
         dataListWrapper.innerHTML = `<div style="text-align=center"><h4>Sorry, No Products Available Right Now For This Filter</h4><p>Please Change Filter Or Clear All Filter And Browse Other Options...Thanks</p></div>`
+       }
     }
     
 }
