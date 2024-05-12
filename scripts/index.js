@@ -1,5 +1,9 @@
 let baseURL = "http://localhost:3000/product"
 
+let loggedIn = JSON
+
+
+
 function filter(obj){
     localStorage.setItem("filter", JSON.stringify(obj));
     window.open("../html/category.html","_self");
@@ -468,7 +472,7 @@ function createCard(elem){
     let priceCont = document.createElement("div")
     let price = document.createElement("h3")
     let priceStrik = document.createElement("p")
-    let off = document.createElement("p")
+    let off = document.createElement("h5")
     let dis = Math.ceil(((elem.oldPrice-elem.price)/elem.price)*100)
 
     cardCont.className = "cardCont"
