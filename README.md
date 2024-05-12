@@ -6,12 +6,10 @@ Bewakoof is an Indian online fashion and lifestyle brand that offers trendy and 
 In this repository, you'll find the source code for the Bewakoof website, where we showcase our latest collections, engage with our customers, and provide a seamless shopping experience. Feel free to explore the code and provide feedback to help us improve.
 
 ## Project Type
-Frontend
+Frontend | Backend
 
 ## Deplolyed Link
-Frontend: https://deployed-site.whatever
-Backend: https://deployed-site.whatever
-Database: https://deployed-site.whatever
+<a href="#">Live Demo : Bewakoof</a>
 
 ## Directory Structure
 my-app/
