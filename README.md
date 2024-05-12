@@ -52,6 +52,8 @@ Provide instructions and examples on how to use your project.
 ```
 
 Include screenshots as necessary.
+![image](https://github.com/saif520/Chenab-Pointer-011/assets/62957608/4d2c7969-619f-43ac-b52a-c323131c5e90)
+
 
 ## Credentials
 Provide user credentials for autheticated pages
@@ -66,8 +68,6 @@ POST /api/items - create a new item
 
 
 ## Technology Stack
-List and provide a brief overview of the technologies used in the project.
-
 - Html
 - Css
 - Bootstrap
