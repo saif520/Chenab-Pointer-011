@@ -118,5 +118,6 @@ body {
   }
   .card {
     width: 430px;
+    padding-bottom: 200px;
   }
 }

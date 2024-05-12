@@ -13,6 +13,19 @@ let summaryDiscount = document.querySelector(".summary-discount");
 let summarySubtotal = document.querySelector(".summary-subtotal");
 let summaryTotal = document.querySelector(".summary-total");
 
+//address form
+let addAddress = document.querySelector(".add-address");
+let addressFormDiv = document.querySelector(".address-form-div");
+let placeOrder = document.querySelector(".place-order");
+let closeForm = document.querySelector(".close-form");
+let formName = document.querySelector(".form-name");
+let formMobile = document.querySelector(".form-mobile");
+let formZip = document.querySelector(".form-zip");
+let formCity = document.querySelector(".form-city");
+let formState = document.querySelector(".form-state");
+let formFlatno = document.querySelector(".form-flatno");
+let formLocality = document.querySelector(".form-locality");
+
 function createCard(obj) {
   let card = document.createElement("div");
   card.className = "card";
@@ -110,3 +123,34 @@ function appendData(data) {
 }
 
 appendData(cartData);
+
+// ADDRESS FORM
+addAddress.addEventListener("click", (e) => {
+  e.preventDefault();
+  addressFormDiv.style.display = "block ";
+});
+
+closeForm.addEventListener("click", (e) => {
+  e.preventDefault();
+  addressFormDiv.style.display = "none";
+});
+
+placeOrder.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (
+    formName.value &&
+    formMobile.value &&
+    formZip.value &&
+    formCity.value &&
+    formState.value &&
+    formFlatno.value &&
+    formLocality.value
+  ) {
+    localStorage.setItem("cartData", JSON.stringify([]));
+    alert("Order Placed!");
+    window.location.href =
+      "file:///home/tehreem/Downloads/weekProject/Chenab-Pointer-011/html/index.html";
+  } else {
+    alert("Fill in all the Fields!");
+  }
+});
