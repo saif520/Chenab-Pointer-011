@@ -20,7 +20,7 @@
 let loginToken = JSON.parse(localStorage.getItem("loginToken"));
 
 // Fetch data function
-const baseUrl = "http://localhost:3000/product?";
+const baseUrl = "https://server-ve5q.onrender.com/product?";
 let fetchParams='';
 let page = 1;
 let total_data_count;
@@ -28,7 +28,7 @@ async function fetchData(fetchParams,page){
     try{
         fetchParams=fetchParams;
         let url = baseUrl+`_page=${page}&_limit=${6}&`+fetchParams;
-        console.log(url);
+        // console.log(url);
 
         let res = await fetch(url);
         total_data_count = res.headers.get('X-Total-Count');
