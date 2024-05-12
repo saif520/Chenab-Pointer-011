@@ -1,5 +1,14 @@
 let cartCount = document.querySelector(".cart-count");
 
+// User Name
+let uName = document.getElementById("user")
+uName.innerText = JSON.parse(localStorage.getItem("uName"))
+
+
+
+
+
+
 //card container
 
 let container = document.querySelector(".container-main");

@@ -1,6 +1,19 @@
 let baseURL = "https://server-ve5q.onrender.com/product"
 
-let loggedIn = JSON
+let loggedIn = JSON.parse(localStorage.getItem("loginToken"))
+console.log(loggedIn)
+// User Name
+
+if(loggedIn){
+    
+    let uName = document.getElementById("user")
+    uName.innerText = JSON.parse(localStorage.getItem("uName"))
+    
+}else{
+    console.log(false)
+}
+
+
 
 
 

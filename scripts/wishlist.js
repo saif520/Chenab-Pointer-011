@@ -1,4 +1,11 @@
 let containerMain = document.querySelector(".container-main");
+
+// User Name
+let uName = document.getElementById("user")
+uName.innerText = JSON.parse(localStorage.getItem("uName"))
+
+
+
 //localstorage
 let wishlistData = JSON.parse(localStorage.getItem("addToWishlistArr"));
 

@@ -116,6 +116,8 @@ async function userLogin() {
           element.username == loginUsername.value &&
           element.password == loginPassword.value
         ) {
+          localStorage.setItem("uName",JSON.stringify(element.name))
+  
           return true;
         }
       }
