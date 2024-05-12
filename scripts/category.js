@@ -261,9 +261,7 @@ function createLabel(element,filterKey){
     // let br = document.createElement("br");
 
     input.addEventListener("click",(e)=>{
-        // let active = document.querySelector(`[name|=${filterKey}]`);
-        // console.log(active);
-        // active.previousSibling.classList.remove("active");
+        let active = document.querySelector(`[name|=${filterKey}]`);
         label.classList.add("active");
         
         // console.log("target.name: "+e.target.name);
