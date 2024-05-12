@@ -10,7 +10,8 @@ if(loggedIn){
     uName.innerText = JSON.parse(localStorage.getItem("uName"))
     
 }else{
-    console.log(false)
+    let uName = document.getElementById("user")
+    uName.innerText = "Login"
 }
 
 
