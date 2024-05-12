@@ -338,9 +338,7 @@ header > p {
 
 
 
-
-/* navbar */
-.loginbtn:hover{
+.loginbtn, .loginbtn:hover{
   text-decoration: none;
   color: #000000;
 }
@@ -402,26 +400,21 @@ header > p {
 
 
 }
+.cont {
+  text-align: center;
+}
 
 
 .navMid img{
   width: 160px;
 }
-#navEnd {
-  display: none;
-  display: flex;
-  gap: 40px;
-  padding-top: 10px;
-  font-size: 16px;
-  overflow: hidden;
-  justify-content: space-between;
-}
+
 .nav-icon {
   height: 20px;
 }
 /* Search box styling */
 #searchCon {
-  padding: 10px;
+  padding: 1px 15px;
   border-radius: 5px;
   background-color: #eaeaea;
   display: flex;
