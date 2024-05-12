@@ -9,7 +9,7 @@ In this repository, you'll find the source code for the Bewakoof website, where 
 Frontend | Backend
 
 ## Deplolyed Link
-<a href="#">Live Demo : Bewakoof</a>
+<a href="">Live Demo : Bewakoof</a>
 
 ## Directory Structure
 my-app/
@@ -18,7 +18,7 @@ my-app/
 │  ├─ ...
 
 ## Video Walkthrough of the project
-<a href="#"></a>
+<a href="https://www.youtube.com/watch?v=2N29GB4qw9"></a>
 
 ## Video Walkthrough of the codebase
 Attach a very short video walkthough of codebase [ 1 - 5 minutes ]
@@ -61,6 +61,9 @@ Include screenshots as necessary.
 ![image](https://github.com/saif520/Chenab-Pointer-011/assets/62957608/3440cbcd-d3d1-437c-89bc-531d41f067f8)
 ![image](https://github.com/saif520/Chenab-Pointer-011/assets/62957608/c62a96dd-2cf0-411a-8c2e-01a76a18b0e2)
 ![image](https://github.com/saif520/Chenab-Pointer-011/assets/62957608/d24e5cd5-8c94-434b-8f05-c996775c8122)
+![image](https://github.com/saif520/Chenab-Pointer-011/assets/62957608/4a7a6090-766f-435b-ac23-109668f56de7)
+![image](https://github.com/saif520/Chenab-Pointer-011/assets/62957608/696dd0ae-3adb-47f7-9a58-56156bbabb7b)
+
 
 
 
