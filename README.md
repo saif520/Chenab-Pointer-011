@@ -27,13 +27,13 @@ Attach a very short video walkthough of codebase [ 1 - 5 minutes ]
 
 ## Features
 
--Product Listings: The website features a wide range of products including t-shirts, sweatshirts, joggers, shorts, mobile covers, backpacks, and more. Users can browse through different categories and collections.
--Search and Filter: Users can search for specific products using keywords or filters such as size, color, price range, and category to narrow down their choices.
--User Accounts: Customers can create accounts on the website which allows them to save their shipping addresses, track orders, view order history, and manage their preferences.
--Shopping Cart: Users can add items to their shopping cart while browsing and proceed to checkout when they're ready to make a purchase.
--Adding Products: When a user finds a product they want to purchase, they can click on the "Add to Bag" button. This action adds the item to their virtual shopping bag or cart.
--Bag Management: Users can typically view and manage the contents of their bag, including removing items, updating quantities, or saving items for later.
--Wishlist Button: On each product page, users will find a "Add to Wishlist" button, typically located near the "Add to Bag" or "Add to Cart" button.
+- Product Listings: The website features a wide range of products including t-shirts, sweatshirts, joggers, shorts, mobile covers, backpacks, and more. Users can browse through different categories and collections.
+- Search and Filter: Users can search for specific products using keywords or filters such as size, color, price range, and category to narrow down their choices.
+- User Accounts: Customers can create accounts on the website which allows them to save their shipping addresses, track orders, view order history, and manage their preferences.
+- Shopping Cart: Users can add items to their shopping cart while browsing and proceed to checkout when they're ready to make a purchase.
+- Adding Products: When a user finds a product they want to purchase, they can click on the "Add to Bag" button. This action adds the item to their virtual shopping bag or cart.
+- Bag Management: Users can typically view and manage the contents of their bag, including removing items, updating quantities, or saving items for later.
+- Wishlist Button: On each product page, users will find a "Add to Wishlist" button, typically located near the "Add to Bag" or "Add to Cart" button.
 Sort Dropdown: A dropdown menu or a set of sorting options is usually provided above or beside the product listings. Common sorting options include:
 
 
@@ -95,10 +95,10 @@ To run this project locally:
 
 ##Contributors
 
-  -Saifuddin Dhali
-  -Sunny Kumar
-  -Tehreem Jan
-  -Chaitanya Premshankar
+  - Saifuddin Dhali
+  - Sunny Kumar
+  - Tehreem Jan
+  - Chaitanya Premshankar
 
 ##License
 
