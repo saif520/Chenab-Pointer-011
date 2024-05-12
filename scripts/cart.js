@@ -45,7 +45,8 @@ function createCard(obj) {
   removeCartBtn.innerText = "Remove";
   moveToWishlistBtn.innerText = "Move to Wishlist";
   removeCartBtn.value = obj.title;
-
+  moveToWishlistBtn.value = obj.id;
+  //remove from cart
   removeCartBtn.addEventListener("click", (e) => {
     e.preventDefault();
     let cart = JSON.parse(localStorage.getItem("cartData"));
@@ -57,6 +58,24 @@ function createCard(obj) {
     }
     localStorage.setItem("cartData", JSON.stringify(cart));
     appendData(cart);
+  });
+
+  //move to wishlist
+  moveToWishlistBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    let moveData = JSON.parse(localStorage.getItem("addToWishlistArr")) || [];
+    let cartMoveData = JSON.parse(localStorage.getItem("cartData"));
+    for (let i = 0; i <= cartMoveData.length - 1; i++) {
+      if (moveToWishlistBtn.value == cartMoveData[i].id) {
+        let item = cartMoveData[i];
+        cartMoveData.splice(i, 1);
+        moveData.push(item);
+        break;
+      }
+    }
+    localStorage.setItem("cartData", JSON.stringify(cartMoveData));
+    localStorage.setItem("addToWishlistArr", JSON.stringify(moveData));
+    appendData(cartMoveData);
   });
 
   cartProdLeft.append(cartProdTitle, price, oldPrice, savedAmount);
