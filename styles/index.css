@@ -220,6 +220,9 @@ body {
 }
 
 /* Besteseller ----------------------------------*/
+#bestseller{
+  
+}
 #best1 , #best2,#best3{
     display: flex;
     justify-content: space-around;
