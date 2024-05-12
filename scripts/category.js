@@ -90,11 +90,12 @@ let sortBySet = ["Popular",'New','Price: high to low',"Price: low to high"];
 let Gender = "";
 
 // Fetch data function
-const baseUrl = "http://localhost:3000/product";
+const baseUrl = "http://localhost:3000/product?";
 let fetchParams='';
-async function fetchData(fetchParams){
+let page = 1;
+async function fetchData(fetchParams,page){
     try{
-        let url = baseUrl+fetchParams;
+        let url = baseUrl+`_page=${page}&_limit=${6}&`+fetchParams;
         console.log(url);
 
         let res = await fetch(url);
@@ -107,11 +108,17 @@ async function fetchData(fetchParams){
     }
     
 }
+//scrollbar
+window.addEventListener("scroll",(e)=>{
+    console.log(page);
+    let scrollHeight = document.documentElement.scrollHeight;
+    let clientHeight = document.documentElement.clientHeight;
+    let scrollTop = document.documentElement.scrollTop;
 
-//clear all filter
-// let clearAll = document.getElementById("clear-all"){
-//     continue
-// }
+    if(scrollHeight-clientHeight <= scrollTop+clientHeight/2){
+        fetchData(fetchParams,page++);
+    }
+})
 
 //GEnder
 let categoryGender = document.getElementById("gender-name");
@@ -368,7 +375,8 @@ function createLabel(element,filterKey){
                 }
             }
             // console.log(baseUrl+"?"+fetchParams);
-            fetchData(`?${fetchParams}`);
+            page=1;
+            fetchData(fetchParams,page);
         }
         e.stopImmediatePropagation();
     })
@@ -486,17 +494,26 @@ function createCard(obj,ind){
     div.append(img_div,content_div);
     return div;
 }
-
+let dataNumbers;
 function renderCards(data){
+    let dataListWrapper = document.getElementById("data-list-wrapper");
+
     let dataListTitle = document.getElementById("data-list-title-wrapper");
     let params = fetchParams.split("&");
     let filterTitle = params.map((element)=>{
         return element.split("=")[1];
     })
-    dataListTitle.innerHTML = `<h2>PRODUCTS FILTERED BY ${filterTitle.join(" | ")} (${data.length})</h2>`
 
-    let dataListWrapper = document.getElementById("data-list-wrapper");
-    dataListWrapper.innerHTML = '';
+    if(page==1){
+        dataListWrapper.innerHTML = '';
+        dataNumbers = data.length;
+
+        dataListTitle.innerHTML = `<h2>PRODUCTS FILTERED BY ${filterTitle.join(" | ")} (${dataNumbers})</h2>`;
+    }
+    else{
+        dataNumbers += data.length;
+        dataListTitle.innerHTML = `<h2>PRODUCTS FILTERED BY ${filterTitle.join(" | ")} (${dataNumbers})</h2>`;
+    }
 
     data.forEach((element,index) => {
         let card  = createCard(element,index);
