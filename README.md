@@ -67,7 +67,7 @@ POST /api/items - create a new item
 
   2. Fonts & Icons: Integrates Google Fonts and FontAwesome icons for enhanced typography and visual elements. By leveraging these resources, the website achieves a modern and visually appealing design, improving readability and user engagement.
 
-##How to Use
+## How to Use
 
 To run this project locally:
 
@@ -75,18 +75,18 @@ To run this project locally:
   2. Open the index.html file in your preferred web browser.
   3. Explore the Bewakoof experience right from your device.
 
-##Contributors
+## Contributors
 
   - <a href="https://github.com/saif520">Saifuddin Dhali</a>
   - <a href="https://github.com/aniyant">Sunny Kumar</a>
   - <a href="https://github.com/mohammadtehreem">Tehreem Jan</a>
   - <a href="https://github.com/Chaitanya-05">Chaitanya Premshankar</a>
 
-##License
+## License
 
   This project is licensed under the MIT License - see the <a href="#">LICENSE</a> file for details.
 
-##Acknowledgments
+## Acknowledgments
 
-  -Inspired by Lenovo original website
-  -Special thanks to the our mentors/IA Ritesh Ranjan for giving us directions and material for this project.
+  - Inspired by Lenovo original website
+  - Special thanks to the our mentors/IA <a href="#">Ritesh Rangan</a> for giving us directions and material for this project.
