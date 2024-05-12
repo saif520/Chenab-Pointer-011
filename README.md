@@ -28,7 +28,7 @@ Attach a very short video walkthough of codebase [ 1 - 5 minutes ]
 ## Features
 
 - Product Listings: The website features a wide range of products including t-shirts, sweatshirts, joggers, shorts, mobile covers, backpacks, and more. Users can browse through different categories and collections.
-- Search and Filter: Users can search for specific products using keywords or filters such as size, color, price range, and category to narrow down their choices.
+- Filter: filters such as size, color, price range, and category to narrow down their choices.
 - User Accounts: Customers can create accounts on the website which allows them to save their shipping addresses, track orders, view order history, and manage their preferences.
 - Shopping Cart: Users can add items to their shopping cart while browsing and proceed to checkout when they're ready to make a purchase.
 - Adding Products: When a user finds a product they want to purchase, they can click on the "Add to Bag" button. This action adds the item to their virtual shopping bag or cart.
@@ -57,6 +57,8 @@ Provide instructions and examples on how to use your project.
 ```
 
 Include screenshots as necessary.
+
+![image](https://github.com/saif520/Chenab-Pointer-011/assets/62957608/2567431c-253a-4e08-a268-886b648649b0)
 
 
 ## Credentials
