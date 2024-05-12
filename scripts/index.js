@@ -48,7 +48,7 @@ navEle.forEach(element => {
     span.innerText=element.title
     let obj={
         url:`${baseURL}${element.url}`,
-        prop:element.url
+        filterParams:element.url
     }
     span.addEventListener("click",()=>{ 
     
