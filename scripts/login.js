@@ -98,7 +98,9 @@ loginBtn.addEventListener("click", (e) => {
 async function createLoginSession() {
   if (await userLogin()) {
     localStorage.setItem("loginToken", JSON.stringify("true"));
-    alert("done");
+    alert("Logged In");
+    window.location.href =
+      "file:///home/tehreem/Downloads/weekProject/Chenab-Pointer-011/html/index.html";
   } else {
     alert("Wrong Credentials!");
   }
