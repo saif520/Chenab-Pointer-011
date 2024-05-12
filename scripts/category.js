@@ -4,6 +4,26 @@
 // filters.addEventListener("onload",(e)=>{
 
 // })
+
+
+// from chaitanya
+ 
+//  let obj={
+//         url:`${baseURL}${element.url}`,
+//         filterParams:element.url
+//     }
+//     object nama= filter
+
+// to saifudddin
+//     id
+    // object=productId
+    // productId={
+    //     id:2
+    // }
+
+//    let obj= localStorage.setItem("productId", JSON.stringify(productId));
+//     obj.id
+
 let str= `{
     "products": [
         {
