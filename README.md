@@ -95,10 +95,10 @@ To run this project locally:
 
 ##Contributors
 
-  - Saifuddin Dhali
-  - Sunny Kumar
-  - Tehreem Jan
-  - Chaitanya Premshankar
+  - <a href="https://github.com/saif520">Saifuddin Dhali</a>
+  - <a href="https://github.com/aniyant">Sunny Kumar</a>
+  - <a href="https://github.com/mohammadtehreem">Tehreem Jan</a>
+  - <a href="https://github.com/Chaitanya-05">Chaitanya Premshankar</a>
 
 ##License
 
