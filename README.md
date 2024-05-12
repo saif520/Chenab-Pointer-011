@@ -12,9 +12,10 @@ Frontend | Backend
 <a href="">Live Demo : Bewakoof</a>
 
 ## Directory Structure
-my-app/
-├─ backend/
-├─ frontend/
+/ Chenab-Pointer-011
+├─ / html
+├─ / scripts
+├─ / styles
 │  ├─ ...
 
 ## Video Walkthrough of the project
