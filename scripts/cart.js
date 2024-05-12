@@ -44,14 +44,14 @@ function createCard(obj) {
   cardImg.src = obj.image;
   removeCartBtn.innerText = "Remove";
   moveToWishlistBtn.innerText = "Move to Wishlist";
-  removeCartBtn.value = obj.title;
+  removeCartBtn.value = obj.id;
   moveToWishlistBtn.value = obj.id;
   //remove from cart
   removeCartBtn.addEventListener("click", (e) => {
     e.preventDefault();
     let cart = JSON.parse(localStorage.getItem("cartData"));
     for (let i = 0; i <= cart.length - 1; i++) {
-      if (cart[i].title == removeCartBtn.value) {
+      if (cart[i].id == removeCartBtn.value) {
         cart.splice(i, 1);
         break;
       }
