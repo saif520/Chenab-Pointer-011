@@ -20,9 +20,6 @@ my-app/
 ## Video Walkthrough of the project
 <a href="https://www.youtube.com/watch?v=2N29GB4qw9">project presentation</a>
 
-## Video Walkthrough of the codebase
-Attach a very short video walkthough of codebase [ 1 - 5 minutes ]
-
 ## Features
 
 - Product Listings: The website features a wide range of products including t-shirts, sweatshirts, joggers, shorts, mobile covers, backpacks, and more. Users can browse through different categories and collections.
@@ -35,27 +32,6 @@ Attach a very short video walkthough of codebase [ 1 - 5 minutes ]
 Sort Dropdown: A dropdown menu or a set of sorting options is usually provided above or beside the product listings. Common sorting options include:
 
 
-## design decisions or assumptions
-List your design desissions & assumptions
-
-## Installation & Getting started
-Detailed instructions on how to install, configure, and get the project running. For BE/FS projects, guide the reviewer how to check mongodb schema etc.
-
-```bash
-npm install my-project
-cd my-project
-npm start
-```
-
-## Usage
-Provide instructions and examples on how to use your project.
-
-```bash
-# Example
-```
-
-Include screenshots as necessary.
-
 ![image](https://github.com/saif520/Chenab-Pointer-011/assets/62957608/2567431c-253a-4e08-a268-886b648649b0)
 ![image](https://github.com/saif520/Chenab-Pointer-011/assets/62957608/3776604c-83c6-49ba-8811-15f2854b10fc)
 ![image](https://github.com/saif520/Chenab-Pointer-011/assets/62957608/3440cbcd-d3d1-437c-89bc-531d41f067f8)
@@ -63,12 +39,6 @@ Include screenshots as necessary.
 ![image](https://github.com/saif520/Chenab-Pointer-011/assets/62957608/d24e5cd5-8c94-434b-8f05-c996775c8122)
 ![image](https://github.com/saif520/Chenab-Pointer-011/assets/62957608/4a7a6090-766f-435b-ac23-109668f56de7)
 ![image](https://github.com/saif520/Chenab-Pointer-011/assets/62957608/696dd0ae-3adb-47f7-9a58-56156bbabb7b)
-
-
-
-
-
-
 
 
 ## Credentials
@@ -114,7 +84,7 @@ To run this project locally:
 
 ##License
 
-  This project is licensed under the MIT License - see the LICENSE file for details.
+  This project is licensed under the MIT License - see the <a href="#">LICENSE</a> file for details.
 
 ##Acknowledgments
 
