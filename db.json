@@ -15,6 +15,14 @@
       "email": "ask@bd.ci",
       "mobile": "02397402",
       "id": 2
+    },
+    {
+      "name": "sunny kumar",
+      "username": "sunny",
+      "password": "123456789",
+      "email": "kumarsunny",
+      "mobile": "2643872834",
+      "id": 3
     }
   ],
   "product": [
@@ -1331,7 +1339,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":89,
+      "id": 89,
       "title": "Women's Casual Jogger Pants",
       "category": "joggers",
       "description": "Stay comfortable and stylish with our Women's Casual Jogger Pants. These pants feature a relaxed fit and elasticized waistband, perfect for lounging or running errands.",
@@ -1346,7 +1354,7 @@
       "fit": "Regular Fit"
     },
     {
-      "id":90,
+      "id": 90,
       "title": "Women's Purple Oversized T-shirt",
       "category": "t-shirt",
       "description": "Womens Purple Bloom Oversized T-shirt Country of Origin - India",
@@ -1358,9 +1366,9 @@
       "brand": "Bewakoof",
       "gender": "women",
       "sales": 9841,
-      "fit": "oversized"     
-  
-    },{
+      "fit": "oversized"
+    },
+    {
       "id": 91,
       "title": "Women's Black Katara Graphic Printed Oversized T-shirt",
       "category": "t-shirt",
@@ -1902,7 +1910,8 @@
       "gender": "men",
       "sales": 350,
       "fit": ""
-    },{
+    },
+    {
       "id": 127,
       "title": "",
       "category": "",
@@ -2179,8 +2188,8 @@
       "description": "",
       "price": 5199,
       "oldPrice": 10699,
-      "rating": 4.0,
-      "image": "https://images.bewakoof.com/t1080/men-s-black-joggers-617412-1709805450-1.jpg",
+      "rating": 4,
+      "image": "",
       "material": "",
       "brand": "",
       "gender": "men",
@@ -2201,7 +2210,8 @@
       "gender": "men",
       "sales": 78900,
       "fit": ""
-    },{
+    },
+    {
       "id": 147,
       "title": "",
       "category": "",
@@ -2343,8 +2353,8 @@
       "description": "",
       "price": 6299,
       "oldPrice": 12899,
-      "rating": 4.0,
-      "image": "https://images.bewakoof.com/t1080/men-s-black-joggers-617412-1709805450-1.jpg",
+      "rating": 4,
+      "image": "",
       "material": "",
       "brand": "",
       "gender": "men",
@@ -2553,8 +2563,8 @@
       "description": "",
       "price": 7699,
       "oldPrice": 15699,
-      "rating": 4.0,
-      "image": "https://images.bewakoof.com/t1080/men-s-black-joggers-617412-1709805450-1.jpg",
+      "rating": 4,
+      "image": "",
       "material": "",
       "brand": "",
       "gender": "men",
@@ -2650,7 +2660,8 @@
       "gender": "men",
       "sales": 65432,
       "fit": ""
-    },{
+    },
+    {
       "id": 177,
       "title": "",
       "category": "",
@@ -2717,8 +2728,8 @@
       "description": "",
       "price": 8799,
       "oldPrice": 17899,
-      "rating": 4.0,
-      "image": "https://images.bewakoof.com/t1080/men-s-black-joggers-617412-1709805450-1.jpg",
+      "rating": 4,
+      "image": "",
       "material": "",
       "brand": "",
       "gender": "men",
@@ -2874,7 +2885,8 @@
       "gender": "men",
       "sales": 65432,
       "fit": ""
-    },{
+    },
+    {
       "id": 192,
       "title": "",
       "category": "",
@@ -2941,8 +2953,8 @@
       "description": "",
       "price": 10299,
       "oldPrice": 20899,
-      "rating": 4.0,
-      "image": "https://images.bewakoof.com/t1080/men-s-black-joggers-617412-1709805450-1.jpg",
+      "rating": 4,
+      "image": "",
       "material": "",
       "brand": "",
       "gender": "men",

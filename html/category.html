@@ -6,169 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../styles/category.css">
     <script src="https://kit.fontawesome.com/9a9fd82d89.js" crossorigin="anonymous"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-        body,p{
-            padding: 0px;
-            margin: 0px;
-            font-family: "Montserrat", sans-serif;
-        }
-        .container{
-            max-width: 1320px;
-            margin: auto;
-        }
-        #content-filters-wrapper{
-            display: flex;
-        }
-        #section-filters-wrapper{
-            width: 20%;
-            position: relative;
-            /* padding: 5%; */
-        }
-        #div-filters-wrapper{
-            padding: 5%;
-            position: fixed;
-            /* overflow-y: scroll; */
-            /* top:0;
-            left: 0; */
-        }
-        #filter-categories-title{
-            display: flex;
-            justify-content: space-between;
-            padding: 10px 3px;
-        }
-        #filter-categories-title #filter-head{
-            color:#717171;
-            font-size: large;
-            font-weight: 500;
-        }
-        #filter-categories-title #clear-all{
-            color: #77a3a3;
-            font-size: large;
-            font-weight: 400;
-        }
-        #filters>div>div:nth-of-type(1){
-            /* color:#6f6658; */
-            color: #333333;
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            padding-top:10px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #e5e5e5;
-        }
-        #div-filters-wrapper label{
-            display: block;
-            width: 100%;
-            padding: 3px;
-            margin-top: 5px;
-            margin-bottom: 5px;
-            color: #7e8a96;
-        }
-        #div-filters-wrapper label:hover{
-            background-color: #e5e5e5;
-            cursor: pointer;
-        }
-        #content-wrapper{
-            width: 70%;
-            padding: 5%;
-            /* height: 100vh; */
-        }
-        #data-list-title-wrapper{
-            text-align: center;
-        }
-
-        #data-list-wrapper{
-            display: grid;
-            gap: 20px;
-            grid-template-columns: repeat(3, 1fr);
-            grid-auto-rows: auto;
-        }
-        
-        #data-list-wrapper .card:hover{
-            cursor: pointer;
-        }
-        .product-image{
-            width: 100%;
-            transition: all 0.5s ease ;
-        }
-        .product-image:hover{
-            transform: scale(1.03);
-            cursor: pointer;
-        }
-        #image-div{
-            position: relative;
-        }
-        #image-div .fit{
-            color:white;
-            font-size: 10px;
-            font-weight:500;
-            padding: 4px 8px;
-            background-color: #6f6658;
-            position: absolute;
-            top:0px;
-            left: 0px;
-        }
-        #image-div .rating{
-            color:black;
-            font-size: 11px;
-            font-weight:500;
-            padding: 4px 8px;
-            position: absolute;
-            background-color: white;
-            bottom:20px;
-            left: 0px;
-        }
-        #image-div .rate{
-            font-size: 12px;
-            padding-left:8px;
-            font-weight:500;
-        }
-        #data-list-wrapper .content_div{
-            margin: 10px;
-        }
-        .content_div .brand_div{
-            display: flex;
-            justify-content: space-between;
-        }
-        .content_div .brand{
-            font-size: 12px;
-            font-weight:600;
-        }
-        .content_div .title{
-            font-size: 12px;
-            color:#807f83;
-            padding: 5px 0px;
-            font-weight: 500;
-        }
-        .content_div .price{
-            font-size: 16px;
-            font-weight: 600;
-        }
-        .content_div s{
-            padding-left: 8px;
-            font-size: 14px;
-            font-weight: 400;
-            color:#807f83;
-        }
-        .content_div .tribe{
-            width: fit-content;
-            font-size: 12px;
-            background-color: #f7f7f7;
-            padding: 3px 5px;
-            margin:8px ;
-            font-weight: 700;
-        }
-        .content_div .material{
-            width: fit-content;
-            font-size: 11px;
-            color:#807f83;
-            padding: 5px 10px;
-            margin-top: 10px;
-            margin-bottom: 30px;
-            border: 1px solid #807f83;
-        }
-    </style>
+    <link rel="stylesheet" href="../styles/cart.css">
 </head>
 <body>
 
@@ -224,7 +62,7 @@
                 <section id="section-filters-wrapper">
                     <div id="div-filters-wrapper">
                         <div id="filter-title">
-                            <h3>Men's Clothing</h3>
+                            <h4>Bewkoof's Clothing <span id="total-count-products"></span></h4>
                         </div>
                         <div id="filters-categories">
                             <div id="filter-categories-title">
@@ -240,7 +78,7 @@
                                     <div class="filter-name" id="gender-name">
                                         <span>Gender</span>
                                         <!---->
-                                        <span><i class="fa-thin fa-caret-down fa-lg" style="color: #B197FC;"></i></span>
+                                        <span><i class="fa-solid fa-caret-down fa-lg" style="color: #74C0FC;"></i></span>
                                     </div>
                                     <div class="filter-cat hide" id="gender-filter">
                                         
@@ -249,7 +87,7 @@
                                <div id="filter-category">
                                     <div class="filter-name" id="category-name">
                                         <span>Category</span>
-                                        <span><i class="fa-thin fa-caret-down fa-lg" style="color: #B197FC;"></i></span>
+                                        <span><i class="fa-solid fa-caret-down fa-lg" style="color: #74C0FC;"></i></span>
                                     </div>
                                     <div class="filter-cat hide" id="category-filter">
                                         
@@ -258,7 +96,7 @@
                                <div id="filter-brand">
                                     <div class="filter-name" id="brand-name">
                                         <span>Brand</span>
-                                        <span><i class="fa-thin fa-caret-down fa-lg" style="color: #B197FC;"></i></span>
+                                        <span><i class="fa-solid fa-caret-down fa-lg" style="color: #74C0FC;"></i></span>
                                     </div>
                                     <div class="filter-cat hide" id="brand-filter">
                                         
@@ -267,7 +105,7 @@
                                <div id="filter-material">
                                     <div class="filter-name" id="material-name">
                                         <span>Material</span>
-                                        <span><i class="fa-thin fa-caret-down fa-lg" style="color: #B197FC;"></i></span>
+                                        <span><i class="fa-solid fa-caret-down fa-lg" style="color: #74C0FC;"></i></span>
                                     </div>
                                     <div class="filter-cat hide" id="material-filter">
     
@@ -276,7 +114,7 @@
                                <div id="filter-fit">
                                     <div class="filter-name" id="fit-name">
                                         <span>Fit</span>
-                                        <span><i class="fa-thin fa-caret-down fa-lg" style="color: #B197FC;"></i></span>
+                                        <span><i class="fa-solid fa-caret-down fa-lg" style="color: #74C0FC;"></i></span>
                                     </div>
                                     <div class="filter-cat hide" id="fit-filter">
                                         
@@ -285,7 +123,7 @@
                                <div id="filter-rating">
                                     <div class="filter-name" id="rating-name">
                                         <span>Rating</span>
-                                        <span><i class="fa-thin fa-caret-down fa-lg" style="color: #B197FC;"></i></span>
+                                        <span><i class="fa-solid fa-caret-down fa-lg" style="color: #74C0FC;"></i></span>
                                     </div>
                                     <div class="filter-cat hide" id="rating-filter">
                                         
@@ -294,7 +132,7 @@
                                 <div id="filter-sortby">
                                     <div class="filter-name" id="sortby-name">
                                         <span>SortBy</span>
-                                        <span><i class="fa-thin fa-caret-down fa-lg" style="color: #B197FC;"></i></span>
+                                        <span><i class="fa-solid fa-caret-down fa-lg" style="color: #74C0FC;"></i></span>
                                     </div>
                                     <div class="filter-cat hide" id="sortby-filter">
                                         
@@ -305,8 +143,10 @@
                     </div>
                 </section>
                 <section id="content-wrapper">
-                    <div id="data-list-title-wrapper">
+                    <div id="products-list-title">
+                        <p id="data-list-title-wrapper">
                         
+                        </p>
                     </div>
                     <div id="data-list-wrapper">
 
@@ -314,7 +154,9 @@
                 </section>
             </div>
             <div id="rest-content-wrapper">
-                
+                <div>
+                    <h3 style="text-align: center;color:#74C0FC">Bewkoof.com!</h3>
+                </div>
             </div>
         </main>
         <footer>
