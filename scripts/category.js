@@ -17,7 +17,7 @@
 //    let obj= localStorage.setItem("productId", JSON.stringify(productId));
 //     obj.id
 
-let Gender = "";
+let loginToken = JSON.parse(localStorage.getItem("loginToken"));
 
 // Fetch data function
 const baseUrl = "http://localhost:3000/product?";
@@ -435,8 +435,29 @@ function createCard(obj,ind){
 
     let brand_div = document.createElement("div");
     brand_div.className="brand_div";
-    brand_div.innerHTML = `<span class="brand">${obj.brand}</span><span class="wishlist"><i class="fa-regular fa-heart fa-lg" style="color: #a39f9f;"></i></span>`;
+    brand_div.innerHTML = `<span class="brand">${obj.brand}</span>`;
     
+    // <span class="wishlist"><i class="fa-regular fa-heart fa-lg" style="color: #a39f9f;"></i></span>
+    let wishlist = document.createElement('span');
+    wishlist.className = "wishlist";
+    wishlist.innerHTML = `<i class="fa-regular fa-heart fa-lg" style="color: #a39f9f;"></i>`;
+
+    //wishlist evenlistener
+    wishlist.addEventListener("click",(e)=>{
+        if(loginToken){
+            let getWishlistItem = JSON.parse(localStorage.getItem("addToWishlistArr")) || [];
+            getWishlistItem.push(obj);
+
+            localStorage.setItem("addToWishlistArr",JSON.stringify(getWishlistItem));
+
+            //change to red heart image;
+            wishlist.innerHTML = `<i class="fa-solid fa-heart" style="color: #f50f1b;"></i>`;
+        }
+        else{
+            alert("Please Login First !");
+            window.open("./login.html","_self");
+        }
+    })
 
     let title = document.createElement("p");
     title.className = "title";
