@@ -1,8 +1,9 @@
 let loginToken=JSON.parse(localStorage.getItem("loginToken"));
 let obj=JSON.parse(localStorage.getItem("productId"));
+console.log(obj);
 let id=obj.id;
 async function fetchData(id){
-  let res=await fetch(`http://localhost:3000/product/${id}`,{
+  let res=await fetch(`https://server-ve5q.onrender.com/product${id}`,{
     "method":"GET",
     "headers":{
       "content-type":"application/json"
