@@ -13,10 +13,13 @@ Frontend | Backend
 
 ## Directory Structure
 / Chenab-Pointer-011
-├─ / html
-├─ / scripts
-├─ / styles
-│  ├─ ...
+├─ html
+  ├─ ...
+├─  scripts
+  ├─ ...
+├─  styles
+  ├─ ...
+
 
 ## Video Walkthrough of the project
 <a href="https://www.youtube.com/watch?v=2N29GB4qw9">project presentation</a>
