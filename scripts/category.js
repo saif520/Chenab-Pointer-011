@@ -87,14 +87,15 @@ let genderSet;
 let ratingSet = ["More than 1","More than 2","More than 3","More than 4"]
 let sortBySet = ["Popular",'New','Price: high to low',"Price: low to high"];
 
-let Gender = "";
+// let Gender = "men";
 
 // Fetch data function
-const baseUrl = "http://localhost:3000/product";
+const baseUrl = "http://localhost:3000/product?";
 let fetchParams='';
-async function fetchData(fetchParams){
+let page = 1;
+async function fetchData(fetchParams,page){
     try{
-        let url = baseUrl+fetchParams;
+        let url = `${baseUrl}_page=${page}&_limit=${6}&${fetchParams}`;
         console.log(url);
 
         let res = await fetch(url);
@@ -107,6 +108,17 @@ async function fetchData(fetchParams){
     }
     
 }
+//
+window.addEventListener("scroll",(e)=>{
+    console.log("page:"+page);
+    let scrollHeight = document.documentElement.scrollHeight;
+    let clientHeight = document.documentElement.clientHeight;
+    let scrollTop = document.documentElement.scrollTop;
+
+    if(scrollHeight-clientHeight <= scrollTop){
+        fetchData(fetchParams,page++);
+    }
+})
 
 //clear all filter
 // let clearAll = document.getElementById("clear-all"){
@@ -354,7 +366,7 @@ function createLabel(element,filterKey){
                 else{
                     fetchParams += `&${e.target.name}=${e.target.value}`;
                 }
-                console.log("inside >=1:"+fetchParams);
+                // console.log("inside >=1:"+fetchParams);
             }
             else if(fetchParams.split('&')[0] === ''){
                 if(e.target.name === "_sort"){
@@ -368,7 +380,8 @@ function createLabel(element,filterKey){
                 }
             }
             // console.log(baseUrl+"?"+fetchParams);
-            fetchData(`?${fetchParams}`);
+            page=1;
+            fetchData(fetchParams);
         }
         e.stopImmediatePropagation();
     })
@@ -496,7 +509,11 @@ function renderCards(data){
     dataListTitle.innerHTML = `<h2>PRODUCTS FILTERED BY ${filterTitle.join(" | ")} (${data.length})</h2>`
 
     let dataListWrapper = document.getElementById("data-list-wrapper");
-    dataListWrapper.innerHTML = '';
+    if(page==1){
+        dataListWrapper.innerHTML = '';
+        dataListTitle.innerHTML = `<h2>PRODUCTS FILTERED BY ${filterTitle.join(" | ")} (${data.length})</h2>`
+    }
+    else{}
 
     data.forEach((element,index) => {
         let card  = createCard(element,index);
