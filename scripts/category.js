@@ -1,10 +1,3 @@
-// let filters = document.getElementById("filters-wrapper");
-
-// let filters_category = ["title","category","description","rating","price","oldPrice","image","material","brand","gender","sales","fit"]
-// filters.addEventListener("onload",(e)=>{
-
-// })
-
 
 // from chaitanya
  
@@ -24,101 +17,23 @@
 //    let obj= localStorage.setItem("productId", JSON.stringify(productId));
 //     obj.id
 
-let str= `{
-    "products": [
-        {
-            "title": "Men's Casual Cargo Pants",
-            "category": "cargo",
-            "description": "Stay cool and comfortable with our Women's Casual Linen Pants.",
-            "rating": "4.0",
-            "price": "699",
-            "oldPrice": "899",
-            "image": "https://images.bewakoof.com/t640/men-s-brown-boxer-628781-1707976186-1.jpg",
-            "material": "premium blended fabric",
-            "brand": "Bushirt",
-            "gender": "men",
-            "sales": "2389",
-            "fit": "Regular Fit"
-        },
-        {
-            "title": "Women's Floral Dress",
-            "category": "dress",
-            "description": "Stay cool and comfortable with our Women's Casual Linen Pants.",
-            "rating": "4.8",
-            "price": "1299",
-            "oldPrice": "1499",
-            "image": "https://images.bewakoof.com/t640/men-s-chocolate-brown-printed-oversized-hooded-vest-627843-1710335791-1.jpg",
-            "material": "100% cotton",
-            "brand": "Rigo",
-            "gender": "women",
-            "sales": "3856",
-            "fit": "Slim Fit"
-        },
-        {
-            "title": "Women's Cropped Denim Jacket",
-            "category": "jackets",
-            "description": "Stay cool and comfortable with our Women's Casual Linen Pants.",
-            "price": "1199",
-            "oldPrice": "1399",
-            "image": "https://images.bewakoof.com/t640/men-printed-co-ord-set-7-619985-1709805508-1.jpg",
-            "material": "denim fabric",
-            "brand": "Bewakoof®",
-            "gender": "women",
-            "sales": "14200",
-            "fit": "Regular Fit"
-        },
-        {
-            "title": "Men's Classic Crewneck T-Shirt",
-            "category": "t-shirt",
-            "description": "Keep it simple and stylish with our Men's Classic Crewneck T-Shirt. This t-shirt features a classic crewneck design and soft cotton fabric, perfect for everyday wear.",
-            "price": "599",
-            "oldPrice": "699",
-            "image": "https://images.bewakoof.com/t640/men-s-brown-striped-oversized-polo-t-shirt-617096-1707200102-1.jpg",
-            "material": "soft cotton fabric",
-            "brand": "Rigo",
-            "gender": "men",
-            "sales": "15678",
-            "fit": "Regular Fit"
-        },
-        {
-            "title": "Women's Casual Linen Pants",
-            "category": "pants",
-            "description": "Stay cool and comfortable with our Women's Casual Linen Pants.",
-            "price": "899",
-            "oldPrice": "999",
-            "image": "https://images.bewakoof.com/t640/men-s-white-striped-oversized-polo-t-shirt-617090-1707200069-1.jpg",
-            "material": "linen fabric",
-            "brand": "Campus Sutra",
-            "gender": "women",
-            "sales": "16900",
-            "fit": "Regular Fit"
-        }
-    ]
-}`;
-// let products = JSON.parse(str);
-// console.log(products);
-// renderCards(products.products);
-let MenCategorySet = new Set();
-let WomenCategorySet = new Set();
-let brandSet;
-let materialSet;
-let fitSet;
-let genderSet;
-let ratingSet = ["More than 1","More than 2","More than 3","More than 4"]
-let sortBySet = ["Popular",'New','Price: high to low',"Price: low to high"];
-
-let Gender = "";
+let loginToken = JSON.parse(localStorage.getItem("loginToken"));
 
 // Fetch data function
-const baseUrl = "http://localhost:3000/product";
+const baseUrl = "http://localhost:3000/product?";
 let fetchParams='';
-async function fetchData(fetchParams){
+let page = 1;
+let total_data_count;
+async function fetchData(fetchParams,page){
     try{
-        let url = baseUrl+fetchParams;
+        fetchParams=fetchParams;
+        let url = baseUrl+`_page=${page}&_limit=${6}&`+fetchParams;
         console.log(url);
 
         let res = await fetch(url);
+        total_data_count = res.headers.get('X-Total-Count');
         let data = await res.json();
+
         console.log(data.length);
         renderCards(data);
     }
@@ -128,10 +43,54 @@ async function fetchData(fetchParams){
     
 }
 
-//clear all filter
-// let clearAll = document.getElementById("clear-all"){
-//     continue
-// }
+let initialFetchDataParams = localStorage.getItem("filter") || false;
+let Gender="";
+if(initialFetchDataParams){
+    initialFetchDataParams = JSON.parse(initialFetchDataParams).filterParams.slice(1,);
+    // console.log(initialFetchDataParams);
+    // if(initialFetchDataParams.includes("men")){
+    //     Gender = "men"
+    // }
+    // else{
+    //     Gender = "women";
+    // }
+}
+else{
+    initialFetchDataParams = "gender=men";
+}
+//onload function
+window.addEventListener("load",(e)=>{
+    fetchData(initialFetchDataParams,1);
+})
+
+let MenCategorySet = new Set();
+let WomenCategorySet = new Set();
+let brandSet;
+let materialSet;
+let fitSet;
+let genderSet;
+let ratingSet = ["More than 1","More than 2","More than 3","More than 4"]
+let sortBySet = ["Popular",'New','Price: high to low',"Price: low to high"];
+
+
+//scrollbar
+window.addEventListener("scroll",(e)=>{
+    console.log(page);
+    let scrollHeight = document.documentElement.scrollHeight;
+    let clientHeight = document.documentElement.clientHeight;
+    let scrollTop = document.documentElement.scrollTop;
+
+    if(scrollHeight-clientHeight <= scrollTop+clientHeight/2){
+        fetchData(fetchParams,page++);
+    }
+})
+//clear-all filter
+let clearAll = document.getElementById("clear-all");
+clearAll.addEventListener("click",(e)=>{
+    page=1;
+    fetchParams='';
+    fetchData(initialFetchDataParams,page);
+});
 
 //GEnder
 let categoryGender = document.getElementById("gender-name");
@@ -302,8 +261,11 @@ function createLabel(element,filterKey){
     // let br = document.createElement("br");
 
     input.addEventListener("click",(e)=>{
-        console.log("target.name: "+e.target.name);
-        console.log("target.value:"+e.target.value);
+        let active = document.querySelector(`[name|=${filterKey}]`);
+        label.classList.add("active");
+        
+        // console.log("target.name: "+e.target.name);
+        // console.log("target.value:"+e.target.value);
 
         // ["More than 1","More than 2","More than 3","More than 4"]
         // ["Popular",'New','Price: high to low',"Price: low to high"];
@@ -388,7 +350,8 @@ function createLabel(element,filterKey){
                 }
             }
             // console.log(baseUrl+"?"+fetchParams);
-            fetchData(`?${fetchParams}`);
+            page=1;
+            fetchData(fetchParams,page);
         }
         e.stopImmediatePropagation();
     })
@@ -482,8 +445,31 @@ function createCard(obj,ind){
 
     let brand_div = document.createElement("div");
     brand_div.className="brand_div";
-    brand_div.innerHTML = `<span class="brand">${obj.brand}</span><span class="wishlist"><i class="fa-regular fa-heart fa-lg" style="color: #a39f9f;"></i></span>`;
+    brand_div.innerHTML = `<span class="brand">${obj.brand}</span>`;
     
+    // <span class="wishlist"><i class="fa-regular fa-heart fa-lg" style="color: #a39f9f;"></i></span>
+    let wishlist = document.createElement('span');
+    wishlist.className = "wishlist";
+    wishlist.innerHTML = `<i class="fa-regular fa-heart fa-lg" style="color: #a39f9f;"></i>`;
+
+    brand_div.append(wishlist);
+    //wishlist evenlistener
+    wishlist.addEventListener("click",(e)=>{
+        e.stopImmediatePropagation();
+        if(loginToken){
+            let getWishlistItem = JSON.parse(localStorage.getItem("addToWishlistArr")) || [];
+            getWishlistItem.push(obj);
+
+            localStorage.setItem("addToWishlistArr",JSON.stringify(getWishlistItem));
+
+            //change to red heart image;
+            wishlist.innerHTML = `<i class="fa-solid fa-heart" style="color: #f50f1b;"></i>`;
+        }
+        else{
+            alert("Please Login First !");
+            window.location.href="./login.html";
+        }
+    })
 
     let title = document.createElement("p");
     title.className = "title";
@@ -504,22 +490,43 @@ function createCard(obj,ind){
     content_div.append(brand_div,title,price,tribe,material)
     
     div.append(img_div,content_div);
+    //Event listener to redirect and save the card object
+    div.addEventListener("click",(e)=>{
+        e.stopImmediatePropagation();
+        localStorage.setItem("productId",JSON.stringify({id:obj.id}));
+        window.open("./product.html","_self");
+    });
     return div;
 }
 
 function renderCards(data){
+    let dataListWrapper = document.getElementById("data-list-wrapper");
+    let totalCountTag = document.getElementById("total-count-products");
+
     let dataListTitle = document.getElementById("data-list-title-wrapper");
     let params = fetchParams.split("&");
     let filterTitle = params.map((element)=>{
         return element.split("=")[1];
     })
-    dataListTitle.innerHTML = `<h2>PRODUCTS FILTERED BY ${filterTitle.join(" | ")} (${data.length})</h2>`
 
-    let dataListWrapper = document.getElementById("data-list-wrapper");
-    dataListWrapper.innerHTML = '';
+    if(page==1){
+        dataListWrapper.innerHTML = '';
+        totalCountTag.innerHTML = `(${total_data_count})`;
+        // dataListTitle.innerHTML = `<h2>PRODUCTS FILTERED BY ${filterTitle.join(" | ")}</h2>`;
+        dataListTitle.innerHTML = "PRODUCTS";
+    }
+   
 
-    data.forEach((element,index) => {
-        let card  = createCard(element,index);
-        dataListWrapper.append(card);
-    });
+    if(data.length){
+        data.forEach((element,index) => {
+            let card  = createCard(element,index);
+            dataListWrapper.append(card);
+        });
+    }
+    else{
+       if(page==1){
+        dataListWrapper.innerHTML = `<div style="text-align=center"><h4>Sorry, No Products Available Right Now For This Filter</h4><p>Please Change Filter Or Clear All Filter And Browse Other Options...Thanks</p></div>`
+       }
+    }
+    
 }
