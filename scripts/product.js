@@ -1,6 +1,6 @@
 let loginToken=JSON.parse(localStorage.getItem("loginToken"));
-// let id=2;
-// let obj=JSON.parse(localStorage.getItem("productId"));
+let obj=JSON.parse(localStorage.getItem("productId"));
+let id=obj.id;
 async function fetchData(id){
   let res=await fetch(`http://localhost:3000/product/${id}`,{
     "method":"GET",
