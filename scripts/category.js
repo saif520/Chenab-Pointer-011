@@ -1,10 +1,3 @@
-// let filters = document.getElementById("filters-wrapper");
-
-// let filters_category = ["title","category","description","rating","price","oldPrice","image","material","brand","gender","sales","fit"]
-// filters.addEventListener("onload",(e)=>{
-
-// })
-
 
 // from chaitanya
  
@@ -24,80 +17,45 @@
 //    let obj= localStorage.setItem("productId", JSON.stringify(productId));
 //     obj.id
 
-let str= `{
-    "products": [
-        {
-            "title": "Men's Casual Cargo Pants",
-            "category": "cargo",
-            "description": "Stay cool and comfortable with our Women's Casual Linen Pants.",
-            "rating": "4.0",
-            "price": "699",
-            "oldPrice": "899",
-            "image": "https://images.bewakoof.com/t640/men-s-brown-boxer-628781-1707976186-1.jpg",
-            "material": "premium blended fabric",
-            "brand": "Bushirt",
-            "gender": "men",
-            "sales": "2389",
-            "fit": "Regular Fit"
-        },
-        {
-            "title": "Women's Floral Dress",
-            "category": "dress",
-            "description": "Stay cool and comfortable with our Women's Casual Linen Pants.",
-            "rating": "4.8",
-            "price": "1299",
-            "oldPrice": "1499",
-            "image": "https://images.bewakoof.com/t640/men-s-chocolate-brown-printed-oversized-hooded-vest-627843-1710335791-1.jpg",
-            "material": "100% cotton",
-            "brand": "Rigo",
-            "gender": "women",
-            "sales": "3856",
-            "fit": "Slim Fit"
-        },
-        {
-            "title": "Women's Cropped Denim Jacket",
-            "category": "jackets",
-            "description": "Stay cool and comfortable with our Women's Casual Linen Pants.",
-            "price": "1199",
-            "oldPrice": "1399",
-            "image": "https://images.bewakoof.com/t640/men-printed-co-ord-set-7-619985-1709805508-1.jpg",
-            "material": "denim fabric",
-            "brand": "Bewakoof®",
-            "gender": "women",
-            "sales": "14200",
-            "fit": "Regular Fit"
-        },
-        {
-            "title": "Men's Classic Crewneck T-Shirt",
-            "category": "t-shirt",
-            "description": "Keep it simple and stylish with our Men's Classic Crewneck T-Shirt. This t-shirt features a classic crewneck design and soft cotton fabric, perfect for everyday wear.",
-            "price": "599",
-            "oldPrice": "699",
-            "image": "https://images.bewakoof.com/t640/men-s-brown-striped-oversized-polo-t-shirt-617096-1707200102-1.jpg",
-            "material": "soft cotton fabric",
-            "brand": "Rigo",
-            "gender": "men",
-            "sales": "15678",
-            "fit": "Regular Fit"
-        },
-        {
-            "title": "Women's Casual Linen Pants",
-            "category": "pants",
-            "description": "Stay cool and comfortable with our Women's Casual Linen Pants.",
-            "price": "899",
-            "oldPrice": "999",
-            "image": "https://images.bewakoof.com/t640/men-s-white-striped-oversized-polo-t-shirt-617090-1707200069-1.jpg",
-            "material": "linen fabric",
-            "brand": "Campus Sutra",
-            "gender": "women",
-            "sales": "16900",
-            "fit": "Regular Fit"
-        }
-    ]
-}`;
-// let products = JSON.parse(str);
-// console.log(products);
-// renderCards(products.products);
+let Gender = "";
+
+// Fetch data function
+const baseUrl = "http://localhost:3000/product?";
+let fetchParams='';
+let page = 1;
+let total_data_count;
+async function fetchData(fetchParams,page){
+    try{
+        fetchParams=fetchParams;
+        let url = baseUrl+`_page=${page}&_limit=${6}&`+fetchParams;
+        console.log(url);
+
+        let res = await fetch(url);
+        total_data_count = res.headers.get('X-Total-Count');
+        let data = await res.json();
+
+        console.log(data.length);
+        renderCards(data);
+    }
+    catch(error){
+        console.log(error);
+    }
+    
+}
+
+let initialFetchDataParams = localStorage.getItem("filter") || false;
+if(initialFetchDataParams){
+    initialFetchDataParams = JSON.parse(initialFetchDataParams).filterParams.slice(1,);
+    console.log(initialFetchDataParams);
+}
+else{
+    initialFetchDataParams = "gender=men";
+}
+//onload function
+window.addEventListener("load",(e)=>{
+    fetchData(initialFetchDataParams,1);
+})
+
 let MenCategorySet = new Set();
 let WomenCategorySet = new Set();
 let brandSet;
@@ -107,27 +65,7 @@ let genderSet;
 let ratingSet = ["More than 1","More than 2","More than 3","More than 4"]
 let sortBySet = ["Popular",'New','Price: high to low',"Price: low to high"];
 
-let Gender = "";
 
-// Fetch data function
-const baseUrl = "http://localhost:3000/product?";
-let fetchParams='';
-let page = 1;
-async function fetchData(fetchParams,page){
-    try{
-        let url = baseUrl+`_page=${page}&_limit=${6}&`+fetchParams;
-        console.log(url);
-
-        let res = await fetch(url);
-        let data = await res.json();
-        console.log(data.length);
-        renderCards(data);
-    }
-    catch(error){
-        console.log(error);
-    }
-    
-}
 //scrollbar
 window.addEventListener("scroll",(e)=>{
     console.log(page);
@@ -139,6 +77,13 @@ window.addEventListener("scroll",(e)=>{
         fetchData(fetchParams,page++);
     }
 })
+//clear-all filter
+let clearAll = document.getElementById("clear-all");
+clearAll.addEventListener("click",(e)=>{
+    page=1;
+    fetchParams='';
+    fetchData(initialFetchDataParams,page);
+});
 
 //GEnder
 let categoryGender = document.getElementById("gender-name");
@@ -512,11 +457,17 @@ function createCard(obj,ind){
     content_div.append(brand_div,title,price,tribe,material)
     
     div.append(img_div,content_div);
+    //Event listener to redirect and save the card object
+    div.addEventListener("click",(e)=>{
+        localStorage.setItem("productId",JSON.stringify({id:obj.id}));
+        window.open("./product.html","_self");
+    });
     return div;
 }
-let dataNumbers;
+
 function renderCards(data){
     let dataListWrapper = document.getElementById("data-list-wrapper");
+    let totalCountTag = document.getElementById("total-count-products");
 
     let dataListTitle = document.getElementById("data-list-title-wrapper");
     let params = fetchParams.split("&");
@@ -526,17 +477,20 @@ function renderCards(data){
 
     if(page==1){
         dataListWrapper.innerHTML = '';
-        dataNumbers = data.length;
+        totalCountTag.innerHTML = `(${total_data_count})`;
+        // dataListTitle.innerHTML = `<h2>PRODUCTS FILTERED BY ${filterTitle.join(" | ")}</h2>`;
+        dataListTitle.innerHTML = "PRODUCTS";
+    }
+   
 
-        dataListTitle.innerHTML = `<h2>PRODUCTS FILTERED BY ${filterTitle.join(" | ")} (${dataNumbers})</h2>`;
+    if(data.length){
+        data.forEach((element,index) => {
+            let card  = createCard(element,index);
+            dataListWrapper.append(card);
+        });
     }
     else{
-        dataNumbers += data.length;
-        dataListTitle.innerHTML = `<h2>PRODUCTS FILTERED BY ${filterTitle.join(" | ")} (${dataNumbers})</h2>`;
+        dataListWrapper.innerHTML = `<div style="text-align=center"><h4>Sorry, No Products Available Right Now For This Filter</h4><p>Please Change Filter Or Clear All Filter And Browse Other Options...Thanks</p></div>`
     }
-
-    data.forEach((element,index) => {
-        let card  = createCard(element,index);
-        dataListWrapper.append(card);
-    });
+    
 }
