@@ -22,12 +22,52 @@
         }
         #section-filters-wrapper{
             width: 20%;
+            position: relative;
             /* padding: 5%; */
         }
         #div-filters-wrapper{
+            padding: 5%;
             position: fixed;
+            /* overflow-y: scroll; */
             /* top:0;
             left: 0; */
+        }
+        #filter-categories-title{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 3px;
+        }
+        #filter-categories-title #filter-head{
+            color:#717171;
+            font-size: large;
+            font-weight: 500;
+        }
+        #filter-categories-title #clear-all{
+            color: #77a3a3;
+            font-size: large;
+            font-weight: 400;
+        }
+        #filters>div>div:nth-of-type(1){
+            /* color:#6f6658; */
+            color: #333333;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding-top:10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        #div-filters-wrapper label{
+            display: block;
+            width: 100%;
+            padding: 3px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            color: #7e8a96;
+        }
+        #div-filters-wrapper label:hover{
+            background-color: #e5e5e5;
+            cursor: pointer;
         }
         #content-wrapper{
             width: 70%;
@@ -36,7 +76,6 @@
         }
         #data-list-title-wrapper{
             text-align: center;
-            /* fon */
         }
 
         #data-list-wrapper{
@@ -141,6 +180,7 @@
                 <section id="section-filters-wrapper">
                     <div id="div-filters-wrapper">
                         <div id="filter-title">
+                            <h3>Men's Clothing</h3>
                         </div>
                         <div id="filters-categories">
                             <div id="filter-categories-title">

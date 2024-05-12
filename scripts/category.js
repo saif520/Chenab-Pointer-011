@@ -87,17 +87,6 @@ let genderSet;
 let ratingSet = ["More than 1","More than 2","More than 3","More than 4"]
 let sortBySet = ["Popular",'New','Price: high to low',"Price: low to high"];
 
-// let FilterObj = {
-//     "Brand":brandSet,
-//     "Material":materialSet,
-//     "Fit":fitSet,
-// }
-// let exp = document.getElementById("gender-filter");
-// exp.addEventListener("click",(e)=>{
-//     console.log(e);
-//     console.log(e.target.value);
-//     console.log("name:"+e.target.name);
-// })
 let Gender = "";
 
 // Fetch data function
@@ -118,6 +107,11 @@ async function fetchData(fetchParams){
     }
     
 }
+
+//clear all filter
+// let clearAll = document.getElementById("clear-all"){
+//     continue
+// }
 
 //GEnder
 let categoryGender = document.getElementById("gender-name");
@@ -240,7 +234,7 @@ categoryRating.addEventListener("click",(e)=>{
     let categoryDiv = document.getElementById("rating-filter");
     if(!isRatingClicked){
         ratingSet.forEach((element)=>{
-            let cat = createLabel(element,"rating");
+            let cat = createLabel(element,"rating_gte");
             categoryDiv.append(cat)
         })
         isRatingClicked = true;
@@ -270,6 +264,7 @@ categorySortBy.addEventListener("click",(e)=>{
     }
 })
 
+//creating label
 function createLabel(element,filterKey){
     let div = document.createElement("div");
     div.className = element;
@@ -284,58 +279,101 @@ function createLabel(element,filterKey){
     input.setAttribute("value",element);
     input.hidden=true;
             
-    let br = document.createElement("br");
+    // let br = document.createElement("br");
 
     input.addEventListener("click",(e)=>{
         console.log("target.name: "+e.target.name);
         console.log("target.value:"+e.target.value);
 
-        ["More than 1","More than 2","More than 3","More than 4"]
-        ["Popular",'New','Price: high to low',"Price: low to high"];
-        
-        if(e.target.name === 'sortby'){
+        // ["More than 1","More than 2","More than 3","More than 4"]
+        // ["Popular",'New','Price: high to low',"Price: low to high"];
+        // let isSort = false;
+        //sorting related variables
+        let sortBasis;
+        let sortOrder;
+        if(e.target.name === '_sort'){
+            // isSort = true;
+            // console.log("sorting is applied");
             if(e.target.value === "Popular"){
-                e.target.name = "_sort=sales";
-                e.target.value = "_order=asc"
+                sortBasis = "sales";
+                sortOrder = "desc"
+                // console.log("sorting is applied");
             }
             if(e.target.value === "New"){
-                e.target.name = "_sort=sales";
-                e.target.value = "_order=desc"
+                sortBasis = "sales";
+                sortOrder = "asc"
             }
             if(e.target.value === "Price: high to low"){
-                e.target.name = "_sort=price";
-                e.target.value = "_order=asc"
+                sortBasis = "price";
+                sortOrder = "desc"
             }
             if(e.target.value === "Price: low to high"){
-                e.target.name = "_sort=price";
-                e.target.value = "_order=desc"
+                sortBasis = "price";
+                sortOrder = "asc"
             }
         }
-        if(e.target.name !== 'rating' && e.target.name !== 'sortby'){
+
+
+        // if(e.target.name === 'rating'){
+        //     if(e.target.value === "More than 1"){
+        //         e.target.
+        //     }
+        // }
+        if(e.target.name && e.target.value){
             if(fetchParams.includes(e.target.name)){
                 fetchParams = fetchParams.split("&");
                 for(let i=0;i<fetchParams.length;i++){
                     // console.log(fetchParams(fetchParams[i]));
                     if(fetchParams[i].includes(e.target.name)){
+                        if(e.target.name === "_sort"){
+                            // console.log(fetchParams[i]);
+                            // console.log(fetchParams[i+1]);
+                            fetchParams[i] = `_sort=${sortBasis}`;
+                            fetchParams[i+1] = `_order=${sortOrder}`;
+                            break;
+                        }
+                        if(e.target.name == "rating_gte"){
+                            // console.log("for"+e.target.value.slice(-1));
+                            fetchParams[i] = `${e.target.name}=${e.target.value.slice(-1)}`
+                            break;
+                        }
                         fetchParams[i] = `${e.target.name}=${e.target.value}`;
                         break;
                     }
                 }
                 fetchParams = fetchParams.join("&");
             }
-            else if(fetchParams.split('&').length >= 1){
-                fetchParams += `&${e.target.name}=${e.target.value}`;
+            else if(fetchParams.split('&')[0] !== ''){
+                console.log(fetchParams.split('&'));
+                if(e.target.name === "_sort"){
+                    fetchParams += `&_sort=${sortBasis}&_order=${sortOrder}`;
+                }
+                else if(e.target.name === "rating_gte"){
+                    fetchParams += `&${e.target.name}=${e.target.value.slice(-1)}`;
+                }
+                else{
+                    fetchParams += `&${e.target.name}=${e.target.value}`;
+                }
+                console.log("inside >=1:"+fetchParams);
             }
-            else if(fetchParams.split('&').length === 0){
-                fetchParams += `${e.target.name}=${e.target.value}`;
+            else if(fetchParams.split('&')[0] === ''){
+                if(e.target.name === "_sort"){
+                    fetchParams += `_sort=${sortBasis}&_order=${sortOrder}`;
+                }
+                else if(e.target.name === "rating_gte"){
+                    fetchParams += `${e.target.name}=${e.target.value.slice(-1)}`
+                }
+                else{
+                    fetchParams += `${e.target.name}=${e.target.value}`;
+                }
             }
-            console.log(baseUrl+"?"+fetchParams);
+            // console.log(baseUrl+"?"+fetchParams);
             fetchData(`?${fetchParams}`);
         }
         e.stopImmediatePropagation();
     })
 
-    div.append(label,input,br);
+    div.append(label,input);
 
     return div;
 }
