@@ -13,6 +13,19 @@ let summaryDiscount = document.querySelector(".summary-discount");
 let summarySubtotal = document.querySelector(".summary-subtotal");
 let summaryTotal = document.querySelector(".summary-total");
 
+//address form
+let addAddress = document.querySelector(".add-address");
+let addressFormDiv = document.querySelector(".address-form-div");
+let placeOrder = document.querySelector(".place-order");
+let closeForm = document.querySelector(".close-form");
+let formName = document.querySelector(".form-name");
+let formMobile = document.querySelector(".form-mobile");
+let formZip = document.querySelector(".form-zip");
+let formCity = document.querySelector(".form-city");
+let formState = document.querySelector(".form-state");
+let formFlatno = document.querySelector(".form-flatno");
+let formLocality = document.querySelector(".form-locality");
+
 function createCard(obj) {
   let card = document.createElement("div");
   card.className = "card";
@@ -44,19 +57,38 @@ function createCard(obj) {
   cardImg.src = obj.image;
   removeCartBtn.innerText = "Remove";
   moveToWishlistBtn.innerText = "Move to Wishlist";
-  removeCartBtn.value = obj.title;
-
+  removeCartBtn.value = obj.id;
+  moveToWishlistBtn.value = obj.id;
+  //remove from cart
   removeCartBtn.addEventListener("click", (e) => {
     e.preventDefault();
     let cart = JSON.parse(localStorage.getItem("cartData"));
     for (let i = 0; i <= cart.length - 1; i++) {
-      if (cart[i].title == removeCartBtn.value) {
+      if (cart[i].id == removeCartBtn.value) {
         cart.splice(i, 1);
         break;
       }
     }
     localStorage.setItem("cartData", JSON.stringify(cart));
     appendData(cart);
+  });
+
+  //move to wishlist
+  moveToWishlistBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    let moveData = JSON.parse(localStorage.getItem("addToWishlistArr")) || [];
+    let cartMoveData = JSON.parse(localStorage.getItem("cartData"));
+    for (let i = 0; i <= cartMoveData.length - 1; i++) {
+      if (moveToWishlistBtn.value == cartMoveData[i].id) {
+        let item = cartMoveData[i];
+        cartMoveData.splice(i, 1);
+        moveData.push(item);
+        break;
+      }
+    }
+    localStorage.setItem("cartData", JSON.stringify(cartMoveData));
+    localStorage.setItem("addToWishlistArr", JSON.stringify(moveData));
+    appendData(cartMoveData);
   });
 
   cartProdLeft.append(cartProdTitle, price, oldPrice, savedAmount);
@@ -91,3 +123,34 @@ function appendData(data) {
 }
 
 appendData(cartData);
+
+// ADDRESS FORM
+addAddress.addEventListener("click", (e) => {
+  e.preventDefault();
+  addressFormDiv.style.display = "block ";
+});
+
+closeForm.addEventListener("click", (e) => {
+  e.preventDefault();
+  addressFormDiv.style.display = "none";
+});
+
+placeOrder.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (
+    formName.value &&
+    formMobile.value &&
+    formZip.value &&
+    formCity.value &&
+    formState.value &&
+    formFlatno.value &&
+    formLocality.value
+  ) {
+    localStorage.setItem("cartData", JSON.stringify([]));
+    alert("Order Placed!");
+    window.location.href =
+      "file:///home/tehreem/Downloads/weekProject/Chenab-Pointer-011/html/index.html";
+  } else {
+    alert("Fill in all the Fields!");
+  }
+});

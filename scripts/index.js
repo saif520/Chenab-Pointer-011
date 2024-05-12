@@ -1,12 +1,60 @@
-let baseURL = "http://localhost:3000/"
+let baseURL = "http://localhost:3000/product"
 
-
+function filter(obj){
+    localStorage.setItem("filter", JSON.stringify(obj));
+    window.open("../html/category.html","_self");
+}
 
 let navEnd = document.getElementById("navEnd")
-let navEle= ["SHOP NOW","MEN","WOMEN","ACCESSORIES","LIVE NOW","HEAVY DUTY","BEWAKOOF AIR","OFFICIAL MERCH","PLUS SIZE"]
+let navEle= [
+    {
+        title:"SHOP NOW",
+        url:""
+    },
+    {
+        title:"MEN",
+        url:"?gender=men"
+    },
+    {
+        title:"WOMEN",
+        url:"?gender=women"
+    },
+    {
+        title:"ACCESSORIES",
+        url:"?category=accessories"
+    },
+    {
+        title:"LIVE NOW",
+        url:"?q=livenow"
+    },
+    {
+        title:"HEAVY DUTY",
+        url:"?category=jeans"
+    },
+    {
+        title:"BEWAKOOF AIR",
+        url:"?brand=bewakoof air"
+    },
+    {
+        title:"OFFICIAL MERCH",
+        url:"?brand=bewakoof"
+    },
+    {
+        title:"PLUS SIZE",
+        url:"?fit=Regular Fit"
+    }]
 navEle.forEach(element => {
     let span= document.createElement("span")
-    span.innerText=element
+    span.innerText=element.title
+    let obj={
+        url:`${baseURL}${element.url}`,
+        filterParams:element.url
+    }
+    span.addEventListener("click",()=>{ 
+    
+    filter(obj)
+
+    })
     navEnd.append(span)
 });
 
@@ -32,43 +80,44 @@ let firstCatItem = [
     {
         title:"Bestseller",
         image:"https://images.bewakoof.com/uploads/grid/app/category-Icon-Homepage-common-1713936362.gif",
-        sort:"popularity"
+        url:"?_sort=sales&_order=desc"
     },
     {
         title:"High Rated",
         image:"https://images.bewakoof.com/uploads/grid/app/category-icon-230x320-1713944743.gif",
-        sort:"rating"
+        url:"?_sort=rating&_order=desc"
     },
     {
         title:"Official Collabaration",
         image:"https://images.bewakoof.com/uploads/grid/app/category-Icon-Homepage-common-1713936362.gif",
-        value:"popularity"
+        url:"?brand=Bewakoof"
 
     },
     {
         title:"Plus Size",
         image:"https://images.bewakoof.com/uploads/grid/app/category-icon-230x320.gif",
-        value:"plus"
+        url:"?fit=Regular Fit"
+
     },
     {
         title:"Customization",
         image:"https://images.bewakoof.com/uploads/grid/app/thumbnails-Revamp-Customization--1--1693212866.jpg",
-        value:"popularity"
+        url:""
     },
     {
         title:"Combos",
         image:"https://images.bewakoof.com/uploads/grid/app/thumbnails-Revamp-Combos-1693212865.gif",
-        value:"popularity"
+        url:""
     },
     {
         title:"Vote for Desings",
         image:"https://images.bewakoof.com/uploads/grid/app/thumbnails-Revamp-Vote-1693212866.jpg",
-        value:"popularity"
+        url:""
     },
     {
         title:"Last Sizes left",
         image:"https://images.bewakoof.com/uploads/grid/app/last-size-new-thumbnaik-1668508337.jpg",
-        value:"popularity"
+        url:""
     }
 ]
 let first_Category = document.getElementById("first_Category")
@@ -79,10 +128,20 @@ firstCatItem.forEach(element => {
 
     title.innerText = element.title
     image.src=element.image
-    
+
+    let obj={
+        url:`${baseURL}${element.url}`,
+        prop:element.url
+    }
+
+    cont.addEventListener("click",()=>{
+        filter(obj)
+    })
+
     cont.append(image,title)
     first_Category.append(cont)
 });
+
 // Trending categories-------------------------------------------------------------------------
 let trendCategories = document.getElementById("trendCategories")
 let trendCat= [
