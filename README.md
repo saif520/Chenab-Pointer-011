@@ -47,7 +47,8 @@ Sort Dropdown: A dropdown menu or a set of sorting options is usually provided a
 
 
 ## Credentials
-Provide user credentials for autheticated pages
+admin username: tehvrooom
+admin password: password
 
 ## APIs Used
 If your application relies on external APIs, document them and include any necessary links or references.
