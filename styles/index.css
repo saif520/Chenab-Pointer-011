@@ -2,6 +2,12 @@ body {
   margin: 0px;
   padding: 0px;
 }
+#loginbtn{
+  color: #181818;
+}
+#loginbtn:hover{
+  text-decoration: none;
+}
 .cont {
   max-width: 1600px;
   margin: auto;
@@ -220,16 +226,32 @@ body {
 }
 
 /* Besteseller ----------------------------------*/
+#bestseller{
+  max-width: 1960px;
+  margin: auto;
+  text-align: center
+  
+}
+.priceCont p{
+  text-decoration: line-through;
+}
+.priceCont h5{
+  color: rgb(43, 201, 43);
+}
 #best1 , #best2,#best3{
     display: flex;
     justify-content: space-around;
     width: 100%;
 }
 .cardCont{
+    border: 1px solid rgb(183, 183, 183);
     width: 20%;
+    margin: 20px;
+    text-align: start ;
 }
 .cardCont img{
-    width: 100px;
+    width: 100%;
+
 }
 
 .priceCont{

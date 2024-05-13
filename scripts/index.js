@@ -1,8 +1,20 @@
 let baseURL = "http://localhost:3000/product"
 
+let loggedIn = JSON
+
+
+
 function filter(obj){
     localStorage.setItem("filter", JSON.stringify(obj));
     window.open("../html/category.html","_self");
+}
+
+function prodOpen(id){
+    let productId = {
+        id:id
+    }
+    localStorage.setItem("productId", JSON.stringify(productId));
+    window.open("../html/product.html","_self");
 }
 
 let navEnd = document.getElementById("navEnd")
@@ -131,7 +143,7 @@ firstCatItem.forEach(element => {
 
     let obj={
         url:`${baseURL}${element.url}`,
-        prop:element.url
+        filterParams:element.url
     }
 
     cont.addEventListener("click",()=>{
@@ -147,56 +159,65 @@ let trendCategories = document.getElementById("trendCategories")
 let trendCat= [
     {
         image:"https://images.bewakoof.com/uploads/grid/app/trending-category-icons-OS-T-Shirts-1706511994.jpg",
-        category:""
+        url:"?fit=oversized&gender=men"
     },
     {
         image:"https://images.bewakoof.com/uploads/grid/app/trending-category-icons-240x350-Classic-Fit-T-Shirts-1707280970.jpg",
-        category:""
+        url:"?category=t-shirt&fit=Regular%20Fit&gender=men"
     },
     {
         image:"https://images.bewakoof.com/uploads/grid/app/unnamed--5--1706513552.jpg",
-        category:""
+        url:"?q=printed"
     },
     {
         image:"https://images.bewakoof.com/uploads/grid/app/trending-category-icons-Joggers-men-1706512292.jpg",
-        category:""
+        url:"?category=joggers&gender=men"
     },
     {
         image:"https://images.bewakoof.com/uploads/grid/app/trending-category-icons-Jeans-1704181405.jpg",
-        category:""
+        url:"?category=jeans"
     },
     {
         image:"https://images.bewakoof.com/uploads/grid/app/trending-category-icons-240x350-Co-ords-Men-1707280970.jpg",
-        category:""
+        url:"?q=loos"
     },
     {
         image:"https://images.bewakoof.com/uploads/grid/app/3rd-Jan-2024-Oversized-T--shirts-1704270296-1706511259.webp",
-        category:""
+        url:"?fit=oversized&gender=women"
     },
     {
         image:"https://images.bewakoof.com/uploads/grid/app/trending-category-icons-240x350--2--1706509179.jpg",
-        category:""
+        url:"?category=t-shirt&fit=Regular%20Fit&gender=women"
     },
     {
         image:"https://images.bewakoof.com/uploads/grid/app/trending-category-icons-Casual-Pants-1706509180.jpg",
-        category:""
+        url:"?category=pants"
     },
     {
         image:"https://images.bewakoof.com/uploads/grid/app/trending-category-icons-Joggers-1706509180.jpg",
-        category:""
+        url:"?category=joggers&gender=women"
     },
     {
         image:"https://images.bewakoof.com/uploads/grid/app/3rd-Jan-2024-Cargos-1704270812-1706511406.webp",
-        category:""
+        url:"?category=cargo"
     },
     {
         image:"https://images.bewakoof.com/uploads/grid/app/3rd-Jan-2024-Dresses-1704270296-1706511533.webp",
-        category:""
+        url:"?category=dress"
     },
 ]
 trendCat.forEach(element => {
     let image = document.createElement("img")
     image.src= element.image
+    let obj={
+        url:`${baseURL}${element.url}`,
+        filterParams:element.url
+    }
+    image.addEventListener("click",()=>{ 
+    
+    filter(obj)
+
+    })
     trendCategories.append(image)
 });
 
@@ -204,19 +225,19 @@ trendCat.forEach(element => {
 let toHotList = [
     {
         image:"https://images.bewakoof.com/uploads/grid/app/double-the-fun-B1g1-Desktop-Midsize-banner-1714978289.jpg",
-        value:""
+        url:"?category=t-shirt"
     },
     {
         image:"https://images.bewakoof.com/uploads/grid/app/Desktop-midsize-OS-tees-common-ezgif-com-optimize--6--1715319745.gif",
-        value:""
+        url:"?q=printed&fit=oversized"
     },
     {
         image:"https://images.bewakoof.com/uploads/grid/app/DESKTOP-mid-size-common-buy-2--1--1714561166.jpg",
-        value:""
+        url:"?category=t-shirt"
     },
     {
         image:"https://images.bewakoof.com/uploads/grid/app/DESKTOP-mid-size-buy3-common-1715069683.jpg",
-        value:""
+        url:"?category=t-shirt"
     }
 ]
 let tooHot = document.getElementById("tooHot")
@@ -224,6 +245,15 @@ let tooHot = document.getElementById("tooHot")
 toHotList.forEach(element => {
     let image = document.createElement("img")
     image.src=element.image
+    let obj={
+        url:`${baseURL}${element.url}`,
+        filterParams:element.url
+    }
+    image.addEventListener("click",()=>{ 
+    
+    filter(obj)
+
+    })
     tooHot.append(image)
 });
 // categories to bag-------------------------------------------------
@@ -231,32 +261,41 @@ let categoriesBag = document.getElementById("categoriesBag")
 let categoriesBagList= [
     {
         image:"https://images.bewakoof.com/uploads/grid/app/trending-category-icons-Shirts-men--1706511997.jpg",
-        category:""
+        url:"?category=shirt"
     },
     {
         image:"https://images.bewakoof.com/uploads/grid/app/trending-category-icons-Cargos-men-1706511996.jpg",
-        category:""
+        url:"?category=cargo"
     },
     {
         image:"https://images.bewakoof.com/uploads/grid/app/Pajamas-trending-category-icons-240x350-1706514429.jpg",
-        category:""
+        url:"?category=pants"
     },
     {
         image:"https://images.bewakoof.com/uploads/grid/app/trending-category-icons-240x350-Co-ords-1707280972.jpg",
-        category:""
+        url:"?category=pants"
     },
     {
         image:"https://images.bewakoof.com/uploads/grid/app/Pajamas-trending-category-icons-240x350-women-1706514429.jpg",
-        category:""
+        url:"?category=pants"
     },
     {
         image:"https://images.bewakoof.com/uploads/grid/app/trending-category-icons-Jeans-1706509182.jpg",
-        category:""
+        url:"?category=jeans"
     }
 ]
 categoriesBagList.forEach(element => {
     let image = document.createElement("img")
     image.src= element.image
+    let obj={
+        url:`${baseURL}${element.url}`,
+        filterParams:element.url
+    }
+    image.addEventListener("click",()=>{ 
+    
+    filter(obj)
+
+    })
     categoriesBag.append(image)
 });
 
@@ -293,20 +332,29 @@ let carousal_btm =document.getElementById("carousal_btm")
 let carousal_btm_list =[
     {
         image:"https://images.bewakoof.com/uploads/grid/app/Feb-1x1-vests299--3--1714561834.jpg",
-        value:"",
+        url:"?q=shirt",
     },
     {
         image:"https://images.bewakoof.com/uploads/grid/app/HC---1X1-twice-as-nice--1714768452.png",
-        value:"",
+        value:"?category=pants",
     },
     {
         image:"https://images.bewakoof.com/uploads/grid/app/HC-BANNERS---1X1---dresses--3--1714561832.jpg",
-        value:"",
+        value:"?q=dress",
     }
 ]
 carousal_btm_list.forEach(element => {
     let image = document.createElement("img")
     image.src=element.image
+    let obj={
+        url:`${baseURL}${element.url}`,
+        filterParams:element.url
+    }
+    image.addEventListener("click",()=>{ 
+    
+    filter(obj)
+
+    })
     carousal_btm.append(image)
 });
 
@@ -333,6 +381,15 @@ let topAcc =document.getElementById("topAcc")
 topAccList.forEach(element => {
     let image = document.createElement("img")
     image.src=element.image
+    let obj={
+        url:`${baseURL}?category=accessories`,
+        filterParams:"?category=accessories"
+    }
+    image.addEventListener("click",()=>{ 
+    
+    filter(obj)
+
+    })
     topAcc.append(image)
 });
 
@@ -415,7 +472,7 @@ function createCard(elem){
     let priceCont = document.createElement("div")
     let price = document.createElement("h3")
     let priceStrik = document.createElement("p")
-    let off = document.createElement("p")
+    let off = document.createElement("h5")
     let dis = Math.ceil(((elem.oldPrice-elem.price)/elem.price)*100)
 
     cardCont.className = "cardCont"
@@ -429,6 +486,11 @@ function createCard(elem){
     priceStrik.innerText = `₹${elem.oldPrice}`
     off.innerText=`${dis}% OFF`
     priceCont.append(price,priceStrik,off)
+    cardCont.addEventListener("click",()=>{
+        prodOpen(elem.id)
+    })
+    
+
     cardCont.append(image,brand,title,priceCont)
 
     return cardCont;
