@@ -3,7 +3,7 @@ let obj=JSON.parse(localStorage.getItem("productId"));
 console.log(obj);
 let id=obj.id;
 async function fetchData(id){
-  let res=await fetch(`https://server-ve5q.onrender.com/product${id}`,{
+  let res=await fetch(`https://server-ve5q.onrender.com/product/${id}`,{
     "method":"GET",
     "headers":{
       "content-type":"application/json"
@@ -173,7 +173,7 @@ function productDetails(ele){
     }
     else{
       alert("Please Login first!");
-      window.location.href="http://127.0.0.1:5500/Chenab-Pointer-011/html/login.html";
+      window.location.href="https://bewakoooff.netlify.app/html/login.html";
     }
   })
 
@@ -189,7 +189,7 @@ function productDetails(ele){
     }
     else{
       alert("Please Login first!");
-      window.location.href="http://127.0.0.1:5500/Chenab-Pointer-011/html/login.html";
+      window.location.href="https://bewakoooff.netlify.app/html/login.html";
     }
   })
 
@@ -201,6 +201,7 @@ function productDetails(ele){
 }
 
 let recentlyViewTitle=document.getElementById("p-recently-viewed-title");
+recentlyViewTitle.innerText=`Recently Viewed Products`;
 function recentlyViewProduct(ele,index,recentlyViewArr){
   let card=document.createElement("div");
   let image=document.createElement("img");
