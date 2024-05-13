@@ -26,7 +26,7 @@ let page = 1;
 let total_data_count;
 async function fetchData(fetchParams,page){
     try{
-        fetchParams=fetchParams;
+        // fetchParams=fetchParams;
         let url = baseUrl+`_page=${page}&_limit=${6}&`+fetchParams;
         // console.log(url);
 
@@ -34,7 +34,7 @@ async function fetchData(fetchParams,page){
         total_data_count = res.headers.get('X-Total-Count');
         let data = await res.json();
 
-        console.log(data.length);
+        // console.log(data.length);
         renderCards(data);
     }
     catch(error){
@@ -54,9 +54,10 @@ if(initialFetchDataParams){
     // else{
     //     Gender = "women";
     // }
+    fetchParams = initialFetchDataParams;
 }
 else{
-    initialFetchDataParams = "gender=men";
+    initialFetchDataParams = "";
 }
 //onload function
 window.addEventListener("load",(e)=>{
@@ -75,12 +76,12 @@ let sortBySet = ["Popular",'New','Price: high to low',"Price: low to high"];
 
 //scrollbar
 window.addEventListener("scroll",(e)=>{
-    console.log(page);
+    // console.log(page);
     let scrollHeight = document.documentElement.scrollHeight;
     let clientHeight = document.documentElement.clientHeight;
     let scrollTop = document.documentElement.scrollTop;
 
-    if(scrollHeight-clientHeight <= scrollTop+clientHeight/2){
+    if(scrollHeight-clientHeight <= scrollTop+clientHeight/3){
         fetchData(fetchParams,page++);
     }
 })
@@ -251,6 +252,8 @@ function createLabel(element,filterKey){
     let label = document.createElement("label");
     label.innerText = element;
     label.setAttribute("for",element);
+    label.classList.add(filterKey);
+
     let input = document.createElement("input");
     input.type="radio";
     input.setAttribute("id",element);
@@ -261,7 +264,11 @@ function createLabel(element,filterKey){
     // let br = document.createElement("br");
 
     input.addEventListener("click",(e)=>{
-        let active = document.querySelector(`[name|=${filterKey}]`);
+        let active = document.querySelectorAll(`.${filterKey}`);
+        // console.log(active);
+        active.forEach((element)=>{
+            element.classList.remove("active");
+        })
         label.classList.add("active");
         
         // console.log("target.name: "+e.target.name);
