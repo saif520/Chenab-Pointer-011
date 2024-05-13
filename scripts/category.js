@@ -369,7 +369,7 @@ function createLabel(element,filterKey){
 }
 
 function fetchCategoryData(){ 
-    fetch("http://localhost:3000/product").then((res)=>res.json()).then((data)=>{
+    fetch("https://server-ve5q.onrender.com/product").then((res)=>res.json()).then((data)=>{
         // console.log(data);
         function createFilter(data){
             let catogry_filters = [];
