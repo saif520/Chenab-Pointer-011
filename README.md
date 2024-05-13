@@ -93,5 +93,5 @@ To run this project locally:
 
 ## Acknowledgments
 
-  - Inspired by Lenovo original website
+  - Inspired by Bewakoof.com website
   - Special thanks to the our mentors/IA <a href="#">Ritesh Rangan</a> for giving us directions and material for this project.
