@@ -99,8 +99,7 @@ async function createLoginSession() {
   if (await userLogin()) {
     localStorage.setItem("loginToken", JSON.stringify("true"));
     alert("Logged In");
-    window.location.href =
-      "../html/index.html";
+    window.location.href = "../html/index.html";
   } else {
     alert("Wrong Credentials!");
   }
