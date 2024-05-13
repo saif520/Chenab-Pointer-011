@@ -1,13 +1,8 @@
 let cartCount = document.querySelector(".cart-count");
 
 // User Name
-let uName = document.getElementById("user")
-uName.innerText = JSON.parse(localStorage.getItem("uName"))
-
-
-
-
-
+let uName = document.getElementById("user");
+uName.innerText = JSON.parse(localStorage.getItem("uName"));
 
 //card container
 
@@ -157,8 +152,7 @@ placeOrder.addEventListener("click", (e) => {
   ) {
     localStorage.setItem("cartData", JSON.stringify([]));
     alert("Order Placed!");
-    window.location.href =
-      "file:///home/tehreem/Downloads/weekProject/Chenab-Pointer-011/html/index.html";
+    window.location.href = "https://bewakoooff.netlify.app/html/index.html";
   } else {
     alert("Fill in all the Fields!");
   }
