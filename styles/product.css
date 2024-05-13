@@ -407,3 +407,104 @@
         margin-left: 20px;
     }
 }
+
+.loginbtn, .loginbtn:hover{
+    text-decoration: none;
+    color: #000000;
+  }
+  .cont {
+    max-width: 1600px;
+    margin: auto;
+  }
+  
+  #navTop {
+    display: none;
+    background-color: #eeeeee;
+  }
+  @media (min-width:1200px)  {
+    #navTop{
+      display: block;
+    }
+  }
+  .cont.navTop {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px 0px 10px;
+    align-items: center;
+    font-size: 10px;
+  }
+  #navTop div {
+    display: flex;
+    gap: 10px;
+    padding: 3px;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #navTop div p {
+    margin: 0px;
+    
+  }
+  #mar{
+    margin:0px
+  }
+  #navMid {
+    padding: 10px 10px ; 
+    display: flex;
+    justify-content: space-between;  
+   
+  }
+  #bdr{
+    border-bottom: 1px solid rgb(163, 162, 162);
+  }
+  #navMid div:nth-of-type(1){
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-around;
+    
+  }
+  #navMid div:nth-of-type(2){
+    display: flex;
+    align-items: center;
+    gap:20px;
+  
+  
+  }
+  .cont {
+    text-align: center;
+  }
+  
+  
+  .navMid img{
+    width: 160px;
+  }
+  
+  .nav-icon {
+    height: 20px;
+  }
+  /* Search box styling */
+  #searchCon {
+    padding: 1px 15px;
+    border-radius: 5px;
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: space-between;
+  }
+  #serachicon {
+    color: grey;
+    height: 23px;
+    justify-content: center;
+  }
+  #serachicon + input {
+    background-color: #eaeaea;
+    border: none;
+  }
+  
+  /* Dropdown Button */
+  button.dropbtn {
+    background-color: #ffffff;
+    padding: 16px;
+    margin-bottom: 0px;
+    font-size: 16px;
+    border: none;
+  }
